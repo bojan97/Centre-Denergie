@@ -1,0 +1,39 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="2080" measuredH="1157" mockupW="1604" mockupH="1137">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="476" y="20" w="1604" h="1137" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::Image" x="681" y="101" w="496" h="102" measuredW="77" measuredH="79" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22205%2C81%2C701%2C183%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%221%22/%3E</map>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::SubTitle" x="726" y="219" w="535" h="-1" measuredW="537" measuredH="33" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Centre%20d%27%C9nergie%20de%20Chambly%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::SubTitle" x="1084" y="345" w="-1" h="-1" measuredW="305" measuredH="50" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>40</size>
+        <text>Rapport%20Resume</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::Label" x="1137" y="395" w="216" h="30" measuredW="203" measuredH="28" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>20</size>
+        <text>Genere%20le%2001/12/2016</text>
+      </controlProperties>
+    </control>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::DataGrid" x="916" y="526" w="640" h="103" measuredW="488" measuredH="95" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Nombre%20Total%20d%27Utilisateurs%2C%2027%0AComptes%20Crees%20durant%20le%20derniers%20mois%2C%2012%0ANombre%20de%20Messages%20Total%20%2C%20132</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

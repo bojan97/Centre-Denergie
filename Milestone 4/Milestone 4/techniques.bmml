@@ -1,0 +1,94 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="2080" measuredH="1315" mockupW="1604" mockupH="1295">
+  <controls>
+    <control controlID="0" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="476" y="20" w="1604" h="1295" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="1" controlTypeID="com.balsamiq.mockups::ButtonBar" x="849" y="252" w="933" h="81" measuredW="928" measuredH="41" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml%2Cstyles%26bm%3Bstyles.bmml%26bm%3Bstyles.bmml%26bm%3Bstyles.bmml%2Ccours%26bm%3Bcours.bmml%26bm%3Bcours.bmml%26bm%3Bcours.bmml%2Csalle%26bm%3Bsalle.bmml%26bm%3Bsalle.bmml%26bm%3Bsalle.bmml%2Ccontact%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22373%2C232%2C476%2C313%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%221_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22476%2C232%2C712%2C313%22%20href%3D%22styles.bmml%22%20alt%3D%22styles%22%20id%3D%221_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22712%2C232%2C848%2C313%22%20href%3D%22cours.bmml%22%20alt%3D%22cours%22%20id%3D%221_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22848%2C232%2C1096%2C313%22%20href%3D%22salle.bmml%22%20alt%3D%22salle%22%20id%3D%221_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%221096%2C232%2C1304%2C313%22%20href%3D%22contact.bmml%22%20alt%3D%22contact%22%20id%3D%221_4%22/%3E%0A</map>
+        <selectedIndex>-1</selectedIndex>
+        <size>24</size>
+        <text>Acceuil%2C%20Styles%20de%20Combat%2C%20Le%20Cours%2C%20Salle%20de%20Discussion%2C%20Contactez%20Nous</text>
+      </controlProperties>
+    </control>
+    <control controlID="2" controlTypeID="com.balsamiq.mockups::Image" x="681" y="101" w="496" h="102" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22205%2C81%2C701%2C183%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%222%22/%3E</map>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="3" controlTypeID="com.balsamiq.mockups::PointyButton" x="1838" y="101" w="120" h="-1" measuredW="123" measuredH="35" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <menuIcon>true</menuIcon>
+        <size>24</size>
+        <text>bojan97</text>
+      </controlProperties>
+    </control>
+    <control controlID="4" controlTypeID="com.balsamiq.mockups::HRule" x="476" y="1044" w="1604" h="-1" measuredW="100" measuredH="10" zOrder="4" locked="false" isInGroup="-1"/>
+    <control controlID="5" controlTypeID="com.balsamiq.mockups::Label" x="1212" y="1085" w="-1" h="-1" measuredW="175" measuredH="33" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>contact%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22736%2C1065%2C911%2C1098%22%20href%3D%22contact.bmml%22%20alt%3D%22contact%22%20id%3D%225%22/%3E</map>
+        <size>24</size>
+        <text>Contactez-Nous</text>
+      </controlProperties>
+    </control>
+    <control controlID="6" controlTypeID="com.balsamiq.mockups::Label" x="1045" y="1085" w="-1" h="-1" measuredW="81" measuredH="33" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22569%2C1065%2C650%2C1098%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%226%22/%3E</map>
+        <size>24</size>
+        <text>Acceuil</text>
+      </controlProperties>
+    </control>
+    <control controlID="7" controlTypeID="com.balsamiq.mockups::Label" x="1433" y="1085" w="-1" h="-1" measuredW="110" measuredH="33" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Facebook</text>
+      </controlProperties>
+    </control>
+    <control controlID="8" controlTypeID="com.balsamiq.mockups::Label" x="1219" y="1147" w="-1" h="-1" measuredW="117" measuredH="24" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>%28514%29231-5222</text>
+      </controlProperties>
+    </control>
+    <control controlID="9" controlTypeID="com.balsamiq.mockups::Label" x="1087" y="1179" w="-1" h="-1" measuredW="381" measuredH="24" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>250%20boulevard%20Fr%E9chette%2C%20J3L%202Z5%20Chambly%2C%20Canada</text>
+      </controlProperties>
+    </control>
+    <control controlID="10" controlTypeID="com.balsamiq.mockups::Label" x="1126" y="1249" w="332" h="18" measuredW="325" measuredH="24" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Site%20cr%E9%E9%20par%20Bojan%20Srbinoski%20et%20Saad%20Ahmed</text>
+      </controlProperties>
+    </control>
+    <control controlID="11" controlTypeID="com.balsamiq.mockups::Label" x="1219" y="1210" w="-1" h="-1" measuredW="135" measuredH="24" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>test@hotmail.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="12" controlTypeID="com.balsamiq.mockups::HRule" x="1045" y="1114" w="514" h="-1" measuredW="100" measuredH="10" zOrder="12" locked="false" isInGroup="-1"/>
+    <control controlID="13" controlTypeID="com.balsamiq.mockups::HRule" x="1045" y="1075" w="514" h="-1" measuredW="100" measuredH="10" zOrder="13" locked="false" isInGroup="-1"/>
+    <control controlID="21" controlTypeID="com.balsamiq.mockups::DataGrid" x="593" y="457" w="1370" h="444" measuredW="691" measuredH="185" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <color>16777215</color>
+        <size>24</size>
+        <text>Technique%2C%20Blanche%2C%20Jaune%2C%20Orange%0ACoups%20de%20Poing%2C%207%2C%207%2C%207%0ACoups%20de%20Pied%2C%204%2C%204%2C%204%0AKempo%2C%200%2C%203%2C%203%0AFormes%2C%20Premier%20Pinan%2C%20Deuxieme%20Pinan%2C%20Premier%20Kata%0ABloques%2C%208%2C%208%2C%208</text>
+      </controlProperties>
+    </control>
+    <control controlID="24" controlTypeID="com.balsamiq.mockups::SubTitle" x="1153" y="380" w="-1" h="-1" measuredW="235" measuredH="41" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>32</size>
+        <text>Mes%20Techniques</text>
+      </controlProperties>
+    </control>
+  </controls>
+</mockup>

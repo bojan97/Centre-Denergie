@@ -1,0 +1,129 @@
+<mockup version="1.0" skin="sketch" fontFace="Balsamiq Sans" measuredW="2022" measuredH="1413" mockupW="1604" mockupH="1406">
+  <controls>
+    <control controlID="22" controlTypeID="com.balsamiq.mockups::BrowserWindow" x="418" y="7" w="1604" h="1406" measuredW="450" measuredH="400" zOrder="0" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>A%20Web%20Page%0Ahttp%3A//</text>
+      </controlProperties>
+    </control>
+    <control controlID="23" controlTypeID="com.balsamiq.mockups::ButtonBar" x="848" y="243" w="939" h="81" measuredW="928" measuredH="41" zOrder="1" locked="false" isInGroup="-1">
+      <controlProperties>
+        <hrefs>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml%2Cstyles%26bm%3Bstyles.bmml%26bm%3Bstyles.bmml%26bm%3Bstyles.bmml%2Ccours%26bm%3Bcours.bmml%26bm%3Bcours.bmml%26bm%3Bcours.bmml%2Csalle%26bm%3Bsalle.bmml%26bm%3Bsalle.bmml%26bm%3Bsalle.bmml%2Ccontact%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml</hrefs>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22430%2C236%2C534%2C317%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%2223_0%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22534%2C236%2C771%2C317%22%20href%3D%22styles.bmml%22%20alt%3D%22styles%22%20id%3D%2223_1%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22771%2C236%2C908%2C317%22%20href%3D%22cours.bmml%22%20alt%3D%22cours%22%20id%3D%2223_2%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%22908%2C236%2C1157%2C317%22%20href%3D%22salle.bmml%22%20alt%3D%22salle%22%20id%3D%2223_3%22/%3E%0A%3Carea%20shape%3D%22rect%22%20coords%3D%221157%2C236%2C1366%2C317%22%20href%3D%22contact.bmml%22%20alt%3D%22contact%22%20id%3D%2223_4%22/%3E%0A</map>
+        <selectedIndex>1</selectedIndex>
+        <size>24</size>
+        <text>Acceuil%2C%20Styles%20de%20Combat%2C%20Le%20Cours%2C%20Salle%20de%20Discussion%2C%20Contactez%20Nous</text>
+      </controlProperties>
+    </control>
+    <control controlID="30" controlTypeID="com.balsamiq.mockups::Image" x="556" y="92" w="496" h="102" measuredW="77" measuredH="79" zOrder="2" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22138%2C85%2C634%2C187%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%2230%22/%3E</map>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="31" controlTypeID="com.balsamiq.mockups::SubTitle" x="593" y="210" w="535" h="-1" measuredW="537" measuredH="33" zOrder="3" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text>Centre%20d%27%C9nergie%20de%20Chambly%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20</text>
+      </controlProperties>
+    </control>
+    <control controlID="32" controlTypeID="com.balsamiq.mockups::Image" x="578" y="367" w="427" h="250" measuredW="77" measuredH="79" zOrder="4" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="33" controlTypeID="com.balsamiq.mockups::SubTitle" x="1032" y="367" w="-1" h="-1" measuredW="71" measuredH="37" zOrder="5" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>Tigre</text>
+      </controlProperties>
+    </control>
+    <control controlID="34" controlTypeID="com.balsamiq.mockups::Paragraph" x="1017" y="404" w="601" h="191" measuredW="200" measuredH="80" zOrder="6" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident%2C%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum.Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.</text>
+      </controlProperties>
+    </control>
+    <control controlID="35" controlTypeID="com.balsamiq.mockups::Image" x="1466" y="749" w="427" h="250" measuredW="77" measuredH="79" zOrder="7" locked="false" isInGroup="-1">
+      <controlProperties>
+        <text/>
+      </controlProperties>
+    </control>
+    <control controlID="36" controlTypeID="com.balsamiq.mockups::SubTitle" x="1329" y="749" w="-1" h="-1" measuredW="109" measuredH="37" zOrder="8" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>28</size>
+        <text>L%E9opard</text>
+      </controlProperties>
+    </control>
+    <control controlID="37" controlTypeID="com.balsamiq.mockups::Paragraph" x="851" y="794" w="601" h="191" measuredW="200" measuredH="80" zOrder="9" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>18</size>
+        <text>%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipisicing%20elit%2C%20sed%20do%20eiusmod%20tempor%20incididunt%20ut%20labore%20et%20dolore%20magna%20aliqua.%20Ut%20enim%20ad%20minim%20veniam%2C%20quis%20nostrud%20exercitation%20ullamco%20laboris%20nisi%20ut%20aliquip%20ex%20ea%20commodo%20consequat.%20Duis%20aute%20irure%20dolor%20in%20reprehenderit%20in%20voluptate%20velit%20esse%20cillum%20dolore%20eu%20fugiat%20nulla%20pariatur.%20Excepteur%20sint%20occaecat%20cupidatat%20non%20proident%2C%20sunt%20in%20culpa%20qui%20officia%20deserunt%20mollit%20anim%20id%20est%20laborum.Lorem%20ipsum%20dolor%20sit%20amet%2C%20consectetur%20adipiscing%20elit.</text>
+      </controlProperties>
+    </control>
+    <control controlID="38" controlTypeID="com.balsamiq.mockups::Link" x="1733" y="92" w="-1" h="-1" measuredW="95" measuredH="26" zOrder="10" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>register%26bm%3Bregister.bmml%26bm%3Bregister.bmml%26bm%3Bregister.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221315%2C85%2C1410%2C111%22%20href%3D%22register.bmml%22%20alt%3D%22register%22%20id%3D%2238%22/%3E</map>
+        <size>18</size>
+        <text>Enregistrer</text>
+      </controlProperties>
+    </control>
+    <control controlID="39" controlTypeID="com.balsamiq.mockups::Link" x="1841" y="92" w="-1" h="-1" measuredW="88" measuredH="26" zOrder="11" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>login%26bm%3Blogin.bmml%26bm%3Blogin.bmml%26bm%3Blogin.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%221423%2C85%2C1511%2C111%22%20href%3D%22login.bmml%22%20alt%3D%22login%22%20id%3D%2239%22/%3E</map>
+        <size>18</size>
+        <text>Connexion</text>
+      </controlProperties>
+    </control>
+    <control controlID="40" controlTypeID="com.balsamiq.mockups::HRule" x="418" y="1154" w="1604" h="-1" measuredW="100" measuredH="10" zOrder="12" locked="false" isInGroup="-1"/>
+    <control controlID="41" controlTypeID="com.balsamiq.mockups::Label" x="1154" y="1195" w="-1" h="-1" measuredW="175" measuredH="33" zOrder="13" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>contact%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml%26bm%3Bcontact.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22736%2C1188%2C911%2C1221%22%20href%3D%22contact.bmml%22%20alt%3D%22contact%22%20id%3D%2241%22/%3E</map>
+        <size>24</size>
+        <text>Contactez-Nous</text>
+      </controlProperties>
+    </control>
+    <control controlID="42" controlTypeID="com.balsamiq.mockups::Label" x="987" y="1195" w="-1" h="-1" measuredW="81" measuredH="33" zOrder="14" locked="false" isInGroup="-1">
+      <controlProperties>
+        <href>index%26bm%3Bindex.bmml%26bm%3Bindex.bmml%26bm%3Bindex.bmml</href>
+        <map>%3Carea%20shape%3D%22rect%22%20coords%3D%22569%2C1188%2C650%2C1221%22%20href%3D%22index.bmml%22%20alt%3D%22index%22%20id%3D%2242%22/%3E</map>
+        <size>24</size>
+        <text>Acceuil</text>
+      </controlProperties>
+    </control>
+    <control controlID="43" controlTypeID="com.balsamiq.mockups::Label" x="1375" y="1195" w="-1" h="-1" measuredW="110" measuredH="33" zOrder="15" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>24</size>
+        <text>Facebook</text>
+      </controlProperties>
+    </control>
+    <control controlID="44" controlTypeID="com.balsamiq.mockups::Label" x="1161" y="1257" w="-1" h="-1" measuredW="117" measuredH="24" zOrder="16" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>%28514%29231-5222</text>
+      </controlProperties>
+    </control>
+    <control controlID="45" controlTypeID="com.balsamiq.mockups::Label" x="1029" y="1289" w="-1" h="-1" measuredW="381" measuredH="24" zOrder="17" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>250%20boulevard%20Fr%E9chette%2C%20J3L%202Z5%20Chambly%2C%20Canada</text>
+      </controlProperties>
+    </control>
+    <control controlID="46" controlTypeID="com.balsamiq.mockups::Label" x="1068" y="1359" w="332" h="18" measuredW="325" measuredH="24" zOrder="18" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>Site%20cr%E9%E9%20par%20Bojan%20Srbinoski%20et%20Saad%20Ahmed</text>
+      </controlProperties>
+    </control>
+    <control controlID="47" controlTypeID="com.balsamiq.mockups::Label" x="1161" y="1320" w="-1" h="-1" measuredW="135" measuredH="24" zOrder="19" locked="false" isInGroup="-1">
+      <controlProperties>
+        <size>16</size>
+        <text>test@hotmail.com</text>
+      </controlProperties>
+    </control>
+    <control controlID="48" controlTypeID="com.balsamiq.mockups::HRule" x="987" y="1224" w="514" h="-1" measuredW="100" measuredH="10" zOrder="20" locked="false" isInGroup="-1"/>
+    <control controlID="49" controlTypeID="com.balsamiq.mockups::HRule" x="987" y="1185" w="514" h="-1" measuredW="100" measuredH="10" zOrder="21" locked="false" isInGroup="-1"/>
+  </controls>
+</mockup>
