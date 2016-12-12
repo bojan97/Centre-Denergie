@@ -1,7 +1,6 @@
 hr{border:solid 1px;}
 nav {
-    border-top: 1px solid black; 
-    border-bottom: 1px solid black;
+	text-align:center;
 }
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
@@ -16,4 +15,22 @@ nav {
   background-color: #c1b42e;
   color:black;
 }
-li a{background-color:#e7d732;color:black;border-left:1px solid black;border-right:1px solid black;}
+
+@font-face{font-family:shanghai;src:url('/CentreDEnergie/Content/shanghai.ttf')}
+li a{
+	background-color:#e7d732;
+	color:black;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	font-family:shanghai;
+	font-weight:bold;
+	font-size:20px;
+	border-top: 1px solid black; 
+    border-bottom: 1px solid black;
+}
+
+ul{
+	list-style:none;
+	display: inline-block;
+}
+

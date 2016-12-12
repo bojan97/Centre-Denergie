@@ -12,6 +12,7 @@
 	<title>Centre d'Énergie de Chambly'</title>
 	<link rel="stylesheet" href="/CentreDEnergie/Content/bootstrap.css">
 	<link rel="stylesheet" href="/CentreDEnergie/Content/layoutCSS.css">
+
 </head>
 <body>
 <div class="container-fluid">
@@ -30,9 +31,7 @@
 				</div>
 			</div>
 			<div class="row">
-				<div class="col-md-4">
-				</div>
-				<nav class="col-md-5">
+				<nav class="col-md-12" style="text-align:center; margin:0 auto">
 					<ul class="nav nav-pills">
 						<li class="active">
 							<a href="/CentreDEnergie/Pages/index.php">Acceuil</a>
@@ -51,8 +50,6 @@
 						</li>
 					</ul>
 				</nav>
-				<div class="col-md-3">
-				</div>
 			</div>
 			<div class="row">
 				<div class="col-md-12">
