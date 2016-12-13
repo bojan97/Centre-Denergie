@@ -1,14 +1,17 @@
-
 body{background-image: url("/CentreDEnergie/Content/website_back.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}
 /*#main{background-image: url("/CentreDEnergie/Content/WebsiteWall.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}*/
 body{background-color:black;}
 hr{border:solid 1px;}/* Make hr bolder */
-#banner{background-image:url("/CentreDEnergie/Content/logotest1.jpg");background-size:85% 100%;background-repeat:no-repeat;height:200px}/*banner image on top of the page */
-/*
+#banner{background-image:url("/CentreDEnergie/Content/logotest2.png");background-size:85% 100%;background-repeat:no-repeat;height:200px}/*banner image on top of the page */
+
 nav {
 	text-align:center;
 }
-*/
+
+#login-links a{text-decoration:none;color:#c1b42e;}
+#login-links a:hover{color:#a31123}
+
+
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
@@ -47,8 +50,11 @@ ul{
 #title{font-family:shanghai;color:#e7d732;letter-spacing:2px}/* the color and font family for the title under the logo */
 
 
-#footer{text-align:center;}
-#contact-bottom{color:#8c8c8c}
+#footer{text-align:center;}/*center all the text at the bottom */
+
+footer a{text-decoration:none;color:#c1b42e;}
+footer a:hover{color:#a31123}
+#contact-bottom{color:#8c8c8c}/* the color of the basic contact info at the bottom */
 
 
 

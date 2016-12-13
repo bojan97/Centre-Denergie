@@ -22,12 +22,12 @@
 		<!--<img src="/CentreDEnergie/Content/logotest1.jpg">-->
 	
 		</div>
-		<div class="col-md-2">
-			 <a class="label label-default">Enregistrer</a><a class="label label-default">Connexion</a>
+		<div class="col-md-2" id="login-links">
+			 <a>Enregistrer</a>&nbsp;&nbsp;<a>Connexion</a>
 		</div>
 	</div>
 	<div class="row">
-		<nav class="col-md-12" style="text-align:center; margin:0 auto">
+		<nav class="col-md-12" >
 			<ul class="nav nav-pills">
 				<li class="active">
 					<a href="/CentreDEnergie/Pages/index.php">Acceuil</a>
@@ -47,6 +47,8 @@
 			</ul>
 		</nav>
 	</div>
+	<!--End of Header-->
+	
 	<div class="row">
 		<div class="col-md-12">
 			<!-- Insert main-->
@@ -55,6 +57,8 @@
 			</div>
 		</div>
 	</div>
+	
+	<!--Beginning of Footer-->
 	<div class="row">
 		<div class="col-md-3">
 		</div>	
@@ -72,7 +76,9 @@
 		</div>
 		<div class="col-md-4"  id="footer">
 			<hr>
-			<a href="/CentreDEnergie/Pages/index.php">Acceuil</a>&nbsp;|&nbsp;<a href="/CentreDEnergie/Pages/contact.php">Contactez-Nous</a>&nbsp;|&nbsp;<a href="https://www.facebook.com/Le-Centre-d%C3%89nergie-de-Chambly-56111876820/">Facebook</a>
+			<div id="bottom-links">
+				<a href="/CentreDEnergie/Pages/index.php">Acceuil</a>&nbsp;|&nbsp;<a href="/CentreDEnergie/Pages/contact.php">Contactez-Nous</a>&nbsp;|&nbsp;<a href="https://www.facebook.com/Le-Centre-d%C3%89nergie-de-Chambly-56111876820/">Facebook</a>
+			</div>
 			<hr>
 			<br>
 			<div id="contact-bottom">
