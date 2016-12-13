@@ -1,0 +1,57 @@
+
+body{background-image: url("/CentreDEnergie/Content/website_back.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}
+/*#main{background-image: url("/CentreDEnergie/Content/WebsiteWall.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}*/
+body{background-color:black;}
+hr{border:solid 1px;}/* Make hr bolder */
+#banner{background-image:url("/CentreDEnergie/Content/logotest1.jpg");background-size:85% 100%;background-repeat:no-repeat;height:200px}/*banner image on top of the page */
+/*
+nav {
+	text-align:center;
+}
+*/
+
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #fff;
+  background-color: #a31123; /*sets the font color to white and the background color to red when the page is on that link */
+
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  text-decoration: none;
+  background-color: #c1b42e; 
+  color:black; /* sets the font color to black and the background color to dark yellow when the link is hovered over */
+}
+
+@font-face{font-family:shanghai;src:url('/CentreDEnergie/Content/shanghai.ttf')}
+li a{
+	background-color:#e7d732;
+	color:black;
+	border-left:1px solid black;
+	border-right:1px solid black;
+	font-family:shanghai;
+	font-weight:bold;
+	font-size:20px;
+	border-top: 1px solid black; 
+    border-bottom: 1px solid black;
+	letter-spacing:1px;/* the default styles for the nav links */
+}
+/*footer{background-color:black;}*/
+ul{
+	list-style:none;
+	display: inline-block;
+}
+
+#title{font-family:shanghai;color:#e7d732;letter-spacing:2px}/* the color and font family for the title under the logo */
+
+
+#footer{text-align:center;}
+#contact-bottom{color:#8c8c8c}
+
+
+
+
+
+
