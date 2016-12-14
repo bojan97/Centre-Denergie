@@ -1,0 +1,10 @@
+.slideshow-images{width:25%;margin:0 auto;}/* control the size of the images in the slideshow */
+.carousel-control.left{width:10%;margin-left:30%}/* reduce the size of the left arrow and bring it closer to the image */
+.carousel-control.right{width:10%;margin-right:30%}/* reduce the size of the right arrow and bring it closer to the image */
+.carousel-indicators{bottom:-12%}/* move the indicators lower */
+.carousel-inner{margin-bottom:50px}/* something that im supposed to add */
+
+
+.post h3{color:white;text-align:center}
+.post img{text-align:center}
+.postContent{margin-left:25%;margin-right:25%}

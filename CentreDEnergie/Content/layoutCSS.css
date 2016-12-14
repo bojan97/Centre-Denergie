@@ -2,7 +2,7 @@ body{background-image: url("/CentreDEnergie/Content/website_back.png");backgroun
 /*#main{background-image: url("/CentreDEnergie/Content/WebsiteWall.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}*/
 body{background-color:black;}
 hr{border:solid 1px;}/* Make hr bolder */
-#banner{background-image:url("/CentreDEnergie/Content/logotest2.png");background-size:85% 100%;background-repeat:no-repeat;height:200px}/*banner image on top of the page */
+#banner{background-image:url("/CentreDEnergie/Content/logo.png");background-size:85% 100%;background-repeat:no-repeat;height:200px}/*banner image on top of the page */
 
 nav {
 	text-align:center;
