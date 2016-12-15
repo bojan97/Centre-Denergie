@@ -1,0 +1,91 @@
+h3, p{
+	color: white;
+}
+
+h3{
+	font-family:shanghai;
+	letter-spacing: 1px;
+	color: #e7d732;
+}
+#tiger_img{	/*Controls for The tiger image*/
+	float:left;
+	margin-right: 2%;
+    width: 50%; /*Width and height with 50% make the img smaller*/
+	height: 50%;
+}
+
+#tiger{	/*Controls for The tiger text*/
+	word-wrap:break-word;
+	text-align:justify;
+	margin-left: 25%;
+	margin-right: 25%;
+	clear:both;
+}
+
+#monkey_img{
+	float:right;
+	padding-top:2%;
+	margin-left: 2%;
+    width: 50%;
+	height: 50%;
+}
+
+#monkey{
+	word-wrap:break-word;
+	text-align:justify;
+	padding-top:2%;
+	margin-left: 25%;
+	margin-right: 25%;
+	clear:both;
+}
+
+#snake_img{
+	float:left;
+	padding-top:2%;
+	margin-right: 2%;
+    width: 50%;
+	height: 50%;
+}
+
+#snake{
+	word-wrap:break-word;
+	text-align:justify;
+	padding-top:2%;
+	margin-left: 25%;
+	margin-right: 25%;
+	clear:both;
+}
+
+#crane_img{
+	float:right;
+	padding-top:2%;
+	margin-left: 2%;
+    width: 50%;
+	height: 50%;
+}
+
+#crane{
+	word-wrap:break-word;
+	text-align:justify;
+	padding-top:2%;
+	margin-left: 25%;
+	margin-right: 25%;
+	clear:both;
+}
+
+#leopard_img{
+	float:left;
+	padding-top:2%;
+	margin-right: 2%;
+    width: 50%;
+	height: 50%;
+}
+
+#leopard{
+	word-wrap:break-word;
+	text-align:justify;
+	padding-top:2%;
+	margin-left: 25%;
+	margin-right: 25%;
+	clear:both;
+}
