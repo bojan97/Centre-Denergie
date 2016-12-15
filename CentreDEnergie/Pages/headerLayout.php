@@ -15,7 +15,6 @@
 	} 
 	else if(strpos($url,'styles') !== false)
 	{
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/stylesCSS.css'>";
 		$currentPage="styles";
 	}
 	else if(strpos($url,'cours') !== false)
