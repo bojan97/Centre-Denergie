@@ -48,7 +48,7 @@ include("headerLayout.php");
 			
 			<div id="leopard">
 				<img src="/CentreDEnergie/Content/leopard.jpg" alt="Leopard" id="leopard_img" width="640" height="426">
-				<h3>Leopard</h3>
+				<h3>Léopard</h3>
 				<p>
 					Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vitae cursus nibh. Donec sit amet nisl ut nisi pretium dictum. Phasellus pharetra magna in nisl accumsan dapibus et eget quam. 
 					Maecenas elementum faucibus ornare. Proin non scelerisque mi. Aliquam ornare scelerisque erat, ac sodales erat vehicula eget. 
