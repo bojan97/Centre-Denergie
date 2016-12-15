@@ -24,13 +24,13 @@ include("headerLayout.php");
       <img class="slideshow-images"src="/CentreDEnergie/Content/img1.png" >
     </div>
 
-    <div class="item">
+    <!--<div class="item">
       <img class="slideshow-images"src="/CentreDEnergie/Content/img2.png">
-    </div>
+    </div>-->
 
-    <div class="item">
+    <!--<div class="item">
       <img class="slideshow-images"src="/CentreDEnergie/Content/img3.png" >
-    </div>
+    </div>-->
   </div>
 
   <!-- Left and right controls -->
@@ -43,14 +43,9 @@ include("headerLayout.php");
     <span class="sr-only">Next</span>
   </a>
 </div>
-</div>
-</div>
-</div>
-
 <div class="post">
-	<h3>Bienvenue!</h3>
-	<img>
-	<br>
+	<h2>Bienvenue!</h2>
+	<img src="/CentreDEnergie/Content/img2.png">
 	<p class="postContent">Bienvenue sur mon site! Vous pouvez naviguer à travers les pages de styles de combat ou du cours pour plus d'informations sur le programme offert. 
 		Vous pouvez aussi
 		créer un compte gratuitement et utiliser la salle de dicussion pour des questions reliées au matériel du cours. De plus, vous pouvez consultez votre profil 
@@ -58,6 +53,22 @@ include("headerLayout.php");
 		les techniques nécessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".
 	</p>
 </div>
+<br>
+<div class="post">
+	<h2>Bienvenue!</h2>
+	<img>
+	<p class="postContent">Bienvenue sur mon site! Vous pouvez naviguer à travers les pages de styles de combat ou du cours pour plus d'informations sur le programme offert. 
+		Vous pouvez aussi
+		créer un compte gratuitement et utiliser la salle de dicussion pour des questions reliées au matériel du cours. De plus, vous pouvez consultez votre profil 
+		pour une liste de tous
+		les techniques nécessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".
+	</p>
+</div>
+</div>
+</div>
+</div>
+
+
 	
 	
 	
