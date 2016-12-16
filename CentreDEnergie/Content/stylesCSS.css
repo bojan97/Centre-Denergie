@@ -1,8 +1,7 @@
-h3, p{
-	color: white;
-}
 
-h3{
+p{font-size:18px;color:rgb(220,220,220);font-family:Comic Sans MS}
+
+h2{
 	font-family:shanghai;
 	letter-spacing: 1px;
 	color: #e7d732;
