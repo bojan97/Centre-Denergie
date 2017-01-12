@@ -1,0 +1,11 @@
+.post h2{color:e7d732;text-align:center;font-family:shanghai;letter-spacing:2px}/*title*/
+.postContent{margin-right:1%;color:black;line-height:25px;text-align:justify;font-size:17px;font-family:Comic Sans MS}/*text inside the box*/
+.post{border:1px solid white;border-radius:25px;margin-left:24%;margin-right:24%;word-wrap:break-word;background-color: rgba(105,105,105,.5);}/*the box itself*/
+
+
+#tareaBorder{color:black;}
+
+textarea{width:80%;margin-top:-20px;background:transparent;color:white;font-size:20px;border:none;padding-left:0px;padding-top:0px;padding-bottom:40px;resize:none}
+
+#button{float:right;width:20%;margin-top:-20px;margin-right:-1px;padding-top:30px;padding-bottom:38px;background:transparent;color:white;font-size:23px;border-style:none;border-left:solid black}
+

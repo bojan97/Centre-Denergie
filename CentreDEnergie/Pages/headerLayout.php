@@ -5,6 +5,7 @@
 	<title>Centre d'Énergie de Chambly'</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/CentreDEnergie/Content/layoutCSS.css">
+	<link rel="icon" href="/CentreDEnergie/Content/favicon.ico" />
 <?php
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$currentPage="index";
@@ -20,14 +21,17 @@
 	}
 	else if(strpos($url,'cours') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/coursCSS.css'>";
 		$currentPage="cours";
 	}
 	else if(strpos($url,'salle') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/salleCSS.css'>";
 		$currentPage="salle";
 	}
 	else if(strpos($url,'contact') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/contactCSS.css'>";
 		$currentPage="contact";
 	}
 	
