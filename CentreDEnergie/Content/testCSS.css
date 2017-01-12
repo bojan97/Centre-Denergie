@@ -56,23 +56,9 @@ footer a{text-decoration:none;color:#c1b42e;}
 footer a:hover{color:#a31123}
 #contact-bottom{color:#8c8c8c}/* the color of the basic contact info at the bottom */
 
-/*Laptop Size*/
-@media screen and (min-width: 768px) and (max-width: 1024px) {
-	li a{
-		font-size:14px;
-	}
-}
+	p{color:white;}
 /*Tablet Size*/
-@media screen and (min-width: 620px) and (max-width: 767px) {
-	ul{margin-left:25%;margin-right:10%;}
-	li a{
-		font-size:12px;
-	}
-}
-/*Mini-Tablet Size*/
-@media screen and (min-width: 425px) and (max-width: 619px) {
-	ul{margin-left:15%;margin-right:20px;}
-	li a{
-		font-size:12px;
-	}
+@media screen and (min-width: 425px) and (max-width: 1000px) {
+	p{color:yellow;}
+    #banner{background-image:url("/CentreDEnergie/Content/logo.png");background-size:85% 100%;background-repeat:no-repeat;height:50px}/*banner image on top of the page */
 }
