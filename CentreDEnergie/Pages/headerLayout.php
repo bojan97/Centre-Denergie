@@ -21,14 +21,17 @@
 	}
 	else if(strpos($url,'cours') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/coursCSS.css'>";
 		$currentPage="cours";
 	}
 	else if(strpos($url,'salle') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/salleCSS.css'>";
 		$currentPage="salle";
 	}
 	else if(strpos($url,'contact') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/contactCSS.css'>";
 		$currentPage="contact";
 	}
 	
