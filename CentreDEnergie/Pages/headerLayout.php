@@ -2,6 +2,7 @@
 <html>
 <head>
 	<meta charset="utf-8">
+	<meta name= "viewport" content="width=device-width,initial-scale=1.0">
 	<title>Centre d'Énergie de Chambly'</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/CentreDEnergie/Content/layoutCSS.css">
@@ -21,14 +22,17 @@
 	}
 	else if(strpos($url,'cours') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/coursCSS.css'>";
 		$currentPage="cours";
 	}
 	else if(strpos($url,'salle') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/salleCSS.css'>";
 		$currentPage="salle";
 	}
 	else if(strpos($url,'contact') !== false)
 	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/contactCSS.css'>";
 		$currentPage="contact";
 	}
 	
@@ -43,7 +47,6 @@
 <body>
 <div class="container-fluid">
 	<div class="row">
-	<div class="col-md-3"></div>
 		<div class="col-md-7" id="banner">
 	
 		</div>

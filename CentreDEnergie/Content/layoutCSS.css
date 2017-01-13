@@ -2,7 +2,7 @@ body{background-image: url("/CentreDEnergie/Content/website_back.png");backgroun
 /*#main{background-image: url("/CentreDEnergie/Content/WebsiteWall.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}*/
 body{background-color:black;}
 hr{border:solid 1px;}/* Make hr bolder */
-#banner{background-image:url("/CentreDEnergie/Content/logo.png");background-size:85% 100%;background-repeat:no-repeat;height:200px}/*banner image on top of the page */
+#banner{background-image:url("/CentreDEnergie/Content/logo.png");margin-left:25%;float:left;background-size:85% 100%;background-repeat:no-repeat;height:200px;}/*banner image on top of the page */
 
 nav {
 	text-align:center;
@@ -32,7 +32,7 @@ nav {
 li a{
 	background-color:#e7d732;
 	color:black;
-	border-left:1px solid black;
+	border-left:1px solid black;0
 	border-right:1px solid black;
 	font-family:shanghai;
 	font-weight:bold;
@@ -58,6 +58,58 @@ footer a:hover{color:#a31123}
 
 
 
+/*=================*/
+/*||-Laptop Size-||*/
+/*=================*/
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+	li a{
+		font-size:14px;
+	}
+	
+	#banner{margin-left:20%;width:60%;background-size:100% 100%;}/*banner image on top of the page */
+	#login-links{
+		float:left;
+		font-size:12px;
+	}
+}
+
+/*=================*/
+/*||-Tablet Size-||*/
+/*=================*/
+@media screen and (min-width: 586px) and (max-width: 799px) {
+	.nav li a {
+		padding: 5px 5px; /* it makes the box around the links smaller*/
+		font-size:12px;
+	}
+	
+	#banner{margin-left:15%;width:75%;background-size:100% 100%;}/*banner image on top of the page */
+	#login-links{
+		float:left;
+		font-size:12px;
+		margin-left:39%;
+	}
+}
+/*================*/
+/*||-Phone Size-||*/
+/*================*/
+@media screen and (max-width: 585px) {
+	.nav-pills li {
+	  float: none; /*it makes the links one under the others*/
+	}
+	
+	#banner{visibility:hidden;}/*banner image on top of the page */
+}
 
 
 
+/*Mini-Tablet Size*/
+/*@media screen and (min-width: 500px) and (max-width: 566px) {
+	nav{
+		margin-left:20%;
+		margin-right:5%;
+	}
+	.nav li a {
+		padding: 5px 5px;
+		font-size:12px;
+	}
+}*/
