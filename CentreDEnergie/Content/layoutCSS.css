@@ -63,16 +63,26 @@ footer a:hover{color:#a31123}
 	}
 }
 /*Tablet Size*/
-@media screen and (min-width: 620px) and (max-width: 767px) {
-	ul{margin-left:25%;margin-right:10%;}
-	li a{
+@media screen and (min-width: 567px) and (max-width: 767px) {
+	.nav li a {
+		padding: 5px 5px;
 		font-size:12px;
 	}
 }
 /*Mini-Tablet Size*/
-@media screen and (min-width: 425px) and (max-width: 619px) {
-	ul{margin-left:15%;margin-right:20px;}
-	li a{
+/*@media screen and (min-width: 500px) and (max-width: 566px) {
+	nav{
+		margin-left:20%;
+		margin-right:5%;
+	}
+	.nav li a {
+		padding: 5px 5px;
 		font-size:12px;
+	}
+}*/
+/*Phone Size*/
+@media screen and (max-width: 566px) {
+	.nav-pills li {
+	  float: none;
 	}
 }
