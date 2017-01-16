@@ -88,3 +88,60 @@ h2{
 	margin-right: 25%;
 	clear:both;
 }
+
+/*================*/
+/*||-Phone Size-||*/
+/*================*/
+@media screen and (max-width: 585px){
+	#tiger{
+		margin-left:1px;
+		margin-right:1px;
+	}
+	#tiger_img{	/*Controls for The tiger image*/
+		width: 100%; /*Width and height with 50% make the img smaller*/
+		height: 100%;
+	}
+	#monkey_img{
+		width: 100%; /*Width and height with 50% make the img smaller*/
+		height: 100%;
+	}
+
+	#monkey{
+		margin-left:1px;
+		margin-right:1px;
+	}
+
+	#snake_img{
+		width: 100%; /*Width and height with 50% make the img smaller*/
+		height: 100%;
+	}
+
+	#snake{
+		margin-left:1px;
+		margin-right:1px;
+	}
+
+	#crane_img{
+		width: 100%; /*Width and height with 50% make the img smaller*/
+		height: 100%;
+	}
+
+	#crane{
+		margin-left:1px;
+		margin-right:1px;
+	}
+
+	#leopard_img{
+		width: 100%; /*Width and height with 50% make the img smaller*/
+		height: 100%;
+	}
+
+	#leopard{
+		margin-left:1px;
+		margin-right:1px;
+	}
+	
+	h2{
+		text-align:center;
+	}
+}

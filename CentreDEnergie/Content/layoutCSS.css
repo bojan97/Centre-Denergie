@@ -1,24 +1,45 @@
-body{background-image: url("/CentreDEnergie/Content/website_back.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}
-/*#main{background-image: url("/CentreDEnergie/Content/WebsiteWall.png");background-size:100% 100%;background-repeat:no-repeat;background-attachment:fixed;}*/
-body{background-color:black;}
-hr{border:solid 1px;}/* Make hr bolder */
-#banner{background-image:url("/CentreDEnergie/Content/logo.png");margin-left:25%;float:left;background-size:85% 100%;background-repeat:no-repeat;height:200px;}/*banner image on top of the page */
+body{
+	background-image: url("/CentreDEnergie/Content/website_back.png");
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+	background-color:black;
+}
+/*#main{
+	background-image: url("/CentreDEnergie/Content/WebsiteWall.png");
+	background-size:100% 100%;
+	background-repeat:no-repeat;
+	background-attachment:fixed;
+}
+body{background-color:black;}*/
+hr{
+	border:solid 1px;/* Make hr bolder */
+}
+#banner{/*banner image on top of the page */
+	background-image:url("/CentreDEnergie/Content/logo.png");
+	margin-left:25%;float:left;
+	background-size:85% 100%;
+	background-repeat:no-repeat
+	;height:200px;
+	}
 
 nav {
 	text-align:center;
 }
 
-#login-links a{text-decoration:none;color:#c1b42e;}
-#login-links a:hover{color:#a31123}
-
-
+#login-links a{
+	text-decoration:none;
+	color:#c1b42e;
+}
+#login-links a:hover{
+	color:#a31123
+}
 
 .nav-pills > li.active > a,
 .nav-pills > li.active > a:hover,
 .nav-pills > li.active > a:focus {
   color: #fff;
   background-color: #a31123; /*sets the font color to white and the background color to red when the page is on that link */
-
 }
 
 .nav > li > a:hover,
@@ -28,7 +49,11 @@ nav {
   color:black; /* sets the font color to black and the background color to dark yellow when the link is hovered over */
 }
 
-@font-face{font-family:shanghai;src:url('/CentreDEnergie/Content/shanghai.ttf')}
+@font-face{
+	font-family:shanghai;
+	src:url('/CentreDEnergie/Content/shanghai.ttf')
+}
+
 li a{
 	background-color:#e7d732;
 	color:black;
@@ -47,16 +72,33 @@ ul{
 	display: inline-block;
 }
 
-#title{font-family:shanghai;color:#e7d732;letter-spacing:2px}/* the color and font family for the title under the logo */
+#title{
+	font-family:shanghai;
+	color:#e7d732;
+	letter-spacing:2px;
+	display:none;
+	text-align:center;
+}/* the color and font family for the title under the logo */
 
 
-#footer{text-align:center;}/*center all the text at the bottom */
+#footer{
+	text-align:center;/*center all the text at the bottom */
+}
 
-footer a{text-decoration:none;color:#c1b42e;}
-footer a:hover{color:#a31123}
-#contact-bottom{color:#8c8c8c}/* the color of the basic contact info at the bottom */
+footer a{
+	text-decoration:none;
+	color:#c1b42e;
+}
+footer a:hover{
+	color:#a31123;
+}
+#contact-bottom{
+	color:#8c8c8c;/* the color of the basic contact info at the bottom */
+}
 
-
+#brbr{
+	display:none;
+}
 
 /*=================*/
 /*||-Laptop Size-||*/
@@ -66,7 +108,12 @@ footer a:hover{color:#a31123}
 		font-size:14px;
 	}
 	
-	#banner{margin-left:20%;width:60%;background-size:100% 100%;}/*banner image on top of the page */
+	#banner{
+		margin-left:20%;
+		width:60%;
+		background-size:100% 100%;
+	}/*banner image on top of the page */
+	
 	#login-links{
 		float:left;
 		font-size:12px;
@@ -82,11 +129,19 @@ footer a:hover{color:#a31123}
 		font-size:12px;
 	}
 	
-	#banner{margin-left:15%;width:75%;background-size:100% 100%;}/*banner image on top of the page */
+	#banner{
+		margin-left:15%;
+		width:75%;
+		background-size:100% 100%;
+	}/*banner image on top of the page */
+	
 	#login-links{
 		float:left;
 		font-size:12px;
-		margin-left:39%;
+		margin-left:-5.87%;
+	}
+	#brbr{
+		display:inline;
 	}
 }
 /*================*/
@@ -96,8 +151,21 @@ footer a:hover{color:#a31123}
 	.nav-pills li {
 	  float: none; /*it makes the links one under the others*/
 	}
+	#title{
+		display:inline;
+	} /* it makes the #title appear*/
 	
-	#banner{visibility:hidden;}/*banner image on top of the page */
+	#banner{
+		display:none;
+	}/*it removes the banner*/
+	
+	#login-links{
+		text-align:center;
+	}
+	body{
+		background-image:none;
+	}
+	
 }
 
 

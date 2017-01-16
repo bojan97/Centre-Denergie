@@ -35,8 +35,16 @@
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/contactCSS.css'>";
 		$currentPage="contact";
 	}
-	
-	
+	else if(strpos($url,'enregistrer') !== false)
+	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/enregistrerCSS.css'>";
+		$currentPage="enregistrer";
+	}
+	else if(strpos($url,'connexion') !== false)
+	{
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/connexionCSS.css'>";
+		$currentPage="connexion";
+	}
 	
 	
 ?>
@@ -50,8 +58,13 @@
 		<div class="col-md-7" id="banner">
 	
 		</div>
+		<div class="col-md-2">
+		</div>
 		<div class="col-md-2" id="login-links">
-			 <a>Enregistrer</a>&nbsp;&nbsp;<a>Connexion</a>
+			 <a href="/CentreDEnergie/Pages/enregistrer.php">Enregistrer</a>&nbsp;&nbsp;<div id="brbr"><br></div><a href="/CentreDEnergie/Pages/connexion.php">Connexion</a>
+		</div>
+		<div class="col-md-1" id="title">
+			<h1>Le Centre d'Energie de Chambly</h1>
 		</div>
 	</div>
 	<div class="row">
