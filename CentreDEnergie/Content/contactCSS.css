@@ -1,0 +1,14 @@
+textarea{resize:none;}
+
+h2{color:#a31123}/*sets the header message to red*/
+p{color:#FFFFFF}/*sets the page text to white*/
+input{color:black}/*font color inside the email field */
+
+#email{width:37%}
+
+#message{width:80%}
+
+.btn-danger{background-color:#b91327}/*background color of the submit button */
+.btn-danger:hover{background-color:#a31123}/*background color of the submit button when hovered over*/
+
+#coord{text-align:center;}
