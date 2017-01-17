@@ -1,6 +1,6 @@
 textarea{resize:none;}
 
-h2{color:#a31123}/*sets the header message to red*/
+h2{color:#f50000;font-family:shanghai;letter-spacing:2px}/*sets the header message to red*/
 p{color:#FFFFFF}/*sets the page text to white*/
 input{color:black}/*font color inside the email field */
 

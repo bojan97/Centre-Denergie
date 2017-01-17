@@ -89,6 +89,70 @@ h2{
 	clear:both;
 }
 
+/*=================*/
+/*||-Laptop Size-||*/
+/*=================*/
+@media screen and (min-width: 800px) and (max-width: 1024px){
+	p{
+		clear:both;
+	}
+	#tiger_img{	/*Controls for The tiger image*/
+		width: 100%; 
+	}
+	#monkey_img{
+		width: 100%; 
+	}
+
+	#snake_img{
+		width: 100%; 
+	}
+
+	#crane_img{
+		width: 100%; 
+	}
+	
+	#leopard_img{
+		width: 100%;
+	}
+	
+	h2{
+		clear:both;
+		text-align:center;
+	}
+}
+
+/*=================*/
+/*||-Tablet Size-||*/
+/*=================*/
+@media screen and (min-width: 586px) and (max-width: 799px){
+	p{
+		clear:both;
+	}
+	#tiger_img{	/*Controls for The tiger image*/
+		width: 100%; 
+	}
+	#monkey_img{
+		width: 100%; 
+	}
+
+	#snake_img{
+		width: 100%; 
+	}
+
+	#crane_img{
+		width: 100%; 
+	}
+	
+	#leopard_img{
+		width: 100%;
+	}
+	
+	h2{
+		clear:both;
+		text-align:center;
+	}
+}
+
 /*================*/
 /*||-Phone Size-||*/
 /*================*/

@@ -1,0 +1,28 @@
+#login-links{color:blue}
+
+
+h2{color:#f50000;font-family:shanghai;letter-spacing:2px;text-align:center;}
+
+label{
+    display: inline-block;
+    float: left;
+    clear: left;
+    width: 44%;/*Move the labels left be decreasing the value or right by increasing the value*/
+    text-align: right;
+	padding-right:2%;/*Put spaces between the label and the input box*/
+	color:#FFFFFF;/*Font color for the label*/
+	font-family:Arial;
+}
+input {
+  display: inline-block;
+  float: left;
+  margin-bottom:5%;/*Put spaces between the input boxes*/
+}
+/*the code abve that isn't commented is used to align the labels and textboxes*/
+
+form{margin-top:7%;text-align:center}/*move the form lower*/
+
+#username, #password{width:40%;height:70%}/*Set the width and height of the input boxes*/
+
+.btn-danger{background-color:#b91327;margin-left:53%}/*background color of the submit button and alignment of the button*/
+.btn-danger:hover{background-color:#a31123}/*background color of the submit button when hovered over*/

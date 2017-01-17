@@ -132,13 +132,13 @@ footer a:hover{
 	#banner{
 		margin-left:15%;
 		width:75%;
-		background-size:100% 100%;
+		background-size:95% 100%;
 	}/*banner image on top of the page */
 	
 	#login-links{
 		float:left;
 		font-size:12px;
-		margin-left:-5.87%;
+		margin-left:-7%;
 	}
 	#brbr{
 		display:inline;
