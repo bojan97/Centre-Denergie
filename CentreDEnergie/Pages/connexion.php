@@ -19,7 +19,7 @@ include("headerLayout.php");
 	<label for="password">Mot de Passe: </label>
 	<input type="password" name="password" class="form-control"  id="password" required="required">
 	<br>
-	<input type="submit" class="btn btn-danger" value="Connexion" required="required">
+	<input type="submit" class="btn btn-danger" value="Connexion">
 	</form>
 	</div>
 	<div class="col-md-4"></div>

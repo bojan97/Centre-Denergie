@@ -6,9 +6,7 @@ include("headerLayout.php");
 
 ?>
 
-<div class="row">
-	<div class="col-md-3"></div>
-	<div class="col-md-5">
+<div class="row" id="message_Post">
 		<h2>Laissez un Message</h2>
 		<p>Si vous avez des questions, vous pouvez nous envoyer un message par courriel</p>
 		<br>
@@ -21,22 +19,14 @@ include("headerLayout.php");
 		<br>
 		<input type="submit" class="btn btn-danger" value="Envoyer">
 		</form>
-	</div>
-	<div class="col-md-4"></div>
 </div>
 <br>
 <div class="row" id="coord">
-<div class="col-md-4"></div>
-<div class="col-md-4">
 	<h2>Nos Coordonnées</h2>
 	<p>(514)231-5222<br>
 	   250 boulevard Fréchette, J3L 2Z5 Chambly, Canada<br>
 	   test@hotmail.com
 	</p>
-</div>
-<div class="col-md-4"></div>
-
-
 </div>
 
 

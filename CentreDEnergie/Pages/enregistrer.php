@@ -33,7 +33,7 @@ $(document).ready(function(){
 	<label for="lname">Nom: </label>
 	<input type="text" name="lname" class="form-control"  id="lname" required="required">
 	<br>
-	<input type="submit" class="btn btn-danger" value="Enregistrer" required="required">
+	<input type="submit" class="btn btn-danger" value="Enregistrer">
 	</form>
 	</div>
 	<div class="col-md-4"></div>

@@ -4,11 +4,37 @@ h2{color:#f50000;font-family:shanghai;letter-spacing:2px}/*sets the header messa
 p{color:#FFFFFF}/*sets the page text to white*/
 input{color:black}/*font color inside the email field */
 
-#email{width:37%}
+#email{width:50%}
 
-#message{width:80%}
+/*#message{width:80%}*/
 
 .btn-danger{background-color:#b91327}/*background color of the submit button */
 .btn-danger:hover{background-color:#a31123}/*background color of the submit button when hovered over*/
 
 #coord{text-align:center;}
+
+#message_Post{
+	margin-left:25%;
+	margin-right:25%;
+}
+
+/*=================*/
+/*||-Tablet Size-||*/
+/*=================*/
+@media screen and (min-width: 586px) and (max-width: 799px) {
+	#email{
+		width:75%;
+	}
+}
+/*================*/
+/*||-Phone Size-||*/
+/*================*/
+@media screen and (max-width: 585px) {
+	#email{
+		width:290px;
+	}
+	#message_Post{
+		margin-left:0%;
+		margin-right:0%;
+	}
+}

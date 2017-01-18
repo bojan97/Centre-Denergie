@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name= "viewport" content="width=device-width,initial-scale=1.0">
-	<title>Centre d'Énergie de Chambly'</title>
+	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 	<link rel="stylesheet" href="/CentreDEnergie/Content/layoutCSS.css">
 	<link rel="icon" href="/CentreDEnergie/Content/favicon.ico" />
@@ -12,38 +12,57 @@
 	$currentPage="index";
 	if (strpos($url,'index') !== false||strcmp($_SERVER['REQUEST_URI'],'/CentreDEnergie/Pages/')==0) 
 	{
+		echo "<title>Centre d'Énergie Michel Sylvain</title>";
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/indexCSS.css'>";
 		$currentPage="index";
 	} 
 	else if(strpos($url,'styles') !== false)
 	{
+		echo "<title>Styles de Combat</title>";
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/stylesCSS.css'>";
 		$currentPage="styles";
 	}
 	else if(strpos($url,'cours') !== false)
 	{
+		echo "<title>Le Cours</title>";
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/coursCSS.css'>";
 		$currentPage="cours";
 	}
 	else if(strpos($url,'salle') !== false)
 	{
+		echo "<title>Salle de Discussion</title>";
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/salleCSS.css'>";
 		$currentPage="salle";
 	}
 	else if(strpos($url,'contact') !== false)
 	{
+		echo "<title>Contactez-nous</title>";
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/contactCSS.css'>";
 		$currentPage="contact";
 	}
 	else if(strpos($url,'enregistrer') !== false)
 	{
+		echo "<title>Enregistrement</title>";
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/enregistrerCSS.css'>";
 		$currentPage="enregistrer";
 	}
 	else if(strpos($url,'connexion') !== false)
 	{
+		echo "<title>Connexion</title>";
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/connexionCSS.css'>";
 		$currentPage="connexion";
+	}
+	else if(strpos($url,'profil') !== false)
+	{
+		echo "<title>Mon Profil</title>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/profilCSS.css'>";
+		$currentPage="profil";
+	}
+	else if(strpos($url,'techniques') !== false)
+	{
+		echo "<title>Techniques</title>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/techniquesCSS.css'>";
+		$currentPage="techniques";
 	}
 	
 	
