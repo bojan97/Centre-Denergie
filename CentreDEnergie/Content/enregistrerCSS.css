@@ -10,7 +10,7 @@ label {
 	display: inline-block;
 	float: left;
 	clear: left;
-	width: 44%;
+	width: 40%;
 	/*Move the labels left be decreasing the value or right by increasing the value*/
 	text-align: right;
 	padding-right: 2%;
@@ -22,20 +22,19 @@ label {
 input {
 	display: inline-block;
 	float: left;
-	margin-bottom: 5%;
 	/*Put spaces between the input boxes*/
 }
 
 /*the code abve that isn't commented is used to align the labels and textboxes*/
 
 form {
-	margin-top: 7%;
+	margin-top: 4%;
 }
 
 /*move the form lower*/
 
 #username, #password, #rpassword, #fname, #lname {
-	width: 30%;
+	width: 20%;
 }
 
 /*Set the width and height of the input boxes*/
@@ -54,54 +53,37 @@ form {
 /*background color of the submit button when hovered over*/
 
 #usernameTip {
-	margin-top: 1%;
 	margin-left: 10px;
 	width: 12px;
 	height: 12px;
-}
-
-/*the tooltip for the username*/
+}/*the tooltip for the username*/
 
 #passwordTip {
-	margin-top: 4%;
 	margin-left: 10px;
 	width: 12px;
 	height: 12px;
-}
-
-/*the tooltip for the password*/
+}/*the tooltip for the password*/
 
 #nameTip {
-	margin-top: 11%;
 	margin-left: 10px;
 	width: 12px;
 	height: 12px;
-}
-
-/*the tooltip for the name*/
+}/*the tooltip for the name*/
 
 span {
 	color: #e7d732;
+	margin-top:10px;
 }
 
+#div_RPassword{
+	margin-bottom:10px;
+}
 /*=================*/
 /*||-Tablet Size-||*/
 /*=================*/
 @media screen and (min-width: 586px) and (max-width: 799px) {
-	#usernameTip {
-		margin-top: 1%;
-	}
-
-	/*the tooltip for the username*/
-
-	#passwordTip {
-		margin-top: 5%;
-	}
-
-	/*the tooltip for the password*/
-
-	#nameTip {
-		margin-top: 11%;
+	#username, #password, #rpassword, #fname, #lname {
+		width: 30%;
 	}
 }
 
@@ -111,20 +93,5 @@ span {
 @media screen and (max-width: 585px) {
 	#username, #password, #rpassword, #fname, #lname {
 		width: 45%;
-	}
-	#usernameTip {
-		margin-top: 1%;
-	}
-
-	/*the tooltip for the username*/
-
-	#passwordTip {
-		margin-top: 5%;
-	}
-
-	/*the tooltip for the password*/
-
-	#nameTip {
-		margin-top: 12%;
 	}
 }
