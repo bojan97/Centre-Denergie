@@ -25,8 +25,11 @@ $(document).ready(function(){
 			<span id="passwordTip" class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="insert password requirements here"></span>
 		</div>
 		<br>
-		<label for="rpassword">Répétez Mot de Passe: </label>
-		<input type="password" name="rpassword" class="form-control"  id="rpassword" required="required">
+		<div id="div_RPassword">
+			<label for="rpassword">Répétez Mot de Passe: </label>
+			<input type="password" name="rpassword" class="form-control"  id="rpassword" required="required">
+			<br>
+		</div>
 		<br>
 		<div id="div_Name">
 			<label for="fname">Prénom: </label>
@@ -34,9 +37,12 @@ $(document).ready(function(){
 			<span id="nameTip" class="glyphicon glyphicon-question-sign" data-toggle="tooltip" data-placement="right" title="Votre nom ne sera pas visible publiquement"></span>
 		</div>
 		<br>
-		<label for="lname">Nom: </label>
-		<input type="text" name="lname" class="form-control"  id="lname" required="required">
-		<br>
+		<div>
+			<label for="lname">Nom: </label>
+			<input type="text" name="lname" class="form-control"  id="lname" required="required">
+			<br>
+		</div>
+		<br><br>
 		<input type="submit" class="btn btn-danger" value="Enregistrer">
 	</form>
 </div>
