@@ -5,7 +5,7 @@
 	<meta name= "viewport" content="width=device-width,initial-scale=1.0">
 	
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-	<link rel="stylesheet" href="/CentreDEnergie/Content/layoutCSS.css">
+	<link rel="stylesheet" href="/CentreDEnergie/Content/CSSlayout.css">
 	<link rel="icon" href="/CentreDEnergie/Content/favicon.ico" />
 <?php
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
@@ -13,55 +13,55 @@
 	if (strpos($url,'index') !== false||strcmp($_SERVER['REQUEST_URI'],'/CentreDEnergie/Pages/')==0) 
 	{
 		echo "<title>Centre d'Énergie Michel Sylvain</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/indexCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSindex.css'>";
 		$currentPage="index";
 	} 
 	else if(strpos($url,'styles') !== false)
 	{
 		echo "<title>Styles de Combat</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/stylesCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSstyles.css'>";
 		$currentPage="styles";
 	}
 	else if(strpos($url,'cours') !== false)
 	{
 		echo "<title>Le Cours</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/coursCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSScours.css'>";
 		$currentPage="cours";
 	}
 	else if(strpos($url,'salle') !== false)
 	{
 		echo "<title>Salle de Discussion</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/salleCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSsalle.css'>";
 		$currentPage="salle";
 	}
 	else if(strpos($url,'contact') !== false)
 	{
 		echo "<title>Contactez-nous</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/contactCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSScontact.css'>";
 		$currentPage="contact";
 	}
 	else if(strpos($url,'enregistrer') !== false)
 	{
 		echo "<title>Enregistrement</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/enregistrerCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSenregistrer.css'>";
 		$currentPage="enregistrer";
 	}
 	else if(strpos($url,'connexion') !== false)
 	{
 		echo "<title>Connexion</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/connexionCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSconnexion.css'>";
 		$currentPage="connexion";
 	}
 	else if(strpos($url,'profil') !== false)
 	{
 		echo "<title>Mon Profil</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/profilCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSprofil.css'>";
 		$currentPage="profil";
 	}
 	else if(strpos($url,'techniques') !== false)
 	{
 		echo "<title>Techniques</title>";
-		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/techniquesCSS.css'>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSStechniques.css'>";
 		$currentPage="techniques";
 	}
 	
