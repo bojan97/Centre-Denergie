@@ -1,26 +1,61 @@
+h2 {
+	color: #f50000;
+	font-family: shanghai;
+	letter-spacing: 2px;
+	text-align: center;
+}
 
-h2{color:#f50000;font-family:shanghai;letter-spacing:2px;text-align:center;}
-
-label{
-    display: inline-block;
-    float: left;
-    clear: left;
-    width: 44%;/*Move the labels left be decreasing the value or right by increasing the value*/
-    text-align: right;
-	padding-right:2%;/*Put spaces between the label and the input box*/
-	color:#FFFFFF;/*Font color for the label*/
-	font-family:Arial;
+label {
+	display: inline-block;
+	float: left;
+	clear: left;
+	width: 40%;/*Move the labels left be decreasing the value or right by increasing the value*/
+	text-align: right;
+	padding-right: 2%;/*Put spaces between the label and the input box*/
+	color: #FFFFFF;/*Font color for the label*/
+	font-family: Arial;
 }
 input {
-  display: inline-block;
-  float: left;
-  margin-bottom:5%;/*Put spaces between the input boxes*/
+	display: inline-block;
+	float: left;
+	margin-bottom: 1%;/*Put spaces between the input boxes*/
+}/*the code abve that isn't commented is used to align the labels and textboxes*/
+
+form {
+	margin-top: 4%;
+}/*move the form lower*/
+
+#username, #password {
+	width: 20%;
+}/*Set the width and height of the input boxes*/
+
+.btn-danger {
+	background-color: #b91327;
+	margin-left: 45%;
+	margin-top:10px;
+}/*background color of the submit button and alignment of the button*/
+
+.btn-danger:hover {
+	background-color: #a31123
+}/*background color of the submit button when hovered over*/
+
+/*=================*/
+/*||-Tablet Size-||*/
+/*=================*/
+@media screen and (min-width: 586px) and (max-width: 799px) {
+	#username, #password{
+		width: 30%;
+	}
 }
-/*the code abve that isn't commented is used to align the labels and textboxes*/
 
-form{margin-top:7%;text-align:center}/*move the form lower*/
-
-#username, #password{width:40%;height:70%}/*Set the width and height of the input boxes*/
-
-.btn-danger{background-color:#b91327;margin-left:53%}/*background color of the submit button and alignment of the button*/
-.btn-danger:hover{background-color:#a31123}/*background color of the submit button when hovered over*/
+/*================*/
+/*||-Phone Size-||*/
+/*================*/
+@media screen and (max-width: 585px) {
+	#username, #password{
+		width: 45%;
+	}
+	.btn-danger {
+		margin-left: 40%
+	}
+}

@@ -2,8 +2,6 @@ h2 {
 	color: #f50000;
 	font-family: shanghai;
 	letter-spacing: 2px;
-}
-#title_register {
 	text-align: center;
 }
 label {
@@ -93,5 +91,8 @@ span {
 @media screen and (max-width: 585px) {
 	#username, #password, #rpassword, #fname, #lname {
 		width: 45%;
+	}
+	.btn-danger {
+		margin-left: 40%;
 	}
 }
