@@ -1,6 +1,12 @@
 <?php
-
+session_start();
 include("headerLayout.php");
+include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
+
+$student=unserialize($_SESSION["student"]);
+
+$username = $student->getUsername();
+$rank = $student->getRank();
 
 ?>
 <div class="row">
@@ -12,7 +18,7 @@ include("headerLayout.php");
 			<h3>Nom d'Utilisateur</h3>
 			<p>Changez votre nom d'utilisateur ici.</p>
 		</div>
-		<label for="username" id="lblUser">Nom d'Utilisateur:</label> <input class="form-control" id="username" name="username" readonly type="text" value="thelegend27"><br>
+		<label for="username" id="lblUser">Nom d'Utilisateur:</label> <input class="form-control" id="username" name="username" readonly type="text" value="<?php echo $username ?>"><br>
 		<label for="newusername">Nouveau Nom d'Utilisateur:</label> <input class="form-control" id="newusername" maxlength="15" name="newusername" required="required" type="newusername"><br>
 		<input class="btn btn-danger" id="usernameSubmit" type="submit" value="Changer">
 	</form>
@@ -34,7 +40,7 @@ include("headerLayout.php");
 			<p>Si vous voulez changer le niveau de votre ceinture, vous<br>
 			devez demander le code à votre instructeur et l'écrire ici.</p>
 		</div>
-		<label for="curBelt" id="lblCur">Ceinture Actuelle:</label> <input class="form-control" id="curBelt" name="curBelt" readonly type="text" value="Violette"><br>
+		<label for="curBelt" id="lblCur">Ceinture Actuelle:</label> <input class="form-control" id="curBelt" name="curBelt" readonly type="text" value="<?php echo $rank ?>"><br>
 		<label for="code">Code de Ceinture:</label> <input class="form-control" id="code" name="code" required="required" type="code"><br>
 		<input class="btn btn-danger" id="rankSubmit" type="submit" value="Mettre à Niveau">
 	</form>

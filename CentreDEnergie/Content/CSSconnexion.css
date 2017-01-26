@@ -5,6 +5,13 @@ h2 {
 	text-align: center;
 }
 
+p{
+	margin-top:5%;
+	margin-right:30%;
+	color:red;
+}
+
+
 label {
 	display: inline-block;
 	float: left;

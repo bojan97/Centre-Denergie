@@ -1,0 +1,81 @@
+h2 {
+	text-align: center;
+	font-family: shanghai;
+	letter-spacing: 1px;
+	color: #e7d732;
+}
+.post h2 {
+	color: e7d732;
+	text-align: center;
+	font-family: shanghai;
+	letter-spacing: 2px
+}/*title*/
+
+.post img {
+	text-align: center;
+	margin: 0 auto;
+	;
+	width: 25%;
+	display: block
+}/*modify the image of each post */
+
+.postContent {
+	margin-left: 1%;
+	margin-right: 1%;
+	color: black;
+	line-height: 25px;
+	text-align: justify;
+	font-size: 17px;
+	font-family: Comic Sans MS
+}/*text inside the box*/
+
+.post {
+	border: 1px solid white;
+	border-radius: 25px;
+	margin-left: 24%;
+	margin-right: 24%;
+	word-wrap: break-word;
+	background-color: rgba(105, 105, 105, .5);
+}/*the box itself*/
+
+.post ul {
+	color: white;
+	list-style: circle;
+}/* the lists inside the box */
+
+#contactLink {
+	color: white;
+	font-size: 17px;
+	font-family: Comic Sans MS;
+	background-color: initial;
+	border-style: initial;
+	font-weight: bold;
+	text-decoration: underline;
+}/* the styles for the link in the box */
+
+/*=================*/
+/*||-Laptop Size-||*/
+/*=================*/
+@media screen and (min-width: 800px) and (max-width: 1024px) {
+
+}
+
+/*=================*/
+/*||-Tablet Size-||*/
+/*=================*/
+@media screen and (min-width: 586px) and (max-width: 799px) {
+	
+}
+/*================*/
+/*||-Phone Size-||*/
+/*================*/
+@media screen and (max-width: 585px) {
+	.post{
+		margin-top:10px;
+		margin-left: 0px;
+		margin-right: 0px;
+	}
+	h2{
+		font-size:22px;
+	}
+}
