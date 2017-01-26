@@ -46,3 +46,99 @@ h2 {
 	vertical-align: top;
 	width:10%;
 }/*the first row and the first column*/
+
+#btn_white{
+	background-color: white;
+	color: black;
+	display:none;
+}
+
+#btn_yellow{
+	background-color: #ddd840;
+	border: 1px solid #ddd840;
+	color: black;
+	display:none;
+}
+#btn_orange{
+	background-color: orange;
+	border: 1px solid orange;
+	color: black;
+	display:none;
+}
+#btn_purple{
+	background-color: #d365cf;
+	border: 1px solid #d365cf;
+	color: black;
+	display:none;
+}
+#btn_blue{
+	background-color: #4286f4;
+	border: 1px solid #4286f4;
+	color: black;
+	display:none;
+}
+#btn_green{
+	background-color: green;
+	border: 1px solid green;
+	color: white;
+	display:none;
+}
+#btn_brown{
+	background-color: #93503c;
+	border: 1px solid #93503c;
+	color: white;
+	display:none;
+}
+#btn_black{
+	background-color: black;
+	border: 1px solid white;
+	color: white;
+	display:none;
+}
+
+/*=================*/
+/*||-Laptop Size-||*/
+/*=================*/
+@media screen and (min-width: 800px) and (max-width: 1024px){
+	
+}
+/*=================*/
+/*||-Tablet Size-||*/
+/*=================*/
+@media screen and (min-width: 586px) and (max-width: 799px) {
+	table{
+		display:none;
+	}
+	#btn_white{
+		display:inline;
+	}
+
+	#btn_yellow{
+		display:inline;
+	}
+	#btn_orange{
+		display:inline;
+	}
+	#btn_purple{
+		display:inline;
+	}
+	#btn_blue{
+		display:inline;
+	}
+	#btn_green{
+		display:inline;
+	}
+	#btn_brown{
+		display:inline;
+	}
+	#btn_black{
+		display:inline;
+	}
+}
+
+/*================*/
+/*||-Phone Size-||*/
+/*================*/
+@media screen and (max-width: 585px) {
+	
+}
