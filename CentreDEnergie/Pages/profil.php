@@ -3,68 +3,42 @@
 include("headerLayout.php");
 
 ?>
-
-
 <div class="row">
-	<div class="col-md-12"><h2>Mon Profil</h2></div>
+		<h2>Mon Profil</h2>
 </div>
 <div class="row">
-	<div class="col-md-12">
-	<form method="POST" id="changeUsername">
-	<div id="usernameHeader">
+	<form id="changeUsername" method="post" name="changeUsername">
+		<div id="usernameHeader">
 			<h3>Nom d'Utilisateur</h3>
 			<p>Changez votre nom d'utilisateur ici.</p>
 		</div>
-	<label for="username" id="lblUser" >Nom d'Utilisateur: </label>
-	<input type="text" name="username" class="form-control" id="username" readonly value="thelegend27">
-	<br>
-	<label for="newusername">Nouveau Nom d'Utilisateur: </label>
-	<input type="newusername" name="newusername" class="form-control"  id="newusername" required="required" maxlength="15">
-	<br>
-	<input type="submit" class="btn btn-danger" id="usernameSubmit" value="Changer">
+		<label for="username" id="lblUser">Nom d'Utilisateur:</label> <input class="form-control" id="username" name="username" readonly type="text" value="thelegend27"><br>
+		<label for="newusername">Nouveau Nom d'Utilisateur:</label> <input class="form-control" id="newusername" maxlength="15" name="newusername" required="required" type="newusername"><br>
+		<input class="btn btn-danger" id="usernameSubmit" type="submit" value="Changer">
 	</form>
-	
-	<form method="POST" id="changePassword">
-	<div id="passwordHeader">
+	<form id="changePassword" method="post" name="changePassword">
+		<div id="passwordHeader">
 			<h3>Mot de Passe</h3>
 			<p>Changez votre mot de passe ici.</p>
 		</div>
-	<label for="password" id="lblPassword" >Mot de Passe Actuel: </label>
-	<input type="password" name="password" class="form-control" id="password" required="required">
-	<br>
-	<label for="newPassword">Nouveau Mot de Passe: </label>
-	<input type="password" name="newPassword" class="form-control"  id="newPassword" required="required">
-	<br>
-	<label for="rnewPassword">Répétez Nouveau Mot de Passe: </label>
-	<input type="password" name="rnewPassword" class="form-control"  id="rnewPassword" required="required">
-	<br>
-	<input type="submit" class="btn btn-danger" id="passwordSubmit" value="Changer">
+		<label for="password" id="lblPassword">Mot de Passe Actuel:</label> <input class="form-control" id="password" name="password" required="required" type="password"><br>
+		<label for="newPassword">Nouveau Mot de Passe:</label> <input class="form-control" id="newPassword" name="newPassword" required="required" type="password"><br>
+		<label for="rnewPassword">Répétez Nouveau Mot de Passe:</label> <input class="form-control" id="rnewPassword" name="rnewPassword" required="required" type="password"><br>
+		<input class="btn btn-danger" id="passwordSubmit" type="submit" value="Changer">
 	</form>
-	</div>
 </div>
 <div class="row">
-<div class="col-md-12">
-<form method="POST" id="changeRank">
-	<div id="rankHeader">
+	<form id="changeRank" method="post" name="changeRank">
+		<div id="rankHeader">
 			<h3>Couleur de Ceinture</h3>
 			<p>Si vous voulez changer le niveau de votre ceinture, vous<br>
-			   devez demander le code à votre instructeur et l'écrire ici.</p>
+			devez demander le code à votre instructeur et l'écrire ici.</p>
 		</div>
-	<label for="curBelt" id="lblCur" >Ceinture Actuelle: </label>
-	<input type="text" name="curBelt" class="form-control" id="curBelt" readonly value="Violette">
-	<br>
-	<label for="code">Code de Ceinture: </label>
-	<input type="code" name="code" class="form-control"  id="code" required="required">
-	<br>
-	<input type="submit" class="btn btn-danger" id="rankSubmit" value="Mettre à Niveau">
-</form>
+		<label for="curBelt" id="lblCur">Ceinture Actuelle:</label> <input class="form-control" id="curBelt" name="curBelt" readonly type="text" value="Violette"><br>
+		<label for="code">Code de Ceinture:</label> <input class="form-control" id="code" name="code" required="required" type="code"><br>
+		<input class="btn btn-danger" id="rankSubmit" type="submit" value="Mettre à Niveau">
+	</form>
 </div>
-
-</div>
-
-
-
-
 
 <?php
 
