@@ -110,7 +110,7 @@ include("headerLayout.php");
 </div>
 
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_white">
     Blanche <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -123,7 +123,7 @@ include("headerLayout.php");
 </div>
 
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_yellow">
     Jaune <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -138,7 +138,7 @@ include("headerLayout.php");
   </ul>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_orange">
     Orange <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -152,7 +152,7 @@ include("headerLayout.php");
   </ul>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_purple">
     Violette <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -166,7 +166,7 @@ include("headerLayout.php");
   </ul>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_blue">
     Bleue <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -178,7 +178,7 @@ include("headerLayout.php");
   </ul>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_green">
     Verte <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -191,7 +191,7 @@ include("headerLayout.php");
   </ul>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_brown">
     Brune <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
@@ -203,7 +203,7 @@ include("headerLayout.php");
   </ul>
 </div>
 <div class="btn-group">
-  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" id="btn_black">
     Noire <span class="caret"></span>
   </button>
   <ul class="dropdown-menu">
