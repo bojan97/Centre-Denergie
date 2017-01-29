@@ -73,6 +73,12 @@ span {
 	margin-top:10px;
 }
 
+p{
+	text-align:center;
+	margin-top:1%;
+	color:red;
+}
+
 #div_RPassword{
 	margin-bottom:10px;
 }

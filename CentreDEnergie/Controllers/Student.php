@@ -2,6 +2,7 @@
 
 class Student
 {
+	private $studentID;
 	private $username;
 	private $password;
 	private $rank;
@@ -9,13 +10,14 @@ class Student
 	private $lname;
 	private $dateCreated;
 	
-	function __construct($username, $password, $rank, $fname, $lname)
+	function __construct($StudentID, $Username, $Password, $Rank, $Fname, $Lname)
 	{
-		$this->username = $username;
-		$this->password = $password;
-		$this->rank = $rank;
-		$this->fname = $fname;
-		$this->lname = $lname;
+		$this->studentID = $StudentID;
+		$this->username = $Username;
+		$this->password = $Password;
+		$this->rank = $Rank;
+		$this->fname = $Fname;
+		$this->lname = $Lname;
 	}
 	
 	

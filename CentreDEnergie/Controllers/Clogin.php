@@ -10,54 +10,49 @@ $stmt->bind_param("ss", $username, $password);
 $stmt->execute();
 $stmt->store_result();
 
-if($stmt->num_rows<1)
+if($stmt->num_rows<1)//incorrect username/password combination >>>FOR STUDENT LOGIN<<<
 {
-	$error="Le nom d'utilisateur ou le mot de passe est incorrect";
-	$_SESSION["error"]=$error;
-	header("Location:/CentreDEnergie/Pages/connexion.php");
+	$stmt2 = $conn->prepare("SELECT * FROM teacher WHERE teacherUsername=? AND pass=?");
+	$stmt2->bind_param("ss", $username, $password);
+	$stmt2->execute();
+	$stmt2->store_result();
+	
+	if($stmt2->num_rows<1)//wrong username/password for student and teacher tables
+	{
+		$error="Le nom d'utilisateur ou le mot de passe est incorrect";
+		$_SESSION["error"]=$error;
+		header("Location:/CentreDEnergie/Pages/connexion.php");
+	}
+	else//TEACHER LOGIN
+	{
+		$_SESSION["error"]=null;
+		$stmt2->bind_result($username,$password,$beltLevel,$FName,$LName);
+		$stmt2->fetch();
+		echo "Username: ".$username."<br>Password: ".$password;
+	
+		$student = new Student($studentID, $username,$password,$beltLevel,$FName,$LName);
+	
+		$_SESSION["student"]=serialize($student);
+		$_SESSION["loginStatus"]='T';//type of user
+		header("Location:/CentreDEnergie/Pages/profil.php");
+	}
 }
-else
+else//STUDENT LOGIN
 {
 	$_SESSION["error"]=null;
-	$stmt->bind_result($username,$password,$beltLevel,$FName,$LName,$postedMessages,$postedComments,$dateRegistered);
+	$stmt->bind_result($studentID,$username,$password,$beltLevel,$FName,$LName,$postedMessages,$dateRegistered);
 	$stmt->fetch();
-	echo "Username: ".$username."<br>Password: ".$password;
 	
-	$student = new Student($username,$password,$beltLevel,$FName,$LName,$postedMessages,$postedComments,$dateRegistered);
+	$student = new Student($studentID, $username,$password,$beltLevel,$FName,$LName);
 	
 	$_SESSION["student"]=serialize($student);
+	$_SESSION["loginStatus"]='S';//type of user
 	header("Location:/CentreDEnergie/Pages/profil.php");
 }
 
 //close connection to MSSQL
 $stmt->close();
+$stmt2->close();
 $conn->close();
-
-//$stmt->bind_result();
-/*if ($stmt->num_rows < 1) {
-   echo "No data Found";
-}
-else{
-   while ($cats = $stmt->fetch_array()) 
-   {
-        $username  = $cats['username'];
-        $beltLevel = strtoupper(stripslashes($cats['beltLevel']));
-        $name = stripslashes($cats['FName'])." ".stripslashes($cats['LName']);
-
-        echo	"Username: ".$username."<br>".
-				"Belt Level: ".ucfirst(strtolower($beltLevel))."<br>".
-				"Name: ".$name."<br>".
-				"----------------------------------------------------------------<br>";
-
-   }
-}*/
-
-
-
-
-
-//$student = new Student($_POST["username"],$_POST["password"]);
-
-
 
 ?>
