@@ -27,26 +27,34 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 		"; if(isset($_SESSION['errorNewusername'])&&$_SESSION['errorNewusername']==true) echo"<p>Le nom d'utilisateur est invalide</p>"; echo"
 		<input class='btn btn-danger' id='usernameSubmit' type='submit' value='Changer'>
 	</form>
-	<form id='changePassword' method='post' name='changePassword'>
+	<form id='changePassword' method='post' name='changePassword' action='/CentreDEnergie/Controllers/Cchangepassword.php'>
 		<div id='passwordHeader'>
 			<h3>Mot de Passe</h3>
 			<p>Changez votre mot de passe ici.</p>
 		</div>
-		<label for='password' id='lblPassword'>Mot de Passe Actuel:</label> <input class='form-control' id='password' name='password' required='required' type='password'><br>
+		<input class='form-control' id='username' name='username' readonly type='hidden' value='$username'>
+		<label for='password' id='lblPassword'>Mot de Passe Actuel:</label> <input class='form-control' id='password' name='password' required='required' type='password'>
+		<br>
+		"; if(isset($_SESSION['errorPassword'])&&$_SESSION['errorPassword']==true) echo"<p>Le mot de passe actuel est invalide</p>"; echo"
 		<label for='newPassword'>Nouveau Mot de Passe:</label> <input class='form-control' id='newPassword' name='newPassword' required='required' type='password'><br>
-		<label for='rnewPassword'>Répétez Nouveau Mot de Passe:</label> <input class='form-control' id='rnewPassword' name='rnewPassword' required='required' type='password'><br>
+		<label for='rnewPassword'>Répétez Nouveau Mot de Passe:</label> <input class='form-control' id='rnewPassword' name='rnewPassword' required='required' type='password'>
+		<br>
+		"; if(isset($_SESSION['errorNewPassword'])&&$_SESSION['errorNewPassword']==true) echo"<p>Le nouveau mot de passe est invalide</p>"; echo"
 		<input class='btn btn-danger' id='passwordSubmit' type='submit' value='Changer'>
 	</form>
 </div>
 <div class='row'>
-	<form id='changeRank' method='post' name='changeRank'>
+	<form id='changeRank' method='post' name='changeRank' action='/CentreDEnergie/Controllers/Cupgrade.php'>
 		<div id='rankHeader'>
 			<h3>Couleur de Ceinture</h3>
 			<p>Si vous voulez changer le niveau de votre ceinture, vous<br>
 			devez demander le code à votre instructeur et l'écrire ici.</p>
 		</div>
+		<input class='form-control' id='username' name='username' readonly type='hidden' value='$username'>
 		<label for='curBelt' id='lblCur'>Ceinture Actuelle:</label> <input class='form-control' id='curBelt' name='curBelt' readonly type='text' value='$rank'><br>
-		<label for='code'>Code de Ceinture:</label> <input class='form-control' id='code' name='code' required='required' type='code'><br>
+		<label for='code'>Code de Ceinture:</label> <input type='code' class='form-control' id='code' name='code' required='required' >
+		<br>
+		"; if(isset($_SESSION['errorCode'])&&$_SESSION['errorCode']==true) echo"<p>Le code est invalide</p>"; echo"
 		<input class='btn btn-danger' id='rankSubmit' type='submit' value='Mettre à Niveau'>
 	</form>
 </div>";

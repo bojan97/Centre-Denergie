@@ -49,6 +49,7 @@ h2 {
 
 #btn_white{
 	background-color: white;
+	border: 1px solid white;
 	color: black;
 	display:none;
 }
@@ -96,6 +97,9 @@ h2 {
 	display:none;
 }
 
+.well{
+	display:none;
+}
 /*=================*/
 /*||-Laptop Size-||*/
 /*=================*/
@@ -109,30 +113,61 @@ h2 {
 	table{
 		display:none;
 	}
-	#btn_white{
-		display:inline;
+	.well{
+		display:inline-block;
+		width:50%;
 	}
-
-	#btn_yellow{
+	#btn_white, #btn_yellow, #btn_orange, #btn_purple, #btn_blue, #btn_green, #btn_brown, #btn_black{
 		display:inline;
+		width:25%;
+		height:40px;
+		font-family:shanghai;
+		letter-spacing: 1px;
+		font-size:20px;
 	}
-	#btn_orange{
-		display:inline;
+	
+	#btnRows{
+		text-align:center;
+		margin-bottom:2%;
 	}
-	#btn_purple{
-		display:inline;
+	#well_white{
+		background-color:white;
+		border: 1px solid #e2e2e2;
 	}
-	#btn_blue{
-		display:inline;
+	#well_yellow{
+		background-color: #ddd840;
+		border: 1px solid #c9c438;
+		color: black;
 	}
-	#btn_green{
-		display:inline;
+	#well_orange{
+		background-color: orange;
+		border: 1px solid #ce7f00;
+		color: black;
 	}
-	#btn_brown{
-		display:inline;
+	#well_purple{
+		background-color: #d365cf;
+		border: 1px solid #ba57b6;
+		color: black;
 	}
-	#btn_black{
-		display:inline;
+	#well_blue{
+		background-color: #4286f4;
+		border: 1px solid #3774d6;
+		color: black;
+	}
+	#well_green{
+		background-color: green;
+		border: 1px solid #0a3d01;
+		color: white;
+	}
+	#well_brown{
+		background-color: #93503c;
+		border: 1px solid #603426;
+		color: white;
+	}
+	#well_black{
+		background-color:black;
+		border: 1px solid white;
+		color: white;
 	}
 }
 
@@ -140,5 +175,63 @@ h2 {
 /*||-Phone Size-||*/
 /*================*/
 @media screen and (max-width: 585px) {
+	table{
+		display:none;
+	}
+	.well{
+		display:inline-block;
+		width:100%;
+	}
+	#btn_white, #btn_yellow, #btn_orange, #btn_purple, #btn_blue, #btn_green, #btn_brown, #btn_black{
+		display:inline;
+		width:100%;
+		height:40px;
+		font-family:shanghai;
+		letter-spacing: 1px;
+		font-size:20px;
+	}
 	
+	#btnRows{
+		text-align:center;
+		margin-bottom:2%;
+	}
+	#well_white{
+		background-color:white;
+		border: 1px solid #e2e2e2;
+	}
+	#well_yellow{
+		background-color: #ddd840;
+		border: 1px solid #c9c438;
+		color: black;
+	}
+	#well_orange{
+		background-color: orange;
+		border: 1px solid #ce7f00;
+		color: black;
+	}
+	#well_purple{
+		background-color: #d365cf;
+		border: 1px solid #ba57b6;
+		color: black;
+	}
+	#well_blue{
+		background-color: #4286f4;
+		border: 1px solid #3774d6;
+		color: black;
+	}
+	#well_green{
+		background-color: green;
+		border: 1px solid #0a3d01;
+		color: white;
+	}
+	#well_brown{
+		background-color: #93503c;
+		border: 1px solid #603426;
+		color: white;
+	}
+	#well_black{
+		background-color:black;
+		border: 1px solid white;
+		color: white;
+	}
 }
