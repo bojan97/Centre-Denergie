@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2017 at 01:12 AM
+-- Generation Time: Feb 01, 2017 at 10:06 PM
 -- Server version: 5.7.14
 -- PHP Version: 5.6.25
 
@@ -86,25 +86,30 @@ INSERT INTO `customer` (`email`, `message`, `dateSent`) VALUES
 CREATE TABLE `posts` (
   `postId` int(4) NOT NULL,
   `postTitle` varchar(30) NOT NULL,
+  `postImage` varchar(100) DEFAULT NULL,
   `postText` varchar(750) NOT NULL,
-  `postDate` datetime NOT NULL
+  `postDate` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
 --
 
-INSERT INTO `posts` (`postId`, `postTitle`, `postText`, `postDate`) VALUES
-(1, 'New Post', 'hello', '2016-11-01 00:00:00'),
-(2, 'Test', 'hello', '2016-11-02 00:00:00'),
-(3, 'Hey it works', 'test', '2016-11-03 00:00:00'),
-(4, 'No class today', 'sorry', '2016-11-04 00:00:00'),
-(5, 'Hello', 'hi', '2016-11-05 00:00:00'),
-(6, 'Umm', 'nothing to say', '2016-11-06 00:00:00'),
-(7, 'verte test', 'its hard', '2016-11-07 00:00:00'),
-(8, 'This is cool', 'seriously', '2016-11-08 00:00:00'),
-(9, 'Nice post', 'cool', '2016-11-09 00:00:00'),
-(10, 'comment on this', 'sample text', '2016-11-10 00:00:00');
+INSERT INTO `posts` (`postId`, `postTitle`, `postImage`, `postText`, `postDate`) VALUES
+(1, 'New Post', NULL, 'hello', '2016-11-01'),
+(2, 'Test', NULL, 'hello', '2016-11-02'),
+(3, 'Hey it works', NULL, 'test', '2016-11-03'),
+(4, 'No class today', NULL, 'sorry', '2016-11-04'),
+(5, 'Hello', NULL, 'hi', '2016-11-05'),
+(6, 'Umm', NULL, 'nothing to say', '2016-11-06'),
+(7, 'verte test', NULL, 'its hard', '2016-11-07'),
+(8, 'This is cool', NULL, 'seriously', '2016-11-08'),
+(9, 'Nice post', NULL, 'cool', '2016-11-09'),
+(10, 'comment on this', NULL, 'sample text', '2016-11-10'),
+(20, 'dfg', NULL, 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d\'informations sur le programme offert.Vous pouvez aussicrÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil \npour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-01'),
+(21, 'It Works!!', 'snake2.jpg', 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d\'informations sur le programme offert.Vous pouvez aussicrÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil \r\npour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-01'),
+(22, 'another post', 'leopard.jpg', 'this works too', '2017-02-01'),
+(23, 'another post', NULL, 'this works too', '2017-02-01');
 
 -- --------------------------------------------------------
 
@@ -265,7 +270,7 @@ ALTER TABLE `chat`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `postId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `postId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `rank`
 --

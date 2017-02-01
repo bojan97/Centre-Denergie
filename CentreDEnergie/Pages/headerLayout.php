@@ -64,6 +64,12 @@
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSStechniques.css'>";
 		$currentPage="techniques";
 	}
+	else if(strpos($url,'article') !== false)
+	{
+		echo "<title>Nouveau Article</title>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSarticle.css'>";
+		$currentPage="article";
+	}
 	
 	
 ?>

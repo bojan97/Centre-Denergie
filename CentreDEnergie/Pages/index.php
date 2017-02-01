@@ -1,7 +1,6 @@
 <?php
 include("headerLayout.php");
-
-//echo "<a class='".$class."'></a>"
+include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/dbConnect.php");
 
 ?>
 	
@@ -43,27 +42,28 @@ include("headerLayout.php");
 					<span class="sr-only">Next</span>
 				</a>
 			</div>
-			<div class="post">
-				<h2>Bienvenue!</h2>
-				<img src="/CentreDEnergie/Content/img2.png">
-				<p class="postContent">Bienvenue sur mon site! Vous pouvez naviguer à travers les pages de styles de combat ou du cours pour plus d'informations sur le programme offert. 
-					Vous pouvez aussi
-					créer un compte gratuitement et utiliser la salle de dicussion pour des questions reliées au matériel du cours. De plus, vous pouvez consultez votre profil 
-					pour une liste de tous
-					les techniques nécessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".
-				</p>
-			</div>
-			<br>
-			<div class="post">
-				<h2>Le meilleur kung-fu technique a apprendre!!!!!!</h2>
-				<img>
-				<p class="postContent">Bienvenue sur mon site! Vous pouvez naviguer à travers les pages de styles de combat ou du cours pour plus d'informations sur le programme offert. 
-					Vous pouvez aussi
-					créer un compte gratuitement et utiliser la salle de dicussion pour des questions reliées au matériel du cours. De plus, vous pouvez consultez votre profil 
-					pour une liste de tous
-					les techniques nécessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".
-				</p>
-			</div>
+			<?php
+				
+				$getPosts = $conn->prepare("SELECT * FROM posts ORDER BY postId DESC LIMIT 10");
+				$getPosts->execute();
+				$getPosts->store_result();
+
+				$getPosts->bind_result($postId,$postTitle,$postImage,$postText,$postDate);
+				
+				while($getPosts->fetch())
+				{
+					echo "<br><div class='post'>
+							<h2>".$postTitle."</h2>";
+							if($postImage!=null) echo "<img src='/CentreDEnergie/PostImages/".$postImage."'>";
+							echo "<p class='postContent'>".$postText."</p>
+						</div>";
+				}
+				
+				
+				$getPosts->close();
+				
+			?>
+			
 		</div>
 	</div>
 </div>
