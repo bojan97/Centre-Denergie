@@ -21,7 +21,7 @@ else
 	$checkCode->execute();
 	$checkCode->store_result();
 
-	$checkCode->bind_result($beltLevel,$beltCode,$combinations,$kempo,$kicks,$punches,$blocks,$forms,$elbows,$knees);
+	$checkCode->bind_result($beltIndex,$beltLevel,$beltCode,$combinations,$kempo,$kicks,$punches,$blocks,$forms,$elbows,$knees);
 	$checkCode->fetch();
 	
 	if($checkCode->num_rows<1)//check if code entered exists in rank table

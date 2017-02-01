@@ -70,7 +70,6 @@ else//if user is not logged in
 
 
 <?php
-
 include("footerLayout.php");
 
 ?>
