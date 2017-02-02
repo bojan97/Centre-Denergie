@@ -100,6 +100,62 @@ footer a:hover{
 	display:none;
 }
 
+/*--------*/
+/*Dropdown*/
+/*--------*/
+
+/* Dropdown Button */
+#header_dropbtn {
+	font-family:shanghai;
+	letter-spacing: 2px;
+    background-color: rgba(123,3,123,0);
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+#header_dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+#header_dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: rgba(105, 105, 105, 1);
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+#header_dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+#header_dropdown-content a:hover {background-color: #f1f1f1}
+
+/* Show the dropdown menu on hover */
+#header_dropdown:hover #header_dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+#header_dropdown:hover #header_dropbtn {
+    background-color: rgba(123,3,123,0);
+}
+
+
+
+
 /*=================*/
 /*||-Laptop Size-||*/
 /*=================*/

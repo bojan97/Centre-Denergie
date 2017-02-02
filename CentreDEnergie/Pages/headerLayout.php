@@ -90,11 +90,20 @@
 		</div>
 		<div class="col-md-2" id="login-links">
 			<?php
-				if(isset($_SESSION["loginStatus"]))//when a use is looged in
+				if(isset($_SESSION["loginStatus"]))//when a user is looged in
 				{
 					$student=unserialize($_SESSION["student"]);
 					$username = $student->getUsername();
-					echo "<a href='#'>Testing</a>";
+					echo "<div class='dropdown' id='header_dropdown'>
+							  <button class='dropbtn' id='header_dropbtn'>$username</button>
+							  <div class='dropdown-content' id='header_dropdown-content'>
+								<a href='/CentreDEnergie/Pages/article.php'>Nouveau Article</a>
+								<a href='/CentreDEnergie/Pages/techniques.php'>Techniques</a>
+								<a href='#'>Rapport</a>
+								<a href='/CentreDEnergie/Pages/profil.php'>Profil</a>								
+								<a href='/CentreDEnergie/Controllers/Clogout.php'>Log out</a>
+							  </div>
+							</div>";
 				}
 				else //if user is not logged in
 				{

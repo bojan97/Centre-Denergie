@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.6.4
--- https://www.phpmyadmin.net/
+-- version 4.5.2
+-- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2017 at 10:06 PM
--- Server version: 5.7.14
--- PHP Version: 5.6.25
+-- Generation Time: Feb 02, 2017 at 08:09 PM
+-- Server version: 5.7.9
+-- PHP Version: 7.0.0
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,28 +26,31 @@ SET time_zone = "+00:00";
 -- Table structure for table `chat`
 --
 
-CREATE TABLE `chat` (
-  `messageId` int(4) NOT NULL,
+DROP TABLE IF EXISTS `chat`;
+CREATE TABLE IF NOT EXISTS `chat` (
+  `messageId` int(4) NOT NULL AUTO_INCREMENT,
   `senderUsername` varchar(15) DEFAULT NULL,
   `message` varchar(50) NOT NULL,
-  `dateSent` datetime NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `dateSent` date NOT NULL,
+  PRIMARY KEY (`messageId`)
+) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chat`
 --
 
 INSERT INTO `chat` (`messageId`, `senderUsername`, `message`, `dateSent`) VALUES
-(1, 'username', 'hello', '2016-11-01 10:42:21'),
-(2, '123faker', 'yo', '2016-11-01 11:53:53'),
-(3, '1name1', 'how is everyone', '2016-11-01 11:29:12'),
-(4, 'yoloswag420', 'this is a cool site', '2016-11-01 09:13:11'),
-(5, 'blazeit123', 'what do i need to know for verte belt', '2016-11-01 13:22:54'),
-(6, 'chatkool2', 'nice chat room', '2016-11-01 13:22:58'),
-(7, 'user432', 'easy exam?', '2016-11-01 05:32:23'),
-(8, 'play4723', 'lol', '2016-11-01 05:32:46'),
-(9, 'testing75', 'better train hard', '2016-11-01 11:22:33'),
-(10, 'awww', 'nice memes', '2016-11-01 22:33:44');
+(1, 'username', 'hello', '2016-11-01'),
+(2, '123faker', 'yo', '2016-11-01'),
+(3, '1name1', 'how is everyone', '2016-11-01'),
+(4, 'yoloswag420', 'this is a cool site', '2016-11-01'),
+(5, 'blazeit123', 'what do i need to know for verte belt', '2016-11-01'),
+(6, 'chatkool2', 'nice chat room', '2016-11-01'),
+(7, 'user432', 'easy exam?', '2016-11-01'),
+(8, 'play4723', 'lol', '2016-11-01'),
+(9, 'testing75', 'better train hard', '2016-11-01'),
+(10, 'awww', 'nice memes', '2016-11-01'),
+(11, '123faker', 'wieof', '2017-02-02');
 
 -- --------------------------------------------------------
 
@@ -55,10 +58,12 @@ INSERT INTO `chat` (`messageId`, `senderUsername`, `message`, `dateSent`) VALUES
 -- Table structure for table `customer`
 --
 
-CREATE TABLE `customer` (
+DROP TABLE IF EXISTS `customer`;
+CREATE TABLE IF NOT EXISTS `customer` (
   `email` varchar(30) NOT NULL,
   `message` varchar(50) NOT NULL,
-  `dateSent` date NOT NULL
+  `dateSent` date NOT NULL,
+  PRIMARY KEY (`email`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -83,13 +88,15 @@ INSERT INTO `customer` (`email`, `message`, `dateSent`) VALUES
 -- Table structure for table `posts`
 --
 
-CREATE TABLE `posts` (
-  `postId` int(4) NOT NULL,
+DROP TABLE IF EXISTS `posts`;
+CREATE TABLE IF NOT EXISTS `posts` (
+  `postId` int(4) NOT NULL AUTO_INCREMENT,
   `postTitle` varchar(30) NOT NULL,
   `postImage` varchar(100) DEFAULT NULL,
   `postText` varchar(750) NOT NULL,
-  `postDate` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `postDate` date NOT NULL,
+  PRIMARY KEY (`postId`)
+) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
@@ -106,10 +113,11 @@ INSERT INTO `posts` (`postId`, `postTitle`, `postImage`, `postText`, `postDate`)
 (8, 'This is cool', NULL, 'seriously', '2016-11-08'),
 (9, 'Nice post', NULL, 'cool', '2016-11-09'),
 (10, 'comment on this', NULL, 'sample text', '2016-11-10'),
-(20, 'dfg', NULL, 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d\'informations sur le programme offert.Vous pouvez aussicrÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil \npour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-01'),
-(21, 'It Works!!', 'snake2.jpg', 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d\'informations sur le programme offert.Vous pouvez aussicrÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil \r\npour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-01'),
+(20, 'dfg', NULL, 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d''informations sur le programme offert.Vous pouvez aussicrÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil \npour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-01'),
+(21, 'It Works!!', 'snake2.jpg', 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d''informations sur le programme offert.Vous pouvez aussicrÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil \r\npour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-01'),
 (22, 'another post', 'leopard.jpg', 'this works too', '2017-02-01'),
-(23, 'another post', NULL, 'this works too', '2017-02-01');
+(23, 'another post', NULL, 'this works too', '2017-02-01'),
+(24, 'Nice title', 'img3.png', 'cool message', '2017-02-02');
 
 -- --------------------------------------------------------
 
@@ -117,8 +125,9 @@ INSERT INTO `posts` (`postId`, `postTitle`, `postImage`, `postText`, `postDate`)
 -- Table structure for table `rank`
 --
 
-CREATE TABLE `rank` (
-  `beltIndex` int(2) NOT NULL,
+DROP TABLE IF EXISTS `rank`;
+CREATE TABLE IF NOT EXISTS `rank` (
+  `beltIndex` int(2) NOT NULL AUTO_INCREMENT,
   `beltLevel` varchar(15) NOT NULL,
   `beltCode` varchar(15) NOT NULL,
   `combinations` varchar(30) NOT NULL,
@@ -128,8 +137,10 @@ CREATE TABLE `rank` (
   `blocks` int(2) DEFAULT NULL,
   `forms` varchar(150) NOT NULL,
   `elbows` int(2) DEFAULT NULL,
-  `knees` int(2) DEFAULT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `knees` int(2) DEFAULT NULL,
+  PRIMARY KEY (`beltLevel`),
+  UNIQUE KEY `beltIndex` (`beltIndex`)
+) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rank`
@@ -151,16 +162,20 @@ INSERT INTO `rank` (`beltIndex`, `beltLevel`, `beltCode`, `combinations`, `kempo
 -- Table structure for table `student`
 --
 
-CREATE TABLE `student` (
-  `studentID` int(4) NOT NULL,
+DROP TABLE IF EXISTS `student`;
+CREATE TABLE IF NOT EXISTS `student` (
+  `studentID` int(4) NOT NULL AUTO_INCREMENT,
   `username` varchar(15) NOT NULL,
   `pass` varchar(50) NOT NULL,
   `beltLevel` varchar(15) NOT NULL DEFAULT 'blanche',
   `FName` varchar(50) NOT NULL,
   `LName` varchar(50) NOT NULL,
   `postedMessages` int(3) DEFAULT NULL,
-  `dateRegistered` date NOT NULL
-) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+  `dateRegistered` date NOT NULL,
+  PRIMARY KEY (`studentID`),
+  UNIQUE KEY `username` (`username`),
+  KEY `beltLevel` (`beltLevel`)
+) ENGINE=MyISAM AUTO_INCREMENT=17 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
@@ -188,12 +203,16 @@ INSERT INTO `student` (`studentID`, `username`, `pass`, `beltLevel`, `FName`, `L
 -- Table structure for table `teacher`
 --
 
-CREATE TABLE `teacher` (
+DROP TABLE IF EXISTS `teacher`;
+CREATE TABLE IF NOT EXISTS `teacher` (
   `teacherUsername` varchar(20) NOT NULL,
   `pass` varchar(50) NOT NULL,
   `beltLevel` varchar(15) DEFAULT NULL,
   `FName` varchar(50) NOT NULL,
-  `LName` varchar(50) NOT NULL
+  `LName` varchar(50) NOT NULL,
+  PRIMARY KEY (`teacherUsername`),
+  UNIQUE KEY `teacherUsername` (`teacherUsername`),
+  KEY `beltLevel` (`beltLevel`)
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -212,75 +231,6 @@ INSERT INTO `teacher` (`teacherUsername`, `pass`, `beltLevel`, `FName`, `LName`)
 ('trollinsky', 'memeMaker123', 'verte', 'Kane', 'Lynch'),
 ('da1ndonly', 'wordpass', 'brune', 'Jackie', 'Chan');
 
---
--- Indexes for dumped tables
---
-
---
--- Indexes for table `chat`
---
-ALTER TABLE `chat`
-  ADD PRIMARY KEY (`messageId`);
-
---
--- Indexes for table `customer`
---
-ALTER TABLE `customer`
-  ADD PRIMARY KEY (`email`);
-
---
--- Indexes for table `posts`
---
-ALTER TABLE `posts`
-  ADD PRIMARY KEY (`postId`);
-
---
--- Indexes for table `rank`
---
-ALTER TABLE `rank`
-  ADD PRIMARY KEY (`beltLevel`),
-  ADD UNIQUE KEY `beltIndex` (`beltIndex`);
-
---
--- Indexes for table `student`
---
-ALTER TABLE `student`
-  ADD PRIMARY KEY (`studentID`),
-  ADD UNIQUE KEY `username` (`username`),
-  ADD KEY `beltLevel` (`beltLevel`);
-
---
--- Indexes for table `teacher`
---
-ALTER TABLE `teacher`
-  ADD PRIMARY KEY (`teacherUsername`),
-  ADD UNIQUE KEY `teacherUsername` (`teacherUsername`),
-  ADD KEY `beltLevel` (`beltLevel`);
-
---
--- AUTO_INCREMENT for dumped tables
---
-
---
--- AUTO_INCREMENT for table `chat`
---
-ALTER TABLE `chat`
-  MODIFY `messageId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
---
--- AUTO_INCREMENT for table `posts`
---
-ALTER TABLE `posts`
-  MODIFY `postId` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
---
--- AUTO_INCREMENT for table `rank`
---
-ALTER TABLE `rank`
-  MODIFY `beltIndex` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
---
--- AUTO_INCREMENT for table `student`
---
-ALTER TABLE `student`
-  MODIFY `studentID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
