@@ -8,6 +8,9 @@
 	<link rel="stylesheet" href="/CentreDEnergie/Content/CSSlayout.css">
 	<link rel="icon" href="/CentreDEnergie/Content/favicon.ico" />
 <?php
+	session_start();
+	include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
+	
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$currentPage="index";
 	if (strpos($url,'index') !== false||strcmp($_SERVER['REQUEST_URI'],'/CentreDEnergie/Pages/')==0) 
@@ -86,7 +89,19 @@
 		<div class="col-md-2">
 		</div>
 		<div class="col-md-2" id="login-links">
-			 <a href="/CentreDEnergie/Pages/enregistrer.php">Enregistrer</a>&nbsp;&nbsp;<div id="brbr"><br></div><a href="/CentreDEnergie/Pages/connexion.php">Connexion</a>
+			<?php
+				if(isset($_SESSION["loginStatus"]))//when a use is looged in
+				{
+					$student=unserialize($_SESSION["student"]);
+					$username = $student->getUsername();
+					echo "<a href='#'>Testing</a>";
+				}
+				else //if user is not logged in
+				{
+					echo "<a href='/CentreDEnergie/Pages/enregistrer.php'>Enregistrer</a>&nbsp;&nbsp;<div id='brbr'><br></div><a href='/CentreDEnergie/Pages/connexion.php'>Connexion</a>";
+				}
+			?>
+			 
 		</div>
 		<div class="col-md-1" id="title">
 			<h1>Le Centre d'Energie de Chambly</h1>

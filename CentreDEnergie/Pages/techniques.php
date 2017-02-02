@@ -1,5 +1,4 @@
 <?php
-session_start();
 include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/dbConnect.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
 include("headerLayout.php");

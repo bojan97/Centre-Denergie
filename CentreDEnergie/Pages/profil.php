@@ -1,5 +1,4 @@
 <?php
-session_start();
 include("headerLayout.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
 
