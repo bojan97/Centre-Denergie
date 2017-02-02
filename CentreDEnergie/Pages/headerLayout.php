@@ -83,12 +83,10 @@
 <body>
 <div class="container-fluid">
 	<div class="row">
-		<div class="col-md-7" id="banner">
+		<div class="col-md-7 col-md-offset-3" id="banner">
 	
 		</div>
-		<div class="col-md-2">
-		</div>
-		<div class="col-md-2" id="login-links">
+		<div class="col-md-1" id="login-links">
 			<?php
 				if(isset($_SESSION["loginStatus"]))//when a user is looged in
 				{
