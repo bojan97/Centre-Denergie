@@ -23,7 +23,7 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 		<label for='username' id='lblUser'>Nom d'Utilisateur:</label> <input class='form-control' id='username' name='username' readonly type='text' value='$username'><br>
 		<label for='newusername'>Nouveau Nom d'Utilisateur:</label> <input class='form-control' id='newusername' maxlength='15' name='newusername' required='required' type='newusername'>
 		<br>
-		"; if(isset($_SESSION['errorNewusername'])&&$_SESSION['errorNewusername']==true) echo"<p>Le nom d'utilisateur est invalide</p>"; echo"
+		"; if(isset($_SESSION['errorNewusername'])&&$_SESSION['errorNewusername']==true) echo"<p id='errorMsg'>Le nom d'utilisateur est invalide</p>"; echo"
 		<input class='btn btn-danger' id='usernameSubmit' type='submit' value='Changer'>
 	</form>
 	<form id='changePassword' method='post' name='changePassword' action='/CentreDEnergie/Controllers/Cchangepassword.php'>
@@ -34,11 +34,11 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 		<input class='form-control' id='username' name='username' readonly type='hidden' value='$username'>
 		<label for='password' id='lblPassword'>Mot de Passe Actuel:</label> <input class='form-control' id='password' name='password' required='required' type='password'>
 		<br>
-		"; if(isset($_SESSION['errorPassword'])&&$_SESSION['errorPassword']==true) echo"<p>Le mot de passe actuel est invalide</p>"; echo"
+		"; if(isset($_SESSION['errorPassword'])&&$_SESSION['errorPassword']==true) echo"<p id='errorMsg'>Le mot de passe actuel est invalide</p>"; echo"
 		<label for='newPassword'>Nouveau Mot de Passe:</label> <input class='form-control' id='newPassword' name='newPassword' required='required' type='password'><br>
 		<label for='rnewPassword'>Répétez Nouveau Mot de Passe:</label> <input class='form-control' id='rnewPassword' name='rnewPassword' required='required' type='password'>
 		<br>
-		"; if(isset($_SESSION['errorNewPassword'])&&$_SESSION['errorNewPassword']==true) echo"<p>Le nouveau mot de passe est invalide</p>"; echo"
+		"; if(isset($_SESSION['errorNewPassword'])&&$_SESSION['errorNewPassword']==true) echo"<p id='errorMsg'>Le nouveau mot de passe est invalide</p>"; echo"
 		<input class='btn btn-danger' id='passwordSubmit' type='submit' value='Changer'>
 	</form>
 </div>
@@ -53,7 +53,7 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 		<label for='curBelt' id='lblCur'>Ceinture Actuelle:</label> <input class='form-control' id='curBelt' name='curBelt' readonly type='text' value='$rank'><br>
 		<label for='code'>Code de Ceinture:</label> <input type='code' class='form-control' id='code' name='code' required='required' >
 		<br>
-		"; if(isset($_SESSION['errorCode'])&&$_SESSION['errorCode']==true) echo"<p>Le code est invalide</p>"; echo"
+		"; if(isset($_SESSION['errorCode'])&&$_SESSION['errorCode']==true) echo"<p id='errorMsg'>Le code est invalide</p>"; echo"
 		<input class='btn btn-danger' id='rankSubmit' type='submit' value='Mettre à Niveau'>
 	</form>
 </div>";

@@ -17,8 +17,12 @@ if(!isset($_SESSION["loginStatus"])||$_SESSION["loginStatus"]==null)//check if u
 	<br>
 	<label for='password'>Mot de Passe: </label>
 	<input type='password' name='password' class='form-control'  id='password' required='required'>
-	<p>"; if(isset($_SESSION['error']))echo $_SESSION['error']; echo"</p>
-	<input type='submit' class='btn btn-danger' value='Connexion'>
+	<br>
+	<p>"; if(isset($_SESSION['error'])) echo $_SESSION['error'];
+	echo"</p>
+	<div class='buttonHolder'>
+		<input type='submit' class='btn btn-danger' value='Connexion'>
+	</div>
 	</form>
 </div>";
 }

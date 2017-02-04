@@ -47,7 +47,7 @@ echo"
 			<label for='rpassword'>Répétez Mot de Passe: </label>
 			<input type='password' name='rpassword' class='form-control'  id='rpassword' required='required' maxlength='50'>
 			<br>
-			"; if(isset($_SESSION['errorRpassword'])&&$_SESSION['errorRpassword']==true) echo"<p>Les mots de passe ne sont pas pareilles</p>"; echo"
+			"; if(isset($_SESSION['errorRpassword'])&&$_SESSION['errorRpassword']==true) echo"<p id='passEqaulity'>Les mots de passe ne sont pas pareilles</p>"; echo"
 		</div>
 		<br>
 		<div id='div_Name'>
@@ -63,7 +63,9 @@ echo"
 			"; if(isset($_SESSION['errorName'])&&$_SESSION['errorName']==true) echo"<p>Le prénom ou le nom est invalide</p>"; echo"
 		</div>
 		<br><br>
-		<input type='submit' class='btn btn-danger' value='Enregistrer'>
+		<div class='buttonHolder'>
+			<input type='submit' class='btn btn-danger' value='Enregistrer'>
+		</div>
 	</form>
 </div>";
 }
