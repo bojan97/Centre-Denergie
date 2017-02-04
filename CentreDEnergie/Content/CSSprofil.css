@@ -14,7 +14,10 @@ h3 {
 p{
 	text-align: center;
 }
-
+#errorMsg{
+	clear:both;
+	color:red;
+}
 #usernameHeader {
 	margin-left: 4%;
 	color: #e7d732

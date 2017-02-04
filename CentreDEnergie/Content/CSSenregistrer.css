@@ -19,7 +19,6 @@ label {
 }
 input {
 	display: inline-block;
-	float: left;
 	/*Put spaces between the input boxes*/
 }
 
@@ -33,13 +32,15 @@ form {
 
 #username, #password, #rpassword, #fname, #lname {
 	width: 20%;
-}
+	float:left;
+}/*Set the width and height of the input boxes*/
 
-/*Set the width and height of the input boxes*/
+.buttonHolder{
+	text-align:center;
+}
 
 .btn-danger {
 	background-color: #b91327;
-	margin-left: 45%;
 }
 
 /*background color of the submit button and alignment of the button*/
@@ -75,7 +76,7 @@ span {
 
 p{
 	text-align:center;
-	margin-top:1%;
+	margin-top:2%;
 	color:red;
 }
 
@@ -89,6 +90,9 @@ p{
 	#username, #password, #rpassword, #fname, #lname {
 		width: 30%;
 	}
+	#passEqaulity{
+		margin-top:5%;
+	}
 }
 
 /*================*/
@@ -98,7 +102,10 @@ p{
 	#username, #password, #rpassword, #fname, #lname {
 		width: 45%;
 	}
-	.btn-danger {
-		margin-left: 40%;
+	p{
+		margin-top:5%;
+	}
+	#passEqaulity{
+		margin-top:8%;
 	}
 }
