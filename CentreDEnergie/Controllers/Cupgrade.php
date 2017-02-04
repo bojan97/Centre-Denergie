@@ -6,6 +6,12 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php"
 
 $username=$_POST["username"];
 $code=$_POST["code"];
+
+$_SESSION['errorNewusername']=false;
+$_SESSION['errorPassword']=false;
+$_SESSION['errorNewPassword']=false;
+$_SESSION['errorCode']=false;
+
 if($code==null)//validate basic code entry
 {
 	$_SESSION["errorCode"]=true;

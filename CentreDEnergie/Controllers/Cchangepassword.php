@@ -9,6 +9,12 @@ $password=$_POST["password"];
 $newPassword=$_POST["newPassword"];
 $rnewPassword=$_POST["rnewPassword"];
 //$_SESSION["errorPassword"]=false;
+
+$_SESSION['errorNewusername']=false;
+$_SESSION['errorPassword']=false;
+$_SESSION['errorNewPassword']=false;
+$_SESSION['errorCode']=false;
+
 if(strlen($password)>50||strlen($password)<7||!preg_match('#[0-9]#',$password)||$password==null||$newPassword!=$rnewPassword)//validate basic password entry
 {
 	$_SESSION["errorNewPassword"]=true;

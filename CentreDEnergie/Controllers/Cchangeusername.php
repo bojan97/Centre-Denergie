@@ -22,7 +22,11 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php"
 	$checkTeacherTable->fetch();
 	
 	
-	
+$_SESSION['errorNewusername']=false;
+$_SESSION['errorPassword']=false;
+$_SESSION['errorNewPassword']=false;
+$_SESSION['errorCode']=false;
+
 	
 
 
