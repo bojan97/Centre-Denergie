@@ -74,11 +74,29 @@
 		$currentPage="article";
 	}
 	
+	/*if (strcmp($currentPage,"connexion")!=0){
+		$_SESSION['error']=null;
+	}*/
 	
 ?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-
+	<script>
+	$(document).ready(function(){
+		var fixedWidth=120;
+		while($("#header_dropbtn").width()>fixedWidth){
+			var divider = $("#header_dropbtn").width()/fixedWidth;
+			var size = parseInt($("#header_dropbtn").css('font-size'));
+			var newSize=size/divider+"px";
+			$("#header_dropbtn").css('font-size', newSize);
+			alert("123");
+		}
+	});
+	
+	
+	
+	
+	</script>
 </head>
 <body>
 <div class="container-fluid">
@@ -94,9 +112,9 @@
 					$username = $student->getUsername();
 					echo "<div class='dropdown' id='header_dropdown'>
 							  <button class='dropbtn' id='header_dropbtn'>$username</button>
-							  <div class='dropdown-content' id='header_dropdown-content'>
-								<a href='/CentreDEnergie/Pages/article.php'>Nouveau Article</a>
-								<a href='/CentreDEnergie/Pages/techniques.php'>Techniques</a>
+							  <div class='dropdown-content' id='header_dropdown-content'>";
+								if ($_SESSION["loginStatus"]=="T")echo"<a href='/CentreDEnergie/Pages/article.php'>Nouveau Article</a>";
+							echo"<a href='/CentreDEnergie/Pages/techniques.php'>Techniques</a>
 								<a href='#'>Rapport</a>
 								<a href='/CentreDEnergie/Pages/profil.php'>Profil</a>								
 								<a href='/CentreDEnergie/Controllers/Clogout.php'>Log out</a>
