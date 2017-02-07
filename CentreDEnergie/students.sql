@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 02, 2017 at 08:09 PM
+-- Generation Time: Feb 07, 2017 at 05:18 PM
 -- Server version: 5.7.9
 -- PHP Version: 7.0.0
 
@@ -30,27 +30,33 @@ DROP TABLE IF EXISTS `chat`;
 CREATE TABLE IF NOT EXISTS `chat` (
   `messageId` int(4) NOT NULL AUTO_INCREMENT,
   `senderUsername` varchar(15) DEFAULT NULL,
-  `message` varchar(50) NOT NULL,
+  `senderColor` varchar(10) NOT NULL,
+  `message` varchar(300) NOT NULL,
   `dateSent` date NOT NULL,
   PRIMARY KEY (`messageId`)
-) ENGINE=MyISAM AUTO_INCREMENT=12 DEFAULT CHARSET=latin1;
+) ENGINE=MyISAM AUTO_INCREMENT=28 DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chat`
 --
 
-INSERT INTO `chat` (`messageId`, `senderUsername`, `message`, `dateSent`) VALUES
-(1, 'username', 'hello', '2016-11-01'),
-(2, '123faker', 'yo', '2016-11-01'),
-(3, '1name1', 'how is everyone', '2016-11-01'),
-(4, 'yoloswag420', 'this is a cool site', '2016-11-01'),
-(5, 'blazeit123', 'what do i need to know for verte belt', '2016-11-01'),
-(6, 'chatkool2', 'nice chat room', '2016-11-01'),
-(7, 'user432', 'easy exam?', '2016-11-01'),
-(8, 'play4723', 'lol', '2016-11-01'),
-(9, 'testing75', 'better train hard', '2016-11-01'),
-(10, 'awww', 'nice memes', '2016-11-01'),
-(11, '123faker', 'wieof', '2017-02-02');
+INSERT INTO `chat` (`messageId`, `senderUsername`, `senderColor`, `message`, `dateSent`) VALUES
+(1, 'username', 'blanche', 'hello', '2016-11-01'),
+(2, '123faker', 'jaune', 'yo', '2016-11-01'),
+(3, '1name1', 'orange', 'how is everyone', '2016-11-01'),
+(4, 'yoloswag420', 'violette', 'this is a cool site', '2016-11-01'),
+(5, 'blazeit123', 'bleue', 'what do i need to know for verte belt', '2016-11-01'),
+(6, 'chatkool2', 'verte', 'nice chat room', '2016-11-01'),
+(7, 'user432', 'brune', 'easy exam?', '2016-11-01'),
+(8, 'play4723', 'noire', 'lol', '2016-11-01'),
+(9, 'testing75', 'orange', 'better train hard', '2016-11-01'),
+(10, 'awww', 'violette', 'nice memes', '2016-11-01'),
+(11, '123faker', 'bleue', 'wieof', '2017-02-02'),
+(22, '123faker', 'orange', 'ewfw', '2017-02-07'),
+(24, '123faker', 'orange', 'fuck off', '2017-02-07'),
+(25, '123faker', 'orange', 'wefiwojfoewfjewojewo', '2017-02-07'),
+(26, '123faker', 'orange', 'oiaejfoiewjfoiewfjewfoiewjfoew', '2017-02-07'),
+(27, '123faker', 'orange', 'wojowiwef', '2017-02-07');
 
 -- --------------------------------------------------------
 
@@ -182,7 +188,7 @@ CREATE TABLE IF NOT EXISTS `student` (
 --
 
 INSERT INTO `student` (`studentID`, `username`, `pass`, `beltLevel`, `FName`, `LName`, `postedMessages`, `dateRegistered`) VALUES
-(1, '123faker', 'newpass456', 'brune', 'Bill', 'Bush', 15, '2016-11-16'),
+(1, '123faker', 'newpass456', 'orange', 'Bill', 'Bush', 15, '2016-11-16'),
 (3, 'bieberlove', 'iforgot123', 'blanche', 'Sarah', 'noire', 9, '2016-11-15'),
 (6, 'najob79', 'player2', 'noire', 'Max', 'Grey', 5, '2016-11-11'),
 (8, 'swagman', 'tryhard12', 'orange', 'Jill', 'Treliving', 3, '2016-11-14'),

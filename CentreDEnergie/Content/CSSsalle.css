@@ -1,3 +1,7 @@
+html, body{
+	height:100%;
+}
+
 .post h2 {
 	color: e7d732;
 	text-align: center;
@@ -63,7 +67,24 @@ textarea {
 	display:none;
 }
 
-#chatMessages > li {color:white;font-size:18px}
+#wrapper{
+	height:500px;
+	overflow:auto;
+}
+
+
+#chatMessages{
+	width:95%;
+}
+
+#chatMessages > li {
+	width:40%;
+	color:white;
+	font-size:15px;
+	padding:7px;
+	border:2px solid black;
+	border-radius:25px;
+}
 
 
 @media screen and (-webkit-min-device-pixel-ratio:0) and (min-resolution:.001dpcm) {
