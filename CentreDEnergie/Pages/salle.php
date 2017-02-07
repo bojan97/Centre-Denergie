@@ -9,24 +9,12 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 	$student=unserialize($_SESSION["student"]);
 
 	$username = $student->getUsername();
-}
-//else  USER NOT LOGGED IN
-}
-//else  USER NOT LOGGED IN
-?>
-<script>
-$(document).ready(function(){
-	$("#wrapper").animate({ scrollTop: $("#chatMessages").height() }, "slow");
-});
-</script>
-
-<div class="post" style="">
 	
-<div id="wrapper">	
-<ul id="chatMessages">	
-	<?php
+	echo "<div class='post' style=''>
 	
-		$array = array(	"blanche"=>"white",
+<div id='wrapper'>	
+<ul id='chatMessages'>";	
+		/*$array = array(	"blanche"=>"white",
 						"jaune"=>"#F5F507",
 						"orange"=>"#FFA500",
 						"violette"=>"#d365cf",
@@ -48,37 +36,96 @@ $(document).ready(function(){
 		}
 		
 		
-		$getMessages->close();
-	
-	?>
-	
-	<!--
-	<li>bojan97: Hello</li>
-	<br>
-	<li>123faker: whats up?</li>
-	<br>
-	<li>bojan97: Hello</li>
-	<br>
-	<li>123faker: whats up?</li>
-	<br>
-	<li>bojan97: Hello</li>
-	<br>
-	<li>123faker: whats up?</li>
-	<br>
-	<li style="margin-left:75%;color:black;">bojan97: testtesttesttesttesttest</li>
-	-->
+		$getMessages->close();*/
 	
 	
+echo "	
 </ul>
 </div>	
-<hr id="tareaBorder">
-<form method="POST" action='/CentreDEnergie/Controllers/CupdateChat.php'>
-	<textarea name="message" rows="3" maxlength="300" placeholder="Écrivez votre message ici..."autofocus required="required" ></textarea>
-	<input type="submit" id="button" class="input_Button" value="Envoyer">
+<hr id='tareaBorder'>
+<iframe style='display:none;' name='target'></iframe>
+<form method='POST' action='/CentreDEnergie/Controllers/CupdateChat.php' target='target'>
+	<textarea name='message' id='message' rows='3' maxlength='300' placeholder='Écrivez votre message ici...'autofocus required='required' ></textarea>
+	<input type='submit' id='button' class='input_Button' value='Envoyer'>
 
-	<input type="submit" id="button" value="Envoyer" class="button_Button"><span class="glyphicon glyphicon-share-alt"></span></input>
+	<input type='submit' id='button' value='Envoyer' class='button_Button'><span class='glyphicon glyphicon-share-alt'></span></input>
 </form>
-</div>
+</div>";
+	
+	
+}
+else//if user is not logged in
+{
+	echo "<br><p style='color:red;text-align:center'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'>ici </a>pour vous connecter.</p>";
+}
+}
+else//if user is not logged in
+{
+	echo "<br><p style='color:red;text-align:center'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'>ici </a>pour vous connecter.</p>";
+}
+?>
+<script>
+function auto_load(){
+        $.ajax({
+          url: "/CentreDEnergie/Controllers/Cgetmessages.php",
+          cache: false,
+          success: function(data){
+             $("#chatMessages").html(data);
+          } 
+        });
+		//alert($('#wrapper').scrollTop());
+		/*var foo = document.getElementById('wrapper');
+
+		foo.scrollTop = foo.scrollHeight;*/
+		
+		/*alert('height: ' + height + ' scrollHeight: ' + scrollHeight +
+              ' scrollTop: ' + st );*/
+		
+		//alert(st >=scrollHeight-height);
+}
+
+
+function scroll(){
+	$('#wrapper').animate({ scrollTop: $('#chatMessages').height() }, 'slow');
+	
+}
+
+function checkScroll()
+{
+	if($("#message").is(":focus"))
+	{
+		//alert("foiwejf");
+		var container = $("#wrapper");
+		var height = container.height();
+		var scrollHeight = container[0].scrollHeight;
+		var st = container.scrollTop();
+		
+		if(st < scrollHeight-height)
+		{
+			//alert("fjowief");
+			var scrollPos = $("#wrapper");
+			scrollPos.scrollTop = scrollPos.scrollHeight;
+		}
+	}
+}
+
+ 
+$(document).ready(function(){
+	auto_load(); //Call auto_load() function when DOM is Ready
+
+});
+ 
+setInterval(auto_load,1000);
+setInterval(checkScroll,1000);
+setTimeout(scroll,1000);
+
+
+
+
+
+</script>
+
+
 
 <?php
 
