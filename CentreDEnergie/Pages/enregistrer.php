@@ -12,10 +12,13 @@ if(isset($_SESSION["fname"])) $fname=$_SESSION["fname"];
 if(isset($_SESSION["lname"])) $lname=$_SESSION["lname"];
 
 ?>
+<script src='https://www.google.com/recaptcha/api.js?hl=fr'></script>
 <script>
 $(document).ready(function(){
     $("[data-toggle='tooltip']").tooltip(); 
 });
+
+
 </script>
 <?php
 if(!isset($_SESSION["loginStatus"])||$_SESSION["loginStatus"]==null)//check if user is logged in
@@ -64,6 +67,11 @@ echo"
 		</div>
 		<br>
 		<br>
+		<div style='text-align:center'>
+			<div class='g-recaptcha' data-sitekey='6LdN_xQUAAAAAPg2dI8qWmvSe7mC9HV7Bfvdunw8' data-theme='dark' style='display:inline-block'></div>
+		</div>
+		";
+		if(isset($_SESSION['captchaError'])&&$_SESSION['captchaError']==true) echo"<p>Le Captcha doit être cliqué</p>";echo"
 		<div class='buttonHolder'>
 			<input type='submit' class='btn btn-danger' value='Enregistrer'>
 		</div>
