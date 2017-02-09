@@ -11,6 +11,39 @@
 	session_start();
 	include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
 	
+	if(isset($_COOKIE["rememberStudent"])&&$_COOKIE["rememberStudent"]!="")
+	{
+		include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/dbConnect.php");
+		
+		$getPostInfo = $conn->prepare("SELECT * FROM student WHERE username = ?");
+		$getPostInfo->bind_param("s", $_COOKIE["rememberStudent"]);
+		$getPostInfo->execute();
+		$getPostInfo->bind_result($studentId,$username,$password, $beltLevel, $FName, $LName, $postedMessages, $dateRegistered);
+		$getPostInfo->fetch();
+		$getPostInfo->close();
+		$student = new Student($studentId, $username,$password,$beltLevel,$FName,$LName);
+		$student->setPostedMessages($postedMessages);
+		$_SESSION["student"]=serialize($student);
+		$_SESSION["loginStatus"]='S';//type of user
+	}
+	
+	if(isset($_COOKIE["rememberTeacher"])&&$_COOKIE["rememberTeacher"]!="")
+	{
+		include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/dbConnect.php");
+		
+		$getPostInfo = $conn->prepare("SELECT * FROM teacher WHERE teacherUsername = ?");
+		$getPostInfo->bind_param("s", $_COOKIE["rememberTeacher"]);
+		$getPostInfo->execute();
+		$getPostInfo->bind_result($username,$hashPassword,$beltLevel,$FName,$LName);
+		$getPostInfo->fetch();
+		$getPostInfo->close();
+		
+		$student = new Student(0, $username,$hashPassword,$beltLevel,$FName,$LName);
+		$_SESSION["student"]=serialize($student);
+		$_SESSION["loginStatus"]='T';//type of user
+	}
+	
+	
 	$url = 'http://' . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI'];
 	$currentPage="index";
 	if (strpos($url,'index') !== false||strcmp($_SERVER['REQUEST_URI'],'/CentreDEnergie/Pages/')==0) 
@@ -114,10 +147,10 @@
 							  <button class='dropbtn' id='header_dropbtn'>$username</button>
 							  <div class='dropdown-content' id='header_dropdown-content'>";
 								if ($_SESSION["loginStatus"]=="T")echo"<a href='/CentreDEnergie/Pages/article.php'>Nouveau Article</a>";
-							echo"<a href='/CentreDEnergie/Pages/techniques.php'>Techniques</a>
-								<a href='#'>Rapport</a>
-								<a href='/CentreDEnergie/Pages/profil.php'>Profil</a>								
-								<a href='/CentreDEnergie/Controllers/Clogout.php'>Log out</a>
+							echo"<a href='/CentreDEnergie/Pages/techniques.php'>Mes Techniques</a>
+								<a href='#'>Rapports</a>
+								<a href='/CentreDEnergie/Pages/profil.php'>Mon Profil</a>								
+								<a href='/CentreDEnergie/Controllers/Clogout.php'>Déconnexion</a>
 							  </div>
 							</div>";
 				}

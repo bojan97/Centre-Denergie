@@ -78,12 +78,13 @@ textarea {
 }
 
 #chatMessages > li {
-	width:40%;
+	width:42%;
 	color:white;
-	font-size:15px;
+	font-size:16px;
 	padding:7px;
 	border:2px solid black;
 	border-radius:25px;
+	background-color:rgba(105, 105, 105,1);
 }
 
 

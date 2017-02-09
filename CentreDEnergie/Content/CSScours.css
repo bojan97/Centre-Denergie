@@ -11,6 +11,12 @@ h2 {
 	letter-spacing: 2px
 }/*title*/
 
+.post h3 {
+	color: e7d732;
+	font-family: shanghai;
+	letter-spacing: 2px
+}/*title*/
+
 .post img {
 	text-align: center;
 	margin: 0 auto;
@@ -23,10 +29,10 @@ h2 {
 	margin-left: 1%;
 	margin-right: 1%;
 	color: black;
+	font-family: Arial;
 	line-height: 25px;
 	text-align: justify;
 	font-size: 17px;
-	font-family: Comic Sans MS
 }/*text inside the box*/
 
 .post {
@@ -44,14 +50,17 @@ h2 {
 }/* the lists inside the box */
 
 #contactLink {
-	color: white;
+	color: #c1b42e;
 	font-size: 17px;
-	font-family: Comic Sans MS;
+	font-family: Arial;
 	background-color: initial;
 	border-style: initial;
 	font-weight: bold;
-	text-decoration: underline;
+	text-decoration: none;
 }/* the styles for the link in the box */
+#contactLink:hover{
+	color:#a31123
+}
 
 /*=================*/
 /*||-Laptop Size-||*/

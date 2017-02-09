@@ -14,38 +14,14 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 	
 <div id='wrapper'>	
 <ul id='chatMessages'>";	
-		/*$array = array(	"blanche"=>"white",
-						"jaune"=>"#F5F507",
-						"orange"=>"#FFA500",
-						"violette"=>"#d365cf",
-						"bleue"=>"#4286f4",
-						"verte"=>"#37F211",
-						"brune"=>"#D2691E",
-						"noire"=>"black",);
 		
-		$getMessages = $conn->prepare("SELECT * FROM chat ORDER BY messageId");
-		$getMessages->execute();
-		$getMessages->store_result();
-
-		$getMessages->bind_result($messageId,$senderUsername,$senderColor,$message,$dateSent);
-		
-		while($getMessages->fetch())
-		{
-			echo "<li "; if($senderUsername==$username)echo"style='margin-left:63%'"; echo "><font style='font-weight:bold;font-family:shanghai;letter-spacing:2px;color:"; echo $array[$senderColor]; echo "'>".$senderUsername."</font><br>
-			".$message."</li><br>";
-		}
-		
-		
-		$getMessages->close();*/
-	
-	
 echo "	
 </ul>
 </div>	
 <hr id='tareaBorder'>
 <iframe style='display:none;' name='target'></iframe>
 <form method='POST' action='/CentreDEnergie/Controllers/CupdateChat.php' target='target'>
-	<textarea name='message' id='message' rows='3' maxlength='300' placeholder='Écrivez votre message ici...'autofocus required='required' ></textarea>
+	<textarea name='message' id='message' rows='3' maxlength='100' placeholder='Écrivez votre message ici...'autofocus required='required' ></textarea>
 	<input type='submit' id='button' class='input_Button' value='Envoyer'>
 
 	<input type='submit' id='button' value='Envoyer' class='button_Button'><span class='glyphicon glyphicon-share-alt'></span></input>
@@ -71,17 +47,12 @@ function auto_load(){
           cache: false,
           success: function(data){
              $("#chatMessages").html(data);
+			 checkScroll();
           } 
         });
-		//alert($('#wrapper').scrollTop());
-		/*var foo = document.getElementById('wrapper');
-
-		foo.scrollTop = foo.scrollHeight;*/
 		
-		/*alert('height: ' + height + ' scrollHeight: ' + scrollHeight +
-              ' scrollTop: ' + st );*/
 		
-		//alert(st >=scrollHeight-height);
+		
 }
 
 
@@ -90,37 +61,63 @@ function scroll(){
 	
 }
 
+
+
+
 function checkScroll()
 {
-	if($("#message").is(":focus"))
+	var container = $("#wrapper");
+	var height = container.height();
+	var scrollHeight = container[0].scrollHeight;
+	var st = container.scrollTop();
+	var calc = scrollHeight - st;
+	//alert(	"scrollTop="+st+"/n"+
+	//	"height="+scrollHeight+"\n"+
+	//	"calc="+(scrollHeight-st));
+	//alert("fjowief");
+	//var scrollPos = $("#wrapper");
+	//scrollPos.scrollTop = scrollPos.scrollHeight;
+	
+	
+	
+	if(calc>500&&calc<650)
 	{
-		//alert("foiwejf");
-		var container = $("#wrapper");
-		var height = container.height();
-		var scrollHeight = container[0].scrollHeight;
-		var st = container.scrollTop();
-		
-		if(st < scrollHeight-height)
-		{
-			//alert("fjowief");
-			var scrollPos = $("#wrapper");
-			scrollPos.scrollTop = scrollPos.scrollHeight;
-		}
+		var foo = document.getElementById('wrapper');
+
+		foo.scrollTop = foo.scrollHeight;
 	}
 }
 
  
 $(document).ready(function(){
 	auto_load(); //Call auto_load() function when DOM is Ready
+	$(this).scrollTop(0);
 
 });
  
 setInterval(auto_load,1000);
-setInterval(checkScroll,1000);
 setTimeout(scroll,1000);
 
 
-
+ $('#message').keydown(function(event) {
+    if (event.keyCode == 13 ) 
+	{
+		var enteredText = document.getElementById("message").value;
+		var numberOfLineBreaks = (enteredText.match(/\n/g)||[]).length;
+		if(this.value=="" || numberOfLineBreaks>0)
+		{
+			$(this).val('').focus();  
+			return false;
+		}
+		else
+		{
+			$(this.form).submit();
+			$(this).val('').focus();
+			return false;			
+		}
+	}
+	
+ })
 
 
 </script>
@@ -133,3 +130,4 @@ include("footerLayout.php");
 
 
 ?>
+

@@ -232,12 +232,12 @@ $index=0;
 </div>
 
 
-
-<div class="col-md-4"></div>
-<div class="col-md-4" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseWhite" aria-expanded="false" aria-controls="collapseExample" id="btn_white">Blanche</button>
-	<div class="collapse" id="collapseWhite">
-		<div class="well" id="well_white">
+<?php echo"
+<div class='col-md-4'></div>
+<div class='col-md-4' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapseWhite' aria-expanded='false' aria-controls='collapseExample' id='btn_white'>Blanche</button>
+	<div class='collapse' id='collapseWhite'>
+		<div class='well' id='well_white'>
 			<p>Coups de Poing: 7</p>
 			<p>Coups de Pied: 4</p>
 			<p>Bloques: 8</p>
@@ -246,12 +246,15 @@ $index=0;
 		</div>
 	</div>
 </div>
-<div class="col-md-4"></div>
+<div class='col-md-4'></div>";
 
-<div class="col-md-12" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseYellow" aria-expanded="false" aria-controls="collapseExample" id="btn_yellow"  <?php if($beltIndex<2)echo "style='display:none'";?>>Jaune</button>
-	<div class="collapse" id="collapseYellow">
-		<div class="well" id="well_yellow">
+if($beltIndex>=2)
+{
+echo"
+<div class='col-md-12' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapseYellow' aria-expanded='false' aria-controls='collapseExample' id='btn_yellow'>Jaune</button>
+	<div class='collapse' id='collapseYellow'>
+		<div class='well' id='well_yellow'>
 				<p>Coups de Poing: 7</p>
 				<p>Coups de Pied: 4</p>
 				<p>Bloques: 8</p>
@@ -262,11 +265,15 @@ $index=0;
 				<p>Formes: Pinan 2</p>
 		</div>
 	</div>
-</div>
-<div class="col-md-12" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseOrange" aria-expanded="false" aria-controls="collapseExample" id="btn_orange"  <?php if($beltIndex<3)echo "style='display:none'";?>>Orange</button>
-	<div class="collapse" id="collapseOrange">
-		<div class="well" id="well_orange">
+</div>";
+}
+if($beltIndex>=3)
+{
+echo"
+<div class='col-md-12' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapseOrange' aria-expanded='false' aria-controls='collapseExample' id='btn_orange'>Orange</button>
+	<div class='collapse' id='collapseOrange'>
+		<div class='well' id='well_orange'>
 				<p>Coups de Poing: 7</p>
 				<p>Coups de Pied: 4</p>
 				<p>Bloques: 8</p>
@@ -277,11 +284,15 @@ $index=0;
 				<p>Formes: Kata 1</p>
 		</div>
 	</div>
-</div>
-<div class="col-md-12" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsePurple" aria-expanded="false" aria-controls="collapseExample" id="btn_purple"  <?php if($beltIndex<4)echo "style='display:none'";?>>Purple</button>
-	<div class="collapse" id="collapsePurple">
-		<div class="well" id="well_purple">
+</div>";
+}
+if($beltIndex>=4)
+{
+echo"
+<div class='col-md-12' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapsePurple' aria-expanded='false' aria-controls='collapseExample' id='btn_purple'>Purple</button>
+	<div class='collapse' id='collapsePurple'>
+		<div class='well' id='well_purple'>
 				<p>Coups de Poing: 7</p>
 				<p>Coups de Pied: 4</p>
 				<p>Bloques: 3</p>
@@ -291,11 +302,15 @@ $index=0;
 				<p>Formes: Kata 2</p>
 		</div>
 	</div>
-</div>
-<div class="col-md-12" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseBlue" aria-expanded="false" aria-controls="collapseExample" id="btn_blue"  <?php if($beltIndex<5)echo "style='display:none'";?>>Bleue</button>
-	<div class="collapse" id="collapseBlue">
-		<div class="well" id="well_blue">
+</div>";
+}
+if($beltIndex>=5)
+{
+echo"
+<div class='col-md-12' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapseBlue' aria-expanded='false' aria-controls='collapseExample' id='btn_blue'>Bleue</button>
+	<div class='collapse' id='collapseBlue'>
+		<div class='well' id='well_blue'>
 				<p>Coups de Poing: 7</p>
 				<p>Coups de Pied: 4</p>
 				<p>Combinaisons: 10,15,16</p>
@@ -303,11 +318,15 @@ $index=0;
 				<p>Formes: Pinan 3, Pinan 4, Forme de Bloques</p>
 		</div>
 	</div>
-</div>
-<div class="col-md-12" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseGreen" aria-expanded="false" aria-controls="collapseExample" id="btn_green"  <?php if($beltIndex<6)echo "style='display:none'";?>>Verte</button>
-	<div class="collapse" id="collapseGreen">
-		<div class="well" id="well_green">
+</div>";
+}
+if($beltIndex>=6)
+{
+echo"
+<div class='col-md-12' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapseGreen' aria-expanded='false' aria-controls='collapseExample' id='btn_green' >Verte</button>
+	<div class='collapse' id='collapseGreen'>
+		<div class='well' id='well_green'>
 				<p>Coups de Poing: 7</p>
 				<p>Coups de Pied: 4</p>
 				<p>Bloques: 3</p>
@@ -316,11 +335,15 @@ $index=0;
 				<p>Formes: Pinan 5, Forme de la Grue</p>
 		</div>
 	</div>
-</div>
-<div class="col-md-12" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseBrown" aria-expanded="false" aria-controls="collapseExample" id="btn_brown"  <?php if($beltIndex<7)echo "style='display:none'";?>>Brune</button>
-	<div class="collapse" id="collapseBrown">
-		<div class="well" id="well_brown">
+</div>";
+}
+if($beltIndex>=7)
+{
+echo"
+<div class='col-md-12' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapseBrown' aria-expanded='false' aria-controls='collapseExample' id='btn_brown'>Brune</button>
+	<div class='collapse' id='collapseBrown'>
+		<div class='well' id='well_brown'>
 				<p>Coups de Poing: 7</p>
 				<p>Coups de Pied: 4</p>
 				<p>Combinaisons: 1,19,21,26</p>
@@ -328,11 +351,15 @@ $index=0;
 				<p>Formes: Kata 3, Kata 4, Kata 5, Forme du Prunier, Two Man Fist Set A</p>
 		</div>
 	</div>
-</div>
-<div class="col-md-12" id="btnRows">
-	<button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseBlack" aria-expanded="false" aria-controls="collapseExample" id="btn_black"  <?php if($beltIndex<8)echo "style='display:none'";?>>Noire</button>
-	<div class="collapse" id="collapseBlack">
-		<div class="well" id="well_black">
+</div>";
+}
+if($beltIndex>=8)
+{
+echo"
+<div class='col-md-12' id='btnRows'>
+	<button class='btn btn-primary' type='button' data-toggle='collapse' data-target='#collapseBlack' aria-expanded='false' aria-controls='collapseExample' id='btn_black'>Noire</button>
+	<div class='collapse' id='collapseBlack'>
+		<div class='well' id='well_black'>
 				<p>Coups de Poing: 7</p>
 				<p>Coups de Pied: 5</p>
 				<p>Coups de Genou: 1</p>
@@ -342,8 +369,13 @@ $index=0;
 		</div>
 	</div>
 </div>
-
-<?php
+";
+}
+}
+else//if user is not logged in
+{
+	echo "<h2>Mes Techniques</h2>
+		<p style='color:red;text-align:center'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'>ici </a>pour vous connecter.</p>";
 }
 }
 else//if user is not logged in

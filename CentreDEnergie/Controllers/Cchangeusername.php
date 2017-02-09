@@ -66,11 +66,6 @@ else
 	}
 	
 	
-	
-	
-	
-	
-	
 	if($userType=='S')
 	{
 		$updateStudentTable = $conn->prepare("UPDATE student SET username = ? WHERE username=?");
@@ -89,7 +84,7 @@ else
 	
 		$_SESSION["student"]=serialize($student);
 		$_SESSION["loginStatus"]='S';//type of user
-		
+		setcookie("rememberStudent", $student->getUsername(), time() + (10 * 365 * 24 * 60 * 60), "/");
 		header("Location:/CentreDEnergie/Pages/profil.php");
 		
 	}
@@ -110,8 +105,8 @@ else
 		$student = new Student(0, $username,$password,$beltLevel,$FName,$LName);
 	
 		$_SESSION["student"]=serialize($student);
-		$_SESSION["loginStatus"]='S';//type of user
-		
+		$_SESSION["loginStatus"]='T';//type of user
+		setcookie("rememberTeacher", $student->getUsername(), time() + (10 * 365 * 24 * 60 * 60), "/");
 		header("Location:/CentreDEnergie/Pages/profil.php");
 
 	}

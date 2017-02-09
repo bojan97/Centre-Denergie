@@ -36,6 +36,23 @@ form {
 	width: 20%;
 }/*Set the width and height of the input boxes*/
 
+#checkBox{
+	text-align:center;
+	margin-top:-2%;
+	color:#e7d732
+}
+
+
+#link{
+	text-decoration:none;
+	color:#c1b42e;
+}
+#link:hover{
+	color:#a31123
+}
+
+
+
 .btn-danger {
 	background-color: #b91327;
 	margin-top:10px;

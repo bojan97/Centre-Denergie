@@ -38,7 +38,7 @@ echo"
 		<div id='div_Password'>
 			<label for='password'>Mot de Passe: </label>
 			<input type='password' name='password' class='form-control'  id='password' required='required' maxlength='50' >
-			<span id='passwordTip' class='glyphicon glyphicon-question-sign' data-toggle='tooltip' data-placement='auto right' title='Le mot de passe doit contenir au moins 7 charactères et un chiffre.'></span>
+			<span id='passwordTip' class='glyphicon glyphicon-question-sign' data-toggle='tooltip' data-placement='auto right' title='Le mot de passe doit contenir au moins 8 charactères et un chiffre.'></span>
 			<br>
 			"; if(isset($_SESSION['errorPassword'])&&$_SESSION['errorPassword']==true) echo"<p>Le mot de passe est invalide</p>"; echo "
 		</div>
@@ -62,10 +62,12 @@ echo"
 			<br>
 			"; if(isset($_SESSION['errorName'])&&$_SESSION['errorName']==true) echo"<p>Le prénom ou le nom est invalide</p>"; echo"
 		</div>
-		<br><br>
+		<br>
+		<br>
 		<div class='buttonHolder'>
 			<input type='submit' class='btn btn-danger' value='Enregistrer'>
 		</div>
+		<p>Vous avez déja un compte? <a href='connexion.php' id='link'>Cliquez ici</a> pour vous connecter!</p>
 	</form>
 </div>";
 }

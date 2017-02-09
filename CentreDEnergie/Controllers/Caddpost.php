@@ -25,9 +25,31 @@ $temp_name  = $_FILES['image']['tmp_name'];
 	{
 		$image=null;
 	}
-	$addPost = $conn->prepare("INSERT INTO posts (postId, postTitle, postImage, postText, postDate) VALUES(NULL, ?, ?, ?, '".date("Y-m-d")."')");
-	$addPost->bind_param("sss", $title, $image, $message);
-	$addPost->execute();
-
+	if(isset($_POST["postId"])&&$_POST["postId"]!=0)//EXISTING POST IS BEING EDITED
+	{
+		$postId = $_POST["postId"];
+		
+		$getImage = $conn->prepare("SELECT postImage FROM posts WHERE postId = ?");
+		$getImage->bind_param("i", $postId);
+		$getImage->execute();
+		$getImage->bind_result($img);
+		$getImage->fetch();
+		$getImage->close();
+		
+		if($image!=$img)
+		{
+			unlink($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/PostImages/".$img);
+		}
+		
+		$addPost = $conn->prepare("UPDATE posts SET postTitle = ?, postImage = ?, postText = ?  WHERE postId = ?");
+		$addPost->bind_param("sssi", $title, $image, $message, $postId);
+		$addPost->execute();
+	}
+	else//NEW POST IS CREATED
+	{
+		$addPost = $conn->prepare("INSERT INTO posts (postId, postTitle, postImage, postText, postDate) VALUES(NULL, ?, ?, ?, '".date("Y-m-d")."')");
+		$addPost->bind_param("sss", $title, $image, $message);
+		$addPost->execute();
+	}
 	header("Location:/CentreDEnergie/Pages/index.php");
 ?>

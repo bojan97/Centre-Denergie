@@ -20,15 +20,15 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/dbConnect.ph
 				<!-- Wrapper for slides -->
 				<div class="carousel-inner" role="listbox">
 					<div class="item active" >
-					  <img class="slideshow-images"src="/CentreDEnergie/Content/img1.png" >
+					  <img class="slideshow-images"src="/CentreDEnergie/Content/img1.jpg" >
 					</div>
 
 					<div class="item">
-					  <img class="slideshow-images"src="/CentreDEnergie/Content/img2.png">
+					  <img class="slideshow-images"src="/CentreDEnergie/Content/img2.jpg">
 					</div>
 
 					<div class="item">
-					  <img class="slideshow-images"src="/CentreDEnergie/Content/img3.png" >
+					  <img class="slideshow-images"src="/CentreDEnergie/Content/img3.jpg" >
 					</div>
 				</div>
 
@@ -53,7 +53,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/dbConnect.ph
 				while($getPosts->fetch())
 				{
 					echo "<br><div class='post'>
-							<h2>".$postTitle."</h2>";
+							<h2 style=''>".$postTitle."</h2>
+							";if(isset($_SESSION["loginStatus"])&&$_SESSION["loginStatus"]=='T')echo"<a href='/CentreDEnergie/Pages/article.php?id=".$postId."' style='margin-left:97%;'><span class='glyphicon glyphicon-pencil' style='color:yellow;padding-bottom:2%'></span></a>;
+							<a href='/CentreDEnergie/Controllers/Cdeletepost.php?id=".$postId."' style='margin-left:97%;'><span class='glyphicon glyphicon-remove' style='color:red;'></span></a>";
 							if($postImage!=null) echo "<img src='/CentreDEnergie/PostImages/".$postImage."'>";
 							echo "<p class='postContent'>".$postText."</p>
 						</div>";

@@ -23,12 +23,12 @@
 }/* something that im supposed to add */
 
 .carousel-inner>.item>img {
-	width: 400px;
-	height: 340px;
+	width: 440px;
+	height: 380px;
 }
 
 .post h2 {
-	color: white;
+	color: #e7d732;
 	text-align: center;
 	font-family: shanghai;
 	letter-spacing: 2px
@@ -44,11 +44,11 @@
 .postContent {
 	margin-left: 1%;
 	margin-right: 1%;
-	color: black;
+	color: white;
 	line-height: 25px;
 	text-align: justify;
 	font-size: 17px;
-	font-family: Comic Sans MS;
+	font-family: Arial;
 }/*modify the text of each post */
 
 .post {

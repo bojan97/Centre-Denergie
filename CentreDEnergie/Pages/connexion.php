@@ -17,12 +17,17 @@ if(!isset($_SESSION["loginStatus"])||$_SESSION["loginStatus"]==null)//check if u
 	<br>
 	<label for='password'>Mot de Passe: </label>
 	<input type='password' name='password' class='form-control'  id='password' required='required'>
-	<br>
 	<p>"; if(isset($_SESSION['error'])) echo $_SESSION['error'];
-	echo"</p>
+	echo"</p><br>
+	<div id='checkBox'>
+	<input type='checkbox' name='remember' value='remember'>Se souvenir
+	</div>
+	
 	<div class='buttonHolder'>
 		<input type='submit' class='btn btn-danger' value='Connexion'>
 	</div>
+	<br>
+	<p>Vous n'avez pas un compte? <a href='enregistrer.php' id='link'>Cliquez ici</a> pour vous enregistrer!</p>
 	</form>
 </div>";
 }

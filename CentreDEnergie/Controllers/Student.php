@@ -8,6 +8,7 @@ class Student
 	private $rank;
 	private $fname;
 	private $lname;
+	private $postedMessages;
 	private $dateCreated;
 	
 	function __construct($StudentID, $Username, $Password, $Rank, $Fname, $Lname)
@@ -44,9 +45,25 @@ class Student
 	{
 		return $this->lname;
 	}
+	
+	public function setDateCreated($date)
+	{
+		$this->postedMessages = $date;
+	}
+	
 	public function getDateCreated()
 	{
 		return $this->dateCreated;
+	}
+	
+	public function setPostedMessages($message)
+	{
+		$this->postedMessages = $message;
+	}
+	
+	public function getPostedMessages()
+	{
+		return $this->postedMessages;
 	}
 }
 

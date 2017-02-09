@@ -31,7 +31,7 @@ if(strlen($username)>15||$username==null||$stmt3->num_rows>0)//validate basic us
 	$stmt3->close();
 	header("Location:/CentreDEnergie/Pages/enregistrer.php");
 }
-else if(strlen($password)>50||strlen($password)<7||!preg_match('#[0-9]#',$password)||$password==null)//validate basic password entry
+else if(strlen($password)>50||strlen($password)<8||!preg_match('#[0-9]#',$password)||$password==null)//validate basic password entry
 {
 	$_SESSION["errorUsername"]=false;
 	$_SESSION["errorPassword"]=true;
@@ -62,6 +62,7 @@ else
 
 	$username=$_POST["username"];
 	$password=$_POST["password"];
+	$password = password_hash($password,PASSWORD_BCRYPT);
 	$stmt = $conn->prepare("INSERT INTO student (studentID, username, pass, FName, LName, postedMessages, dateRegistered) VALUES(NULL, ?, ?, ?, ?, 0, '".date("Y-m-d")."')");
 	$stmt->bind_param("ssss", $username, $password, $fname, $lname);
 	$stmt->execute();
@@ -77,7 +78,7 @@ else
 	$stmt2->fetch();
 	
 	$student = new Student($studentID, $username,$password,$beltLevel,$FName,$LName);
-	
+	$student->setDateCreated($dateRegistered);
 	$_SESSION["student"]=serialize($student);
 	$_SESSION["loginStatus"]='S';//type of user
 	header("Location:/CentreDEnergie/Pages/profil.php");
@@ -86,6 +87,15 @@ else
 	$stmt->close();
 	$stmt2->close();
 	$conn->close();
+	
+	$_SESSION["errorUsername"]=false;
+	$_SESSION["errorPassword"]=false;
+	$_SESSION["errorRpassword"]=false;
+	$_SESSION["errorName"]=false;
+	
+	$_SESSION["username"]="";
+	$_SESSION["fname"]="";
+	$_SESSION["lname"]="";
 }
 
 ?>

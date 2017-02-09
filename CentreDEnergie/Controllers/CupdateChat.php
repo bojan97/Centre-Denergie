@@ -1,5 +1,4 @@
 <?php
-echo "works";
 
 session_start();
 include("dbConnect.php");
@@ -18,6 +17,26 @@ $updateChat->execute();
 
 $updateChat->close();
 
-header("Location:/CentreDEnergie/Pages/salle.php#wrapper");
+
+
+
+$updateStudentTable = $conn->prepare("UPDATE student SET postedMessages = postedMessages + 1 WHERE username=?");
+$updateStudentTable->bind_param("s", $username);
+$updateStudentTable->execute();
+$updateStudentTable->close();
+
+
+
+
+$getPostedMessages = $conn->prepare("SELECT postedMessages FROM student WHERE username=?");
+$getPostedMessages->bind_param("s", $username);
+$getPostedMessages->execute();
+$getPostedMessages->store_result();
+
+$getPostedMessages->bind_result($postedMessages);
+$getPostedMessages->close();
+
+
+//header("Location:/CentreDEnergie/Pages/salle.php#wrapper");
 
 ?>

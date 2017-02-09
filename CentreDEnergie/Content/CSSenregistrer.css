@@ -35,6 +35,16 @@ form {
 	float:left;
 }/*Set the width and height of the input boxes*/
 
+
+#link{
+	text-decoration:none;
+	color:#c1b42e;
+}
+#link:hover{
+	color:#a31123
+}
+
+
 .buttonHolder{
 	text-align:center;
 }

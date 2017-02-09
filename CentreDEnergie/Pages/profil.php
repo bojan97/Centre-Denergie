@@ -11,6 +11,15 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 	$username = $student->getUsername();
 	$rank = ucfirst($student->getRank());
 	
+	if(isset($_SESSION['success'])&&$_SESSION['success']==true)
+	{
+		echo "<script type=text/javascript>";
+		echo "alert('Votre mot de passe a changé.')";
+		echo "</script>";
+		
+		$_SESSION['success']=false;
+	}
+	
 	echo "<div class='row'>
 		<h2>Mon Profil</h2>
 </div>
