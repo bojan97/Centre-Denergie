@@ -10,7 +10,7 @@ include("headerLayout.php");
 		<h2>Laissez un Message</h2>
 		<p>Si vous avez des questions, vous pouvez nous envoyer un message par courriel</p>
 		<br>
-		<form method="POST">
+		<form action="/CentreDEnergie/Controllers/Ccontact.php" method="POST">
 		<p>Adresse Courriel: <input type="email" name="email" id="email"class="form-control"required="required" id="email"></p>
 		<br>
 		<p>Message:</p>
