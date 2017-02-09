@@ -2,6 +2,10 @@
 session_start();
 include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
 include("dbConnect.php");
+if(isset($_SESSION["loginStatus"]))
+{
+if($_SESSION["loginStatus"]!=null)//check if user is logged in
+{
 $student=unserialize($_SESSION["student"]);
 
 $username = $student->getUsername();
@@ -30,6 +34,11 @@ $array = array(	"blanche"=>"white",
 		
 		
 		$getMessages->close();
-
+}
+else
+	header("Location:/CentreDEnergie/Pages/index.php");
+}
+else
+	header("Location:/CentreDEnergie/Pages/index.php");
 
 ?>

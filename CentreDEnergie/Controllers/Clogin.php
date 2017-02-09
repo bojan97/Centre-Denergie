@@ -4,6 +4,9 @@ include("Student.php");
 include("dbConnect.php");
 
 $username=$_POST["username"];
+$username = strip_tags($username);
+$username = filter_var($username, FILTER_SANITIZE_SPECIAL_CHARS);
+
 $password=$_POST["password"];
 $stmt = $conn->prepare("SELECT * FROM student WHERE username=?");
 $stmt->bind_param("s", $username);

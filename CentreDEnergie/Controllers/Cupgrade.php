@@ -6,6 +6,9 @@ include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php"
 
 $username=$_POST["username"];
 $code=$_POST["code"];
+$code = strip_tags($code);
+$code = filter_var($code, FILTER_SANITIZE_SPECIAL_CHARS);
+
 
 $_SESSION['errorNewusername']=false;
 $_SESSION['errorPassword']=false;

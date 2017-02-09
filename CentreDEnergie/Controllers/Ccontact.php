@@ -1,7 +1,10 @@
 <?php
+session_start();
 include ("class.smtp.php");
 include ("class.phpmailer.php");
-
+$_SESSION['success']=false;
+if(isset($_POST["email"]))
+{
 $mail = new PHPMailer();
 
 //$mail->SMTPDebug = 3;                               // Enable verbose debug output
@@ -15,16 +18,20 @@ $mail->Password = 'I<3B0j4N';                           // SMTP password
 $mail->SMTPSecure = 'ssl';                            // Enable TLS encryption, `ssl` also accepted
 $mail->Port = 465;                                    // TCP port to connect to
 $mail->IsHTML(true);
-$mail->setFrom('centredenergiedechambly@gmail.com');
-$mail->addAddress($_POST["email"]);     // Add a recipient
+$mail->setFrom($_POST["email"]);
+$mail->addAddress('centredenergiedechambly@gmail.com');     // Add a recipient
 
 $mail->Subject = 'Message ecris par '.$_POST["email"];
 $mail->Body    = $_POST["message"];
 
+
 if(!$mail->send()) {
-    echo '<br>Message could not be sent.';
-    echo 'Mailer Error: ' . $mail->ErrorInfo;
+    $_SESSION['success']=false;
 } else {
-    echo 'Message has been sent';
+    $_SESSION['success']=true;
+	header("Location:/CentreDEnergie/Pages/contact.php");
 }
+}
+else
+	header("Location:/CentreDenergie/Pages/index.php");
 ?>

@@ -1,8 +1,23 @@
 <?php
 
 include("headerLayout.php");
+if(isset($_SESSION['success'])&&$_SESSION['success']==true)
+{
+	echo "<script type=text/javascript>";
+	echo "alert('Le message a été envoyé')";
+	echo "</script>";
+	
+	$_SESSION['success']=false;
+}
 
-
+if(isset($_SESSION['success'])&&$_SESSION['success']==false)
+{
+	echo "<script type=text/javascript>";
+	echo "alert('Une erreur est survenue. Le message n'a pas été envoyé.')";
+	echo "</script>";
+	
+	$_SESSION['success']=false;
+}
 
 ?>
 

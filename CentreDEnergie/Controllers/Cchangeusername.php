@@ -5,7 +5,13 @@ include("dbConnect.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
 
 	$username=$_POST["username"];
+	$username = strip_tags($username);
+	$username = filter_var($username, FILTER_SANITIZE_SPECIAL_CHARS);
+	
 	$newusername=$_POST["newusername"];
+	$newusername = strip_tags($newusername);
+	$newusername = filter_var($newusername, FILTER_SANITIZE_SPECIAL_CHARS);
+	
 
 	$checkStudentTable = $conn->prepare("SELECT * FROM student WHERE username=?");
 	$checkStudentTable->bind_param("s", $newusername);

@@ -1,12 +1,23 @@
 <?php
 session_start();
 include("dbConnect.php");
-
+if(isset($_POST["username"]))
+{
 $username=$_POST["username"];
+$username = strip_tags($username);
+$username = filter_var($username, FILTER_SANITIZE_SPECIAL_CHARS);
+
 $password=$_POST["password"];
+
 $rpassword=$_POST["rpassword"];
+
 $fname=$_POST["fname"];
+$fname = strip_tags($fname);
+$fname = filter_var($fname, FILTER_SANITIZE_SPECIAL_CHARS);
+
 $lname=$_POST["lname"];
+$lname = strip_tags($lname);
+$lname = filter_var($lname, FILTER_SANITIZE_SPECIAL_CHARS);
 
 if(!isset($_SESSION["username"])) $_SESSION["username"]=$username; else $_SESSION["username"]=$username;
 if(!isset($_SESSION["fname"])) $_SESSION["fname"]=$fname; else $_SESSION["fname"]=$fname;;
@@ -96,6 +107,11 @@ else
 	$_SESSION["username"]="";
 	$_SESSION["fname"]="";
 	$_SESSION["lname"]="";
+}
+}
+else
+{
+	header("Location:/CentreDEnergie/Pages/enregistrer.php");
 }
 
 ?>

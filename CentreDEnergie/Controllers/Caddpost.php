@@ -1,7 +1,13 @@
 <?php
 include("dbConnect.php");
 $title=$_POST["postTitle"];
+$title = strip_tags($title);
+$title = filter_var($title, FILTER_SANITIZE_SPECIAL_CHARS);
+
+
 $message=$_POST["message"];
+$message = strip_tags($message);
+$message = filter_var($message, FILTER_SANITIZE_SPECIAL_CHARS);
 
 $image= $_FILES['image']['name']; 
 $temp_name  = $_FILES['image']['tmp_name'];  

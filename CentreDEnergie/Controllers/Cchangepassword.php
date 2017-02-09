@@ -5,8 +5,13 @@ include("dbConnect.php");
 include_once($_SERVER['DOCUMENT_ROOT']."/CentreDEnergie/Controllers/Student.php");
 
 $username=$_POST["username"];
+$username = strip_tags($username);
+$username = filter_var($username, FILTER_SANITIZE_SPECIAL_CHARS);
+
 $password=$_POST["password"];
+
 $newPassword=$_POST["newPassword"];
+
 $rnewPassword=$_POST["rnewPassword"];
 //$_SESSION["errorPassword"]=false;
 
