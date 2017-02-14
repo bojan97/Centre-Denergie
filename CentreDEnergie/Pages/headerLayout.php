@@ -148,7 +148,7 @@
 							  <div class='dropdown-content' id='header_dropdown-content'>";
 								if ($_SESSION["loginStatus"]=="T")echo"<a href='/CentreDEnergie/Pages/article.php'>Nouveau Article</a>";
 							echo"<a href='/CentreDEnergie/Pages/techniques.php'>Mes Techniques</a>";
-								if ($_SESSION["loginStatus"]=="T")echo"<a href='#'>Rapports</a>";
+								if ($_SESSION["loginStatus"]=="T")echo"<a href='/CentreDEnergie/Pages/rapports.php'>Rapports</a>";
 							echo"<a href='/CentreDEnergie/Pages/profil.php'>Mon Profil</a>								
 								<a href='/CentreDEnergie/Controllers/Clogout.php'>Déconnexion</a>
 							  </div>
