@@ -1,3 +1,20 @@
 h2{
-	color:blue;
+	text-align:center; color:#f50000;font-family:shanghai;letter-spacing:2px;
+}/*sets the header message to red*/
+p{
+	color:#FFFFFF;
+}/*sets the page text to white*/
+
+
+#Dreport,#Sreport,#Ereport{
+	display: inline-block;
+	margin-bottom:1%;
+	font-family:shanghai;
+	letter-spacing:2px;
+}
+#Ereport{
+	margin-top:5px;
+}
+#btnRows{
+	text-align:center;
 }
