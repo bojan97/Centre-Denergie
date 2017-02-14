@@ -39,7 +39,7 @@ if($_SESSION["loginStatus"]=='T')//check if user is logged in
 		<input type='submit' class='btn btn-danger' value='Envoyer'>
 		</form>
 		</div>";
-
+	$conn->close();
 }
 else
 {
