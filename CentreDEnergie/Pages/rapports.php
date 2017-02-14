@@ -25,7 +25,38 @@ if(isset($_SESSION["loginStatus"]))
 		
 		echo"<div class='row'>
 			<h2>Rapport</h2>
-			
+			<div class='col-md-12' id='btnRows'>
+				<form action='/CentreDEnergie/Pages/TableRapports.php' method='POST'>
+					<input type='submit' name='Dreport' id='Dreport' class='btn btn-danger' value='Rapport Détaillé'>
+				</form>
+			</div>
+			<div class='col-md-12' id='btnRows'>
+				<form action='/CentreDEnergie/Pages/TableRapports.php' method='POST'>
+					<input type='submit' name='Sreport' id='Sreport' class='btn btn-danger' value='Rapport Sommaire'>
+			</div>
+			<br>
+			<div class='col-md-12' id='btnRows'>
+				<form action='/CentreDEnergie/Pages/TableRapports.php' method='POST'>
+					<select name='month' required>
+						<option value=''>Choisissez Votre Mois</option>
+						<option value='Jan'>Janvier</option>
+						<option value='Feb'>Février</option>
+						<option value='Mar'>Mars</option>
+						<option value='Apr'>Avril</option>
+						<option value='May'>Mai</option>
+						<option value='Jun'>Juin</option>
+						<option value='Jul'>Juillet</option>
+						<option value='Aug'>Août</option>
+						<option value='Sep'>Septembre</option>
+						<option value='Oct'>Octobre</option>
+						<option value='Nov'>Novembre</option>
+						<option value='Dec'>Décembre</option>
+				    </select>
+					
+					<br>
+					<input type='submit' name='Ereport' id='Ereport' class='btn btn-danger' value='Rapport D&#39;exception'>
+				</form>
+			</div>
 			</div>";
 
 	}
