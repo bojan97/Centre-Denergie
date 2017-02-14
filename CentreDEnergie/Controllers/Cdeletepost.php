@@ -20,5 +20,5 @@ $deletePost->execute();
 $deletePost->close();
 
 header("Location:/CentreDEnergie/Pages/index.php");
-
+$conn->close();
 ?>

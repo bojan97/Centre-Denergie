@@ -41,7 +41,7 @@ if(strlen($username)>15||$username==null||$stmt3->num_rows>0)//validate basic us
 	$_SESSION["errorPassword"]=false;
 	$_SESSION["errorRpassword"]=false;
 	$_SESSION["errorName"]=false;
-	$stmt3->close();
+	$_SESSION["captchaError"]=false;
 	header("Location:/CentreDEnergie/Pages/enregistrer.php");
 }
 else if(strlen($password)>50||strlen($password)<8||!preg_match('#[0-9]#',$password)||$password==null)//validate basic password entry
@@ -50,6 +50,7 @@ else if(strlen($password)>50||strlen($password)<8||!preg_match('#[0-9]#',$passwo
 	$_SESSION["errorPassword"]=true;
 	$_SESSION["errorRpassword"]=false;
 	$_SESSION["errorName"]=false;
+	$_SESSION["captchaError"]=false;
 	header("Location:/CentreDEnergie/Pages/enregistrer.php");
 }
 else if(strcmp($password,$rpassword)!=0||$rpassword==null)//check if password fields match
@@ -58,6 +59,7 @@ else if(strcmp($password,$rpassword)!=0||$rpassword==null)//check if password fi
 	$_SESSION["errorPassword"]=false;
 	$_SESSION["errorRpassword"]=true;
 	$_SESSION["errorName"]=false;
+	$_SESSION["captchaError"]=false;
 	header("Location:/CentreDEnergie/Pages/enregistrer.php");
 }
 else if($fname==null||strlen($fname)>50||$lname==null||strlen($lname)>50)//first name and last name validation
@@ -66,6 +68,7 @@ else if($fname==null||strlen($fname)>50||$lname==null||strlen($lname)>50)//first
 	$_SESSION["errorPassword"]=false;
 	$_SESSION["errorRpassword"]=false;
 	$_SESSION["errorName"]=true;
+	$_SESSION["captchaError"]=false;
 	header("Location:/CentreDEnergie/Pages/enregistrer.php");
 }
 else
@@ -74,6 +77,7 @@ else
 	$_SESSION["errorPassword"]=false;
 	$_SESSION["errorRpassword"]=false;
 	$_SESSION["errorName"]=false;
+	$_SESSION["captchaError"]=false;
 	
 	
 include("Student.php");
@@ -146,10 +150,14 @@ else
 }
 }
 }
+
+
+$stmt3->close();
+
 }
 else
 {
 	header("Location:/CentreDEnergie/Pages/enregistrer.php");
 }
-
+$conn->close();
 ?>

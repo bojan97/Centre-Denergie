@@ -50,12 +50,15 @@ $temp_name  = $_FILES['image']['tmp_name'];
 		$addPost = $conn->prepare("UPDATE posts SET postTitle = ?, postImage = ?, postText = ?  WHERE postId = ?");
 		$addPost->bind_param("sssi", $title, $image, $message, $postId);
 		$addPost->execute();
+		$addPost->close();
 	}
 	else//NEW POST IS CREATED
 	{
 		$addPost = $conn->prepare("INSERT INTO posts (postId, postTitle, postImage, postText, postDate) VALUES(NULL, ?, ?, ?, '".date("Y-m-d")."')");
 		$addPost->bind_param("sss", $title, $image, $message);
 		$addPost->execute();
+		$addPost->close();
 	}
 	header("Location:/CentreDEnergie/Pages/index.php");
+	$conn->close();
 ?>

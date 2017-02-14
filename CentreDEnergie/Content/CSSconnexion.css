@@ -6,12 +6,26 @@ h2 {
 }
 
 p{
-	color:red;
 	text-align:center;
+	color:red;
+}
+
+
+#bottomText{
+	text-align:center;
+	color:#e7d732;
 }
 .buttonHolder{
 	text-align:center;
 }
+
+.funkyradio-danger input[type="radio"]:checked ~ label:before,
+.funkyradio-danger input[type="checkbox"]:checked ~ label:before {
+  color: #fff;
+  background-color: #d9534f;
+}
+
+
 
 label {
 	display: inline-block;
@@ -45,7 +59,7 @@ form {
 
 #link{
 	text-decoration:none;
-	color:#c1b42e;
+	color:red;
 }
 #link:hover{
 	color:#a31123

@@ -51,4 +51,6 @@ else
 }
 else
 	header("Location:/CentreDEnergie/Pages/index.php");
+
+$conn->close();
 ?>

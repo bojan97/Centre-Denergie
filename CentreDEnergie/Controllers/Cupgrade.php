@@ -89,7 +89,9 @@ else
 			$getNewData->close();
 		}
 	}
-
+	
+	$checkCode->close();
 
 }
+$conn->close();
 ?>

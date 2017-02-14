@@ -60,6 +60,8 @@ else
 		$checkStudent->fetch();
 		if($checkStudent->num_rows()>0)$userType='S';
 	}
+	$checkStudent->close();
+	
 	$checkTeacher = $conn->prepare("SELECT * FROM teacher WHERE teacherUsername=?");
 	$checkTeacher->bind_param("s", $username);
 	if($checkTeacher->execute())
@@ -70,13 +72,14 @@ else
 		$checkTeacher->fetch();
 		if($checkTeacher->num_rows()>0)$userType='T';
 	}
-	
+	$checkTeacher->close();
 	
 	if($userType=='S')
 	{
 		$updateStudentTable = $conn->prepare("UPDATE student SET username = ? WHERE username=?");
 		$updateStudentTable->bind_param("ss", $newusername, $username);
 		$updateStudentTable->execute();
+		$updateStudentTable->close();
 		
 		$getNewData = $conn->prepare("SELECT * FROM student WHERE username=?");
 		$getNewData->bind_param("s", $newusername);
@@ -85,7 +88,7 @@ else
 	
 		$getNewData->bind_result($studentID,$username,$password,$beltLevel,$FName,$LName,$postedMessages,$dateRegistered);
 		$getNewData->fetch();
-	
+		$getNewData->close();
 		$student = new Student($studentID, $username,$password,$beltLevel,$FName,$LName);
 	
 		$_SESSION["student"]=serialize($student);
@@ -99,6 +102,7 @@ else
 		$updateTeacherTable = $conn->prepare("UPDATE teacher SET teacherUsername = ? WHERE teacherUsername=?");
 		$updateTeacherTable->bind_param("ss", $newusername, $username);
 		$updateTeacherTable->execute();
+		$updateTeacherTable->close();
 		
 		$getNewData = $conn->prepare("SELECT * FROM teacher WHERE teacherUsername=?");
 		$getNewData->bind_param("s", $newusername);
@@ -107,6 +111,7 @@ else
 	
 		$getNewData->bind_result($username,$password,$beltLevel,$FName,$LName);
 		$getNewData->fetch();
+		$getNewData->close();
 	
 		$student = new Student(0, $username,$password,$beltLevel,$FName,$LName);
 	
@@ -121,5 +126,5 @@ else
 	
 	
 }
-
+$conn->close();
 ?>

@@ -2,6 +2,7 @@
 session_start();
 include ("class.smtp.php");
 include ("class.phpmailer.php");
+include("dbConnect.php");
 $_SESSION['success']=false;
 if(isset($_POST["email"]))
 {
@@ -27,8 +28,27 @@ $mail->Body    = $_POST["message"];
 
 if(!$mail->send()) {
     $_SESSION['success']=false;
-} else {
+} 
+else 
+{
     $_SESSION['success']=true;
+	
+	$email = $_POST["email"];
+	$email = strip_tags($email);
+	$email = filter_var($email, FILTER_SANITIZE_EMAIL);
+	
+	$message = $_POST["message"];
+	$message = strip_tags($message);
+	$message = filter_var($message, FILTER_SANITIZE_SPECIAL_CHARS);
+	
+	$updateCustomer = $conn->prepare("INSERT INTO Customer (email, message, dateSent) VALUES(?, ?, '".date("Y-m-d")."')");
+	$updateCustomer->bind_param("ss", $email, $message);
+	$updateCustomer->execute();
+	$updateCustomer->close();
+	
+	$conn->close();
+	
+	
 	header("Location:/CentreDEnergie/Pages/contact.php");
 }
 }

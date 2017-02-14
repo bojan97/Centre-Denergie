@@ -29,7 +29,7 @@ if(isset($_SESSION['success'])&&$_SESSION['success']==false)
 		<p>Adresse Courriel: <input type="email" name="email" id="email"class="form-control"required="required" id="email"></p>
 		<br>
 		<p>Message:</p>
-		<textarea name="message" id="message" class="form-control" rows="7" cols="70" required="required"></textarea>
+		<textarea name="message" id="message" class="form-control" rows="7" cols="70" maxlength="1000" required="required"></textarea>
 		
 		<br>
 		<input type="submit" class="btn btn-danger" value="Envoyer">

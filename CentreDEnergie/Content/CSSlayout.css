@@ -29,10 +29,10 @@ nav {
 
 #login-links a{
 	text-decoration:none;
-	color:#c1b42e;
+	color:#e7d732;
 }
 #login-links a:hover{
-	color:#a31123
+	color:#f50000;
 }
 
 .nav-pills > li.active > a,

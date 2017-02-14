@@ -25,10 +25,7 @@ if(!isset($_SESSION["loginStatus"])||$_SESSION["loginStatus"]==null)//check if u
 {
 
 echo"
-<div class='row'>
 	<h2>Enregistrement</h2>
-</div>
-<div class='row'>
 	<form method='POST' action='/CentreDEnergie/Controllers/Cregister.php'>
 		<div id='div_Username'>
 			<label for='username' id='lblUser' >Nom d'Utilisateur: </label>
@@ -75,9 +72,8 @@ echo"
 		<div class='buttonHolder'>
 			<input type='submit' class='btn btn-danger' value='Enregistrer'>
 		</div>
-		<p>Vous avez déja un compte? <a href='connexion.php' id='link'>Cliquez ici</a> pour vous connecter!</p>
-	</form>
-</div>";
+		<p id='bottomText'>Vous avez déja un compte? <a href='connexion.php' id='link'>Cliquez ici</a> pour vous connecter!</p>
+	</form>";
 }
 else
 {

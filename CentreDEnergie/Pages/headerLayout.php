@@ -162,7 +162,7 @@
 			 
 		</div>
 		<div class="col-md-1" id="title">
-			<h1>Le Centre d'Energie de Chambly</h1>
+			<h1>Le Centre d'Énergie Michel Sylvain</h1>
 		</div>
 	</div>
 	<div class="row">

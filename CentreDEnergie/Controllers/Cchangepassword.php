@@ -24,6 +24,7 @@ if(strlen($newPassword)>50||strlen($newPassword)<8||!preg_match('#[0-9]#',$newPa
 {
 	$_SESSION["errorNewPassword"]=true;
 	header("Location:/CentreDEnergie/Pages/profil.php");
+	$conn->close();
 }
 else
 {
@@ -66,7 +67,6 @@ if($userType=='S')
 		$_SESSION["student"]=serialize($student);
 		$_SESSION["loginStatus"]='S';//type of user
 		$_SESSION['success']=true;
-		echo $_SESSION['success'];
 		header("Location:/CentreDEnergie/Pages/profil.php");
 		
 		$getNewData->close();
@@ -74,7 +74,6 @@ if($userType=='S')
 	}
 	else
 	{
-		echo "lol";
 		$_SESSION["errorPassword"]=true;
 		header("Location:/CentreDEnergie/Pages/profil.php");
 	}
@@ -117,7 +116,6 @@ if($userType=='T')
 		$_SESSION["loginStatus"]='T';//type of user
 		$_SESSION['success']=true;
 		header("Location:/CentreDEnergie/Pages/profil.php");
-		echo "good";
 		$getNewData->close();
 		$updateTeacherTable->close();
 	}
@@ -130,7 +128,7 @@ if($userType=='T')
 	$checkPassword->close();
 }
 }
-
+$conn->close();
 
 
 ?>

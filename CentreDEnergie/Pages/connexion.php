@@ -20,14 +20,14 @@ if(!isset($_SESSION["loginStatus"])||$_SESSION["loginStatus"]==null)//check if u
 	<p>"; if(isset($_SESSION['error'])) echo $_SESSION['error'];
 	echo"</p><br>
 	<div id='checkBox'>
-	<input type='checkbox' name='remember' value='remember'>Se souvenir
+	<input type='checkbox' name='remember' value='remember'>&nbsp;Se souvenir
 	</div>
 	
 	<div class='buttonHolder'>
 		<input type='submit' class='btn btn-danger' value='Connexion'>
 	</div>
 	<br>
-	<p>Vous n'avez pas un compte? <a href='enregistrer.php' id='link'>Cliquez ici</a> pour vous enregistrer!</p>
+	<p id='bottomText'>Vous n'avez pas un compte? <a href='enregistrer.php' id='link'>Cliquez ici</a> pour vous enregistrer!</p>
 	</form>
 </div>";
 }
