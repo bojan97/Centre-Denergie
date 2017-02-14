@@ -106,15 +106,18 @@
 		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSarticle.css'>";
 		$currentPage="article";
 	}
-	
-	/*if (strcmp($currentPage,"connexion")!=0){
-		$_SESSION['error']=null;
-	}*/
+	else if(strpos($url,'rapports') !== false)
+	{
+		echo "<title>Rapports</title>";
+		echo "<link rel='stylesheet' href='/CentreDEnergie/Content/CSSrapports.css'>";
+		$currentPage="rapports";
+	}
 	
 ?>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 	<script>
+	
 	$(document).ready(function(){
 		var fixedWidth=120;
 		while($("#header_dropbtn").width()>fixedWidth){
@@ -125,9 +128,6 @@
 			alert("123");
 		}
 	});
-	
-	
-	
 	
 	</script>
 </head>
@@ -147,9 +147,9 @@
 							  <button class='dropbtn' id='header_dropbtn'>$username</button>
 							  <div class='dropdown-content' id='header_dropdown-content'>";
 								if ($_SESSION["loginStatus"]=="T")echo"<a href='/CentreDEnergie/Pages/article.php'>Nouveau Article</a>";
-							echo"<a href='/CentreDEnergie/Pages/techniques.php'>Mes Techniques</a>
-								<a href='#'>Rapports</a>
-								<a href='/CentreDEnergie/Pages/profil.php'>Mon Profil</a>								
+							echo"<a href='/CentreDEnergie/Pages/techniques.php'>Mes Techniques</a>";
+								if ($_SESSION["loginStatus"]=="T")echo"<a href='#'>Rapports</a>";
+							echo"<a href='/CentreDEnergie/Pages/profil.php'>Mon Profil</a>								
 								<a href='/CentreDEnergie/Controllers/Clogout.php'>Déconnexion</a>
 							  </div>
 							</div>";
