@@ -120,12 +120,12 @@
 	
 	$(document).ready(function(){
 		var fixedWidth=120;
-		while($("#header_dropbtn").width()>fixedWidth){
 			var divider = $("#header_dropbtn").width()/fixedWidth;
 			var size = parseInt($("#header_dropbtn").css('font-size'));
 			var newSize=size/divider+"px";
 			$("#header_dropbtn").css('font-size', newSize);
-			alert("123");
+		if ($(window).width() < 800 && $(window).width() > 585) {
+			$("#header_dropbtn").css('width', fixedWidth);
 		}
 	});
 	
