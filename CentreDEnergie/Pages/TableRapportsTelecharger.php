@@ -276,5 +276,8 @@ if (isset($_POST["report"])){
 		header("Content-type: application/vnd.ms-excel");
 		header("Content-Disposition: attachment; filename=$file");
 	}
+	else{
+		header("Location:/CentreDEnergie/Pages/rapports.php");
+	}
 }
 ?>

@@ -282,4 +282,7 @@
 		$getExceptionTable->close();
 		$conn->close();
 	}
+	else{
+		header("Location:/CentreDEnergie/Pages/rapports.php");
+	}
 ?>
