@@ -33,24 +33,25 @@ if(isset($_SESSION["loginStatus"]))
 			<div class='col-md-12' id='btnRows'>
 				<form action='/CentreDEnergie/Pages/TableRapports.php' method='POST'>
 					<input type='submit' name='Sreport' id='Sreport' class='btn btn-danger' value='Rapport Sommaire'>
+				</form>
 			</div>
 			<br>
 			<div class='col-md-12' id='btnRows'>
 				<form action='/CentreDEnergie/Pages/TableRapports.php' method='POST'>
 					<select name='month' required>
 						<option value=''>Choisissez Votre Mois</option>
-						<option value='Jan'>Janvier</option>
-						<option value='Feb'>Février</option>
-						<option value='Mar'>Mars</option>
-						<option value='Apr'>Avril</option>
-						<option value='May'>Mai</option>
-						<option value='Jun'>Juin</option>
-						<option value='Jul'>Juillet</option>
-						<option value='Aug'>Août</option>
-						<option value='Sep'>Septembre</option>
-						<option value='Oct'>Octobre</option>
-						<option value='Nov'>Novembre</option>
-						<option value='Dec'>Décembre</option>
+						<option value='1'>Janvier</option>
+						<option value='2'>Février</option>
+						<option value='3'>Mars</option>
+						<option value='4'>Avril</option>
+						<option value='5'>Mai</option>
+						<option value='6'>Juin</option>
+						<option value='7'>Juillet</option>
+						<option value='8'>Août</option>
+						<option value='9'>Septembre</option>
+						<option value='10'>Octobre</option>
+						<option value='11'>Novembre</option>
+						<option value='12'>Décembre</option>
 				    </select>
 					
 					<br>
