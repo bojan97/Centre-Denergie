@@ -11,6 +11,8 @@ if (isset($_POST["report"])){
 		if($getTable->num_rows()>0)
 		{
 			echo"
+			<meta charset='UTF-8'>
+			<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 			<h1>Rapport Détaillé</h1>
 			<h2>Généré le ".date("Y-m-d")."</h2>
 			<div id='tableRows'>
@@ -112,7 +114,8 @@ if (isset($_POST["report"])){
 		
 		if($getTotalStudents->num_rows()>0)
 		{
-			echo"<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
+			echo"<meta charset='UTF-8'>
+				<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 				<h1>Rapport de sommaire</h1>
 				<h2>Généré le ".date("Y-m-d")."</h2>
 				<div id='tableRows'>
@@ -191,14 +194,7 @@ if (isset($_POST["report"])){
 				echo"
 				</tr>
 				</table>
-				</div>
-				<br>
-				<form action='/CentreDEnergie/Pages/TableRapportsTelecharger.php' method='POST'>
-					<input type='hidden' name='report' value='summary'>
-					<input type='submit' name='download' value='Télécharger'>
-				</form>
-				<br>
-				<a href='/CentreDEnergie/Pages/rapports.php'>Retourner</a>";
+				</div>";
 			
 		}
 		else
@@ -229,7 +225,9 @@ if (isset($_POST["report"])){
 		$getExceptionTable->bind_result($username,$lname,$fname,$beltLevel,$postedMessages,$dateRegistered);
 		if($getExceptionTable->num_rows()>0)
 		{
-			echo"<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
+			echo"
+			<meta charset='UTF-8'>
+			<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 			<h1>Rapport d'exception</h1>
 			<h2>Généré le ".date("Y-m-d")."</h2>
 			<div id='tableRows'>
@@ -252,15 +250,7 @@ if (isset($_POST["report"])){
 				</tr>";
 			}
 			echo"</table>
-			</div>
-			<br>
-			<form action='/CentreDEnergie/Pages/TableRapportsTelecharger.php' method='POST'>
-				<input type='hidden' name='month' value='".$_POST["month"]."'>
-				<input type='hidden' name='report' value='exception'>
-				<input type='submit' name='download' value='Télécharger'>
-			</form>
-			<br>
-			<a href='/CentreDEnergie/Pages/rapports.php'>Retourner</a>";
+			</div>";
 		}
 		else
 		{
@@ -273,11 +263,14 @@ if (isset($_POST["report"])){
 		$getExceptionTable->close();
 		$conn->close();
 		$file="exception".date("Y-m-d h:i:sa").".xls";
-		header("Content-type: application/vnd.ms-excel");
+		header("Content-type: application/vnd.ms-excel;");
 		header("Content-Disposition: attachment; filename=$file");
 	}
 	else{
 		header("Location:/CentreDEnergie/Pages/rapports.php");
 	}
 }
+else{
+		header("Location:/CentreDEnergie/Pages/rapports.php");
+	}
 ?>

@@ -120,13 +120,25 @@
 	
 	$(document).ready(function(){
 		var fixedWidth=120;
-			var divider = $("#header_dropbtn").width()/fixedWidth;
-			var size = parseInt($("#header_dropbtn").css('font-size'));
-			var newSize=size/divider+"px";
-			$("#header_dropbtn").css('font-size', newSize);
+		var originalWidth= parseInt($("#header_dropbtn").css('width'));
+		var divider = $("#header_dropbtn").width()/fixedWidth;
+		var size = parseInt($("#header_dropbtn").css('font-size'));
+		var newSize=size/divider+"px";
+		$("#header_dropbtn").css('font-size', newSize);
+		
 		if ($(window).width() < 800 && $(window).width() > 585) {
 			$("#header_dropbtn").css('width', fixedWidth);
 		}
+		
+		$(window).resize(function(){
+			if ($(window).width() < 800 && $(window).width() > 585) {
+				$("#header_dropbtn").css('width', fixedWidth);
+			}
+			else{
+				$("#header_dropbtn").css('width', originalWidth);
+			}
+		});
+		
 	});
 	
 	</script>
