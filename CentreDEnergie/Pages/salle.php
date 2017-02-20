@@ -71,12 +71,6 @@ function checkScroll()
 	var scrollHeight = container[0].scrollHeight;
 	var st = container.scrollTop();
 	var calc = scrollHeight - st;
-	//alert(	"scrollTop="+st+"/n"+
-	//	"height="+scrollHeight+"\n"+
-	//	"calc="+(scrollHeight-st));
-	//alert("fjowief");
-	//var scrollPos = $("#wrapper");
-	//scrollPos.scrollTop = scrollPos.scrollHeight;
 	
 	
 	
