@@ -238,8 +238,10 @@
 		$getExceptionTable->bind_result($username,$lname,$fname,$beltLevel,$postedMessages,$dateRegistered);
 		if($getExceptionTable->num_rows()>0)
 		{
+			$mois = array("Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre");
+			
 			echo"<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
-			<h1>Rapport d'exception</h1>
+			<h1>Rapport d'exception pour ".$mois[$_POST["month"]-1]." ".date("Y")."</h1>
 			<h2>Généré le ".date("Y-m-d")."</h2>
 			<div id='tableRows'>
 			<table>

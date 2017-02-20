@@ -15,6 +15,13 @@ if (isset($_POST["report"])){
 			<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 			<h1>Rapport Détaillé</h1>
 			<h2>Généré le ".date("Y-m-d")."</h2>
+			<style>
+				table,td,th{
+					border: 1px solid black;
+					text-align:center;
+				}
+				
+			</style>
 			<div id='tableRows'>
 			<table>
 			<tr>
@@ -118,6 +125,13 @@ if (isset($_POST["report"])){
 				<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 				<h1>Rapport de sommaire</h1>
 				<h2>Généré le ".date("Y-m-d")."</h2>
+				<style>
+					table,td,th{
+						border: 1px solid black;
+						text-align:center;
+					}
+					
+				</style>
 				<div id='tableRows'>
 				<table>
 				<tr>
@@ -225,11 +239,20 @@ if (isset($_POST["report"])){
 		$getExceptionTable->bind_result($username,$lname,$fname,$beltLevel,$postedMessages,$dateRegistered);
 		if($getExceptionTable->num_rows()>0)
 		{
+			$mois = array("Janvier", "Février", "Mars","Avril","Mai","Juin","Juillet","Août","Septembre","Octobre","Novembre","Décembre");
+			
 			echo"
 			<meta charset='UTF-8'>
 			<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
-			<h1>Rapport d'exception</h1>
+			<h1>Rapport d'exception pour ".$mois[$_POST["month"]-1]." ".date("Y")."</h1>
 			<h2>Généré le ".date("Y-m-d")."</h2>
+			<style>
+				table,td,th{
+					border: 1px solid black;
+					text-align:center;
+				}
+				
+			</style>
 			<div id='tableRows'>
 			<table>
 			<tr>
