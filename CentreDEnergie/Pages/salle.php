@@ -98,11 +98,16 @@ $(document).ready(function(){
 setInterval(auto_load,1000);
 setTimeout(scroll,1000);
 
+$("form").submit(function()
+{
+	 window.setTimeout(function() { $("#message").val('').focus(); }, 100);
+});
+
 
  $('#message').keydown(function(event) {
     if (event.keyCode == 13 ) 
 	{
-		var enteredText = document.getElementById("message").value;
+		var enteredText = $("#message").val();
 		var numberOfLineBreaks = (enteredText.match(/\n/g)||[]).length;
 		if(this.value=="" || numberOfLineBreaks>0)
 		{
