@@ -121,7 +121,6 @@ if (isset($_POST["report"])){
 		if($getTotalStudents->num_rows()>0)
 		{
 			echo"<meta charset='UTF-8'>
-				<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 				<h1>Rapport sommaire</h1>
 				<h2>Généré le ".date("Y-m-d")."</h2>
 				<style>
@@ -242,7 +241,6 @@ if (isset($_POST["report"])){
 			
 			echo"
 			<meta charset='UTF-8'>
-			<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 			<h1>Rapport d'exception pour ".$mois[$_POST["month"]-1]." ".date("Y")."</h1>
 			<h2>Généré le ".date("Y-m-d")."</h2>
 			<style>
