@@ -12,7 +12,6 @@ if (isset($_POST["report"])){
 		{
 			echo"
 			<meta charset='UTF-8'>
-			<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
 			<h1>Rapport Détaillé</h1>
 			<h2>Généré le ".date("Y-m-d")."</h2>
 			<style>
@@ -123,7 +122,7 @@ if (isset($_POST["report"])){
 		{
 			echo"<meta charset='UTF-8'>
 				<link rel='stylesheet' href='/CentreDEnergie/Content/CSSTableRapports.css'>
-				<h1>Rapport de sommaire</h1>
+				<h1>Rapport sommaire</h1>
 				<h2>Généré le ".date("Y-m-d")."</h2>
 				<style>
 					table,td,th{

@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.5.2
--- http://www.phpmyadmin.net
+-- version 4.6.4
+-- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 20, 2017 at 07:53 PM
--- Server version: 5.7.9
--- PHP Version: 7.0.0
+-- Generation Time: Feb 21, 2017 at 03:08 AM
+-- Server version: 5.7.14
+-- PHP Version: 5.6.25
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -26,15 +26,13 @@ SET time_zone = "+00:00";
 -- Table structure for table `chat`
 --
 
-DROP TABLE IF EXISTS `chat`;
-CREATE TABLE IF NOT EXISTS `chat` (
-  `messageId` int(5) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `chat` (
+  `messageId` int(5) NOT NULL,
   `senderUsername` varchar(15) DEFAULT NULL,
   `senderColor` varchar(10) NOT NULL,
   `message` varchar(130) NOT NULL,
-  `dateSent` date NOT NULL,
-  PRIMARY KEY (`messageId`)
-) ENGINE=MyISAM AUTO_INCREMENT=145 DEFAULT CHARSET=latin1;
+  `dateSent` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `chat`
@@ -62,12 +60,10 @@ INSERT INTO `chat` (`messageId`, `senderUsername`, `senderColor`, `message`, `da
 -- Table structure for table `customer`
 --
 
-DROP TABLE IF EXISTS `customer`;
-CREATE TABLE IF NOT EXISTS `customer` (
+CREATE TABLE `customer` (
   `email` varchar(30) NOT NULL,
   `message` varchar(50) NOT NULL,
-  `dateSent` date NOT NULL,
-  PRIMARY KEY (`email`)
+  `dateSent` date NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -92,22 +88,20 @@ INSERT INTO `customer` (`email`, `message`, `dateSent`) VALUES
 -- Table structure for table `posts`
 --
 
-DROP TABLE IF EXISTS `posts`;
-CREATE TABLE IF NOT EXISTS `posts` (
-  `postId` int(5) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `posts` (
+  `postId` int(5) NOT NULL,
   `postTitle` varchar(30) NOT NULL,
   `postImage` varchar(100) DEFAULT NULL,
   `postText` varchar(750) NOT NULL,
-  `postDate` date NOT NULL,
-  PRIMARY KEY (`postId`)
-) ENGINE=MyISAM AUTO_INCREMENT=41 DEFAULT CHARSET=latin1;
+  `postDate` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `posts`
 --
 
 INSERT INTO `posts` (`postId`, `postTitle`, `postImage`, `postText`, `postDate`) VALUES
-(25, 'Bienvenue', NULL, 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d''informations sur le programme offert. Vous pouvez aussi crÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil pour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-08');
+(25, 'Bienvenue', NULL, 'Bienvenue sur mon site! Vous pouvez naviguer Ã  travers les pages de styles de combat ou du cours pour plus d\'informations sur le programme offert. Vous pouvez aussi crÃ©er un compte gratuitement et utiliser la salle de dicussion pour des questions reliÃ©es au matÃ©riel du cours. De plus, vous pouvez consultez votre profil pour une liste de tous les techniques nÃ©cessaires pour votre prochain examen. Si vous avez des questions, veuillez consulter la page "Contactez-Nous".', '2017-02-08');
 
 -- --------------------------------------------------------
 
@@ -115,9 +109,8 @@ INSERT INTO `posts` (`postId`, `postTitle`, `postImage`, `postText`, `postDate`)
 -- Table structure for table `rank`
 --
 
-DROP TABLE IF EXISTS `rank`;
-CREATE TABLE IF NOT EXISTS `rank` (
-  `beltIndex` int(2) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `rank` (
+  `beltIndex` int(2) NOT NULL,
   `beltLevel` varchar(15) NOT NULL,
   `beltCode` varchar(15) NOT NULL,
   `combinations` varchar(30) NOT NULL,
@@ -127,10 +120,8 @@ CREATE TABLE IF NOT EXISTS `rank` (
   `blocks` int(2) DEFAULT NULL,
   `forms` varchar(150) NOT NULL,
   `elbows` int(2) DEFAULT NULL,
-  `knees` int(2) DEFAULT NULL,
-  PRIMARY KEY (`beltLevel`),
-  UNIQUE KEY `beltIndex` (`beltIndex`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=latin1;
+  `knees` int(2) DEFAULT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `rank`
@@ -152,20 +143,16 @@ INSERT INTO `rank` (`beltIndex`, `beltLevel`, `beltCode`, `combinations`, `kempo
 -- Table structure for table `student`
 --
 
-DROP TABLE IF EXISTS `student`;
-CREATE TABLE IF NOT EXISTS `student` (
-  `studentID` int(4) NOT NULL AUTO_INCREMENT,
+CREATE TABLE `student` (
+  `studentID` int(4) NOT NULL,
   `username` varchar(15) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `beltLevel` varchar(15) NOT NULL DEFAULT 'blanche',
   `FName` varchar(50) NOT NULL,
   `LName` varchar(50) NOT NULL,
   `postedMessages` int(5) DEFAULT NULL,
-  `dateRegistered` date NOT NULL,
-  PRIMARY KEY (`studentID`),
-  UNIQUE KEY `username` (`username`),
-  KEY `beltLevel` (`beltLevel`)
-) ENGINE=MyISAM AUTO_INCREMENT=22 DEFAULT CHARSET=latin1;
+  `dateRegistered` date NOT NULL
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `student`
@@ -184,16 +171,12 @@ INSERT INTO `student` (`studentID`, `username`, `pass`, `beltLevel`, `FName`, `L
 -- Table structure for table `teacher`
 --
 
-DROP TABLE IF EXISTS `teacher`;
-CREATE TABLE IF NOT EXISTS `teacher` (
+CREATE TABLE `teacher` (
   `teacherUsername` varchar(20) NOT NULL,
   `pass` varchar(255) NOT NULL,
   `beltLevel` varchar(15) DEFAULT NULL,
   `FName` varchar(50) NOT NULL,
-  `LName` varchar(50) NOT NULL,
-  PRIMARY KEY (`teacherUsername`),
-  UNIQUE KEY `teacherUsername` (`teacherUsername`),
-  KEY `beltLevel` (`beltLevel`)
+  `LName` varchar(50) NOT NULL
 ) ENGINE=MyISAM DEFAULT CHARSET=latin1;
 
 --
@@ -204,6 +187,75 @@ INSERT INTO `teacher` (`teacherUsername`, `pass`, `beltLevel`, `FName`, `LName`)
 ('bojan97', '$2y$10$YLZjgc0H3fRWy5SsJAyA7eKoaqzk4EkwpEGcCspj47R9GrKlZwsFe', 'noire', 'Bojan', 'Srbinoski'),
 ('saad97', '$2y$10$O4M5uQpMW0ZzD7L0CtiTLuT/vnboFKCxpWVF7znap5WKr5DToP8ti', 'noire', 'Saad', 'Ahmed');
 
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `chat`
+--
+ALTER TABLE `chat`
+  ADD PRIMARY KEY (`messageId`);
+
+--
+-- Indexes for table `customer`
+--
+ALTER TABLE `customer`
+  ADD PRIMARY KEY (`email`);
+
+--
+-- Indexes for table `posts`
+--
+ALTER TABLE `posts`
+  ADD PRIMARY KEY (`postId`);
+
+--
+-- Indexes for table `rank`
+--
+ALTER TABLE `rank`
+  ADD PRIMARY KEY (`beltLevel`),
+  ADD UNIQUE KEY `beltIndex` (`beltIndex`);
+
+--
+-- Indexes for table `student`
+--
+ALTER TABLE `student`
+  ADD PRIMARY KEY (`studentID`),
+  ADD UNIQUE KEY `username` (`username`),
+  ADD KEY `beltLevel` (`beltLevel`);
+
+--
+-- Indexes for table `teacher`
+--
+ALTER TABLE `teacher`
+  ADD PRIMARY KEY (`teacherUsername`),
+  ADD UNIQUE KEY `teacherUsername` (`teacherUsername`),
+  ADD KEY `beltLevel` (`beltLevel`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `chat`
+--
+ALTER TABLE `chat`
+  MODIFY `messageId` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=145;
+--
+-- AUTO_INCREMENT for table `posts`
+--
+ALTER TABLE `posts`
+  MODIFY `postId` int(5) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
+--
+-- AUTO_INCREMENT for table `rank`
+--
+ALTER TABLE `rank`
+  MODIFY `beltIndex` int(2) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
+-- AUTO_INCREMENT for table `student`
+--
+ALTER TABLE `student`
+  MODIFY `studentID` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

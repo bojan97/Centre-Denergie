@@ -375,13 +375,13 @@ echo"
 else//if user is not logged in
 {
 	echo "<h2>Mes Techniques</h2>
-		<p style='color:red;text-align:center'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'>ici </a>pour vous connecter.</p>";
+		<p style='color:red;text-align:center'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'  style='color:#c1b42e'>ici </a>pour vous connecter.</p>";
 }
 }
 else//if user is not logged in
 {
 	echo "<h2>Mes Techniques</h2>
-		<p style='color:red;text-align:center'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'>ici </a>pour vous connecter.</p>";
+		<p style='color:red;text-align:center'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'  style='color:#c1b42e'>ici </a>pour vous connecter.</p>";
 }
 
 include("footerLayout.php");

@@ -72,7 +72,7 @@ if($_SESSION["loginStatus"]!=null)//check if user is logged in
 else//if user is not logged in
 {
 	echo "<h2>Mon Profil</h2>
-		<p style='color:red'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'>ici </a>pour vous connecter.</p>";
+		<p style='color:red'>Vous n'êtes pas connectés. Cliquez <a href='/CentreDEnergie/Pages/connexion.php'  style='color:#c1b42e'>ici </a>pour vous connecter.</p>";
 }
 ?>
 
